@@ -1,0 +1,148 @@
+
+
+create database coffee_shop_management
+use coffee_shop_management
+
+CREATE TABLE Role(
+	roleID INT IDENTITY(1,1) NOT NULL PRIMARY KEY, 
+	name NVARCHAR(50) NOT NULL, 
+);
+GO
+
+CREATE TABLE Account(
+	username NVARCHAR(50) NOT NULL , 
+	password NVARCHAR(50) NOT NULL, 
+	roleID INT NOT NULL,
+	status INT NOT NULL,
+	PRIMARY KEY(username)
+);
+GO
+
+ALTER TABLE Account 
+ADD CONSTRAINT FK_ROLEID_ACCOUNT FOREIGN KEY (roleID) REFERENCES Role(RoleID)
+
+CREATE TABLE Staff(
+	staffID NVARCHAR(8) NOT NULL , 
+	name NVARCHAR(50) NOT NULL, 
+	dateJoin DATE NOT NULL,
+	address NVARCHAR(100),
+	phoneNumber VARCHAR(10),
+	dateOfBirth DATE,
+	taxCode CHAR,
+	status int NOT NULL,
+	username NVARCHAR(50) UNIQUE,
+	PRIMARY KEY(staffID)
+);
+GO
+
+ALTER TABLE Staff 
+ADD CONSTRAINT FK_USERNAME_STAFF FOREIGN KEY (username) REFERENCES Account(username)
+
+CREATE TABLE Category_Product(
+	categoryID INT IDENTITY(1,1) NOT NULL,
+	name NVARCHAR(50) NOT NULL, 
+	PRIMARY KEY(categoryID)
+);
+GO
+
+CREATE TABLE Product(
+	productID NVARCHAR(8) NOT NULL,
+	name NVARCHAR(50) NOT NULL, 
+	description NVARCHAR(100),
+	price float,
+	image NVARCHAR(100),
+	categoryID INT,
+	PRIMARY KEY(productID)
+);
+GO
+
+ALTER TABLE Product 
+ADD CONSTRAINT FK_CATEGORYID_PRODUCT FOREIGN KEY (categoryID) REFERENCES Category_Product(categoryID)
+
+CREATE TABLE Ingredient(
+	ingredientID INT IDENTITY(1,1) NOT NULL,
+	name NVARCHAR(50) NOT NULL, 
+	unit NVARCHAR(10),
+	status int NOT NULL,
+	PRIMARY KEY(ingredientID)
+);
+GO
+
+CREATE TABLE Ingredient_Product(
+	productID NVARCHAR(8) NOT NULL,
+	ingredientID INT NOT NULL,
+	mass int NOT NULL, 
+	PRIMARY KEY(productID, ingredientID)
+);
+GO
+
+ALTER TABLE Ingredient_Product 
+ADD CONSTRAINT FK_PRODUCT_ID_INGREDIENT_PRODUCT FOREIGN KEY (productID) REFERENCES Product(productID)
+ALTER TABLE Ingredient_Product 
+ADD CONSTRAINT FK_INGREDIENT_ID_INGREDIENT_PRODUCT FOREIGN KEY (ingredientID) REFERENCES Ingredient(ingredientID)
+
+CREATE TABLE Customer(
+	phoneNumber NVARCHAR(10) NOT NULL,
+	name NVARCHAR(50) NOT NULL,
+	email NVARCHAR(50), 
+	PRIMARY KEY(phoneNumber)
+);
+GO
+
+CREATE TABLE Payment_Method(
+	paymentMethodID INT IDENTITY(1,1) NOT NULL,
+	name NVARCHAR(50) NOT NULL, 
+	PRIMARY KEY(paymentMethodID)
+);
+GO
+
+CREATE TABLE Status_Order(
+	statusOrderID INT IDENTITY(1,1) NOT NULL,
+	name NVARCHAR(50) NOT NULL, 
+	PRIMARY KEY(statusOrderID)
+);
+GO
+
+CREATE TABLE Orderr(
+	orderID INT IDENTITY(1,1) NOT NULL,
+	productID DATE NOT NULL, 
+	staffID NVARCHAR(8) NOT NULL,
+	phoneNumber NVARCHAR(10) NOT NULL,
+	paymentMethodID INT NOT NULL,
+	statusOrderID INT NOT NULL,
+	PRIMARY KEY(orderID)
+);
+GO
+
+ALTER TABLE Orderr 
+ADD CONSTRAINT FK_STAFFID_ORDERR FOREIGN KEY (staffID) REFERENCES Staff(staffID)
+ALTER TABLE Orderr 
+ADD CONSTRAINT FK_PHONENUMBER_ORDER FOREIGN KEY (phoneNumber) REFERENCES Customer(phoneNumber)
+ALTER TABLE Orderr 
+ADD CONSTRAINT FK_PAYMENT_METHOD_ID_ORDERR FOREIGN KEY (paymentMethodID) REFERENCES Payment_Method(paymentMethodID)
+ALTER TABLE Orderr 
+ADD CONSTRAINT FK_STATUS_ORDER_ID_ORDERR FOREIGN KEY (statusOrderID) REFERENCES Status_Order(statusOrderID)
+
+CREATE TABLE Order_Detail(
+	orderID INT NOT NULL,
+	productID NVARCHAR(8) NOT NULL,
+	quantity INT NOT NULL,
+	totalPrice float NOT NULL,
+	PRIMARY KEY(orderID,productID)
+);
+GO
+ALTER TABLE Order_Detail 
+ADD CONSTRAINT FK_ORDER_ID_ORDER_DETAIL FOREIGN KEY (orderID) REFERENCES Orderr(orderID)
+ALTER TABLE Order_Detail 
+ADD CONSTRAINT FK_PRODUCT_ID_ORDER_DETAIL FOREIGN KEY (productID) REFERENCES Product(productID)
+
+CREATE TABLE Storage(
+	storageID INT IDENTITY(1,1) NOT NULL,
+	ingredientID INT NOT NULL,
+	quantity INT NOT NULL,
+	PRIMARY KEY(storageID)
+);
+GO
+
+ALTER TABLE Storage 
+ADD CONSTRAINT FK_INGREDIENT_ID_STORAGE FOREIGN KEY (ingredientID) REFERENCES Ingredient(ingredientID)
