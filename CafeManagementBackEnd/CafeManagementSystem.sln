@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33213.308
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CafeManagement.Infrastructure", "CafeManagement.Infrastructure\CafeManagement.Infrastructure.csproj", "{AFC5C5A8-E24D-470C-81C3-368BA8F5D5F7}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CafeManagement.Services", "CafeManagement.Services\CafeManagement.Services.csproj", "{88298D29-A4DE-499D-B413-DC938CD26DE7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AFC5C5A8-E24D-470C-81C3-368BA8F5D5F7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AFC5C5A8-E24D-470C-81C3-368BA8F5D5F7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AFC5C5A8-E24D-470C-81C3-368BA8F5D5F7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AFC5C5A8-E24D-470C-81C3-368BA8F5D5F7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{88298D29-A4DE-499D-B413-DC938CD26DE7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{88298D29-A4DE-499D-B413-DC938CD26DE7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{88298D29-A4DE-499D-B413-DC938CD26DE7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{88298D29-A4DE-499D-B413-DC938CD26DE7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {274DB469-E894-44D8-976E-AF151D958CD9}
+	EndGlobalSection
+EndGlobal
