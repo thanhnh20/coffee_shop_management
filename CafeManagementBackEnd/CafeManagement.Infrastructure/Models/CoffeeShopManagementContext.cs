@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.Extensions.Configuration;
 
 namespace CafeManagement.Infrastructure.Models
 {
@@ -35,10 +36,18 @@ namespace CafeManagement.Infrastructure.Models
             if (!optionsBuilder.IsConfigured)
             {
 #warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
-                optionsBuilder.UseSqlServer("Server=desktop-4s6e80t\\sqlexpress2022;Database=CoffeeShopManagement;UID=sa123;Pwd=cubjnmt@Craft1;Trusted_Connection=True;");
+                optionsBuilder.UseSqlServer(GetConnectionString());
             }
         }
-
+        private string GetConnectionString()
+        {
+            IConfiguration config = new ConfigurationBuilder()
+                .SetBasePath(Directory.GetCurrentDirectory())
+                .AddJsonFile("appsettings.json", true, true)
+                .Build();
+            var strConn = config["ConnectionStrings:CoffeeShopManagementDB"];
+            return strConn;
+        }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
