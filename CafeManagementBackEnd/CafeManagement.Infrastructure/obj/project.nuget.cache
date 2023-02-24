@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "yNx8JA93Cvm7qzNCj96EXDPKBk0Xn2FcLS6a7+Q9gCbrHfSzicSvjrCG41/FBXs4T2M8xl4irjZKeCDraOVOWg==",
+  "dgSpecHash": "Cx5Es0UX8X/77boRhVAl0l8FnOGufTqn8IdEKvmre/PmOlIGfxUkCWrPdXkFF6KGAojOMPVpzSH73XortnoHug==",
   "success": true,
-  "projectFilePath": "D:\\SWD\\CafeManagementSystem\\CafeManagementSystem\\CafeManagement.Infrastructure\\CafeManagement.Infrastructure.csproj",
+  "projectFilePath": "D:\\SWD\\CafeManagementSystem\\CafeManagementBackEnd\\CafeManagement.Infrastructure\\CafeManagement.Infrastructure.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ADMIN\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\ADMIN\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",

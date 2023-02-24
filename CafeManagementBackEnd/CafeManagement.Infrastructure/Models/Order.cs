@@ -11,10 +11,10 @@ namespace CafeManagement.Infrastructure.Models
         }
 
         public int OrderId { get; set; }
-        public DateTime CreateDate { get; set; }
+        public DateTime? DateOrder { get; set; }
+        public double? Amount { get; set; }
         public int StaffId { get; set; }
         public string PhoneNumber { get; set; } = null!;
-        public double? Amount { get; set; }
         public int PaymentMethodId { get; set; }
         public int StatusOrderId { get; set; }
 

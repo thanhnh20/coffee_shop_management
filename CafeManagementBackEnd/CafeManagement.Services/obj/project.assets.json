@@ -8401,11 +8401,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\SWD\\CafeManagementSystem\\CafeManagementSystem\\CafeManagement.Services\\CafeManagement.Services.csproj",
+      "projectUniqueName": "D:\\SWD\\CafeManagementSystem\\CafeManagementBackEnd\\CafeManagement.Services\\CafeManagement.Services.csproj",
       "projectName": "CafeManagement.Services",
-      "projectPath": "D:\\SWD\\CafeManagementSystem\\CafeManagementSystem\\CafeManagement.Services\\CafeManagement.Services.csproj",
+      "projectPath": "D:\\SWD\\CafeManagementSystem\\CafeManagementBackEnd\\CafeManagement.Services\\CafeManagement.Services.csproj",
       "packagesPath": "C:\\Users\\ADMIN\\.nuget\\packages\\",
-      "outputPath": "D:\\SWD\\CafeManagementSystem\\CafeManagementSystem\\CafeManagement.Services\\obj\\",
+      "outputPath": "D:\\SWD\\CafeManagementSystem\\CafeManagementBackEnd\\CafeManagement.Services\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "A:\\Microsoft Visual Studio\\Tools\\NuGetPackages"
@@ -8426,8 +8426,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "D:\\SWD\\CafeManagementSystem\\CafeManagementSystem\\CafeManagement.Infrastructure\\CafeManagement.Infrastructure.csproj": {
-              "projectPath": "D:\\SWD\\CafeManagementSystem\\CafeManagementSystem\\CafeManagement.Infrastructure\\CafeManagement.Infrastructure.csproj"
+            "D:\\SWD\\CafeManagementSystem\\CafeManagementBackEnd\\CafeManagement.Infrastructure\\CafeManagement.Infrastructure.csproj": {
+              "projectPath": "D:\\SWD\\CafeManagementSystem\\CafeManagementBackEnd\\CafeManagement.Infrastructure\\CafeManagement.Infrastructure.csproj"
             }
           }
         }

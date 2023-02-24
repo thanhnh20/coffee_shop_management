@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata;
-using Microsoft.Extensions.Configuration;
 
 namespace CafeManagement.Infrastructure.Models
 {
@@ -36,25 +35,17 @@ namespace CafeManagement.Infrastructure.Models
             if (!optionsBuilder.IsConfigured)
             {
 #warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
-                optionsBuilder.UseSqlServer(GetConnectionString());
+                optionsBuilder.UseSqlServer("Server=desktop-4s6e80t\\sqlexpress2022;Database=CoffeeShopManagement;UID=sa123;Pwd=cubjnmt@Craft1;Trusted_Connection=True;");
             }
         }
-        private string GetConnectionString()
-        {
-            IConfiguration config = new ConfigurationBuilder()
-                .SetBasePath(Directory.GetCurrentDirectory())
-                .AddJsonFile("appsettings.json", true, true)
-                .Build();
-            var strConn = config["ConnectionStrings:CoffeeShopManagementDB"];
-            return strConn;
-        }
+
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Account>(entity =>
             {
                 entity.HasKey(e => e.Username)
-                    .HasName("PK__Account__F3DBC573F661B42D");
+                    .HasName("PK__Account__F3DBC573CC67DD41");
 
                 entity.ToTable("Account");
 
@@ -80,7 +71,7 @@ namespace CafeManagement.Infrastructure.Models
             modelBuilder.Entity<CategoryProduct>(entity =>
             {
                 entity.HasKey(e => e.CategoryId)
-                    .HasName("PK__Category__23CAF1F824033D21");
+                    .HasName("PK__Category__23CAF1F82C89AA82");
 
                 entity.ToTable("Category_Product");
 
@@ -94,13 +85,19 @@ namespace CafeManagement.Infrastructure.Models
             modelBuilder.Entity<Customer>(entity =>
             {
                 entity.HasKey(e => e.PhoneNumber)
-                    .HasName("PK__Customer__4849DA0085BD685F");
+                    .HasName("PK__Customer__4849DA006E08C1C1");
 
                 entity.ToTable("Customer");
 
                 entity.Property(e => e.PhoneNumber)
                     .HasMaxLength(10)
                     .HasColumnName("phoneNumber");
+
+                entity.Property(e => e.Address)
+                    .HasMaxLength(1)
+                    .IsUnicode(false)
+                    .HasColumnName("address")
+                    .IsFixedLength();
 
                 entity.Property(e => e.Email)
                     .HasMaxLength(50)
@@ -131,7 +128,7 @@ namespace CafeManagement.Infrastructure.Models
             modelBuilder.Entity<IngredientProduct>(entity =>
             {
                 entity.HasKey(e => new { e.ProductId, e.IngredientId })
-                    .HasName("PK__Ingredie__4F65EB26F2FF0102");
+                    .HasName("PK__Ingredie__4F65EB2601D4E7FD");
 
                 entity.ToTable("Ingredient_Product");
 
@@ -162,9 +159,9 @@ namespace CafeManagement.Infrastructure.Models
 
                 entity.Property(e => e.Amount).HasColumnName("amount");
 
-                entity.Property(e => e.CreateDate)
+                entity.Property(e => e.DateOrder)
                     .HasColumnType("date")
-                    .HasColumnName("createDate");
+                    .HasColumnName("dateOrder");
 
                 entity.Property(e => e.PaymentMethodId).HasColumnName("paymentMethodID");
 
@@ -204,7 +201,7 @@ namespace CafeManagement.Infrastructure.Models
             modelBuilder.Entity<OrderDetail>(entity =>
             {
                 entity.HasKey(e => new { e.OrderId, e.ProductId })
-                    .HasName("PK__Order_De__BAD83E69FE346B8E");
+                    .HasName("PK__Order_De__BAD83E69228683BE");
 
                 entity.ToTable("Order_Detail");
 
@@ -213,6 +210,8 @@ namespace CafeManagement.Infrastructure.Models
                 entity.Property(e => e.ProductId).HasColumnName("productID");
 
                 entity.Property(e => e.Quantity).HasColumnName("quantity");
+
+                entity.Property(e => e.TotalPrice).HasColumnName("totalPrice");
 
                 entity.HasOne(d => d.Order)
                     .WithMany(p => p.OrderDetails)
@@ -254,11 +253,13 @@ namespace CafeManagement.Infrastructure.Models
                     .HasMaxLength(100)
                     .HasColumnName("image");
 
-                entity.Property(e => e.Name)
-                    .HasMaxLength(50)
-                    .HasColumnName("name");
-
                 entity.Property(e => e.Price).HasColumnName("price");
+
+                entity.Property(e => e.ProductName)
+                    .HasMaxLength(50)
+                    .HasColumnName("productName");
+
+                entity.Property(e => e.Status).HasColumnName("status");
 
                 entity.HasOne(d => d.Category)
                     .WithMany(p => p.Products)
@@ -313,7 +314,7 @@ namespace CafeManagement.Infrastructure.Models
             {
                 entity.ToTable("Staff");
 
-                entity.HasIndex(e => e.Username, "UQ__Staff__F3DBC572B6D12225")
+                entity.HasIndex(e => e.Username, "UQ__Staff__F3DBC572DD48F397")
                     .IsUnique();
 
                 entity.Property(e => e.StaffId).HasColumnName("staffID");
@@ -339,7 +340,7 @@ namespace CafeManagement.Infrastructure.Models
                     .IsUnicode(false)
                     .HasColumnName("phoneNumber");
 
-                entity.Property(e => e.Status).HasColumnName("status");
+                entity.Property(e => e.Salary).HasColumnName("salary");
 
                 entity.Property(e => e.TaxCode)
                     .HasMaxLength(1)

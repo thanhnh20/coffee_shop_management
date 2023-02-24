@@ -1,4 +1,4 @@
-﻿namespace CafeManagementSystemBackEnd.VModels
+﻿namespace CafeManagement.Services.VModels
 {
     public class RoleVM
     {

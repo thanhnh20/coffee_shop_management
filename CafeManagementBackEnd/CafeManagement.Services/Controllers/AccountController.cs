@@ -1,5 +1,6 @@
 ﻿using CafeManagement.Infrastructure.Models;
 using CafeManagement.Infrastructure.Repositories;
+using CafeManagement.Services.VModels;
 using Microsoft.AspNetCore.Mvc;
 
 namespace CafeManagementSystemBackEnd.Controllers
@@ -18,25 +19,50 @@ namespace CafeManagementSystemBackEnd.Controllers
         {
             try
             {
-                return Ok(accrep.GetAccounts());
+                List<AccountVM> enumAccountVM = new();
+                IEnumerable<Account> lisacc = accrep.GetAccounts();
+                foreach (Account acc in lisacc)
+                {
+                    AccountVM accvm = new()
+                    {
+                        Username = acc.Username,
+                        Password = acc.Password,
+                        RoleId = acc.RoleId,
+                        Status = acc.Status
+                    };
+                    enumAccountVM.Add(accvm);
+                }
+                if (enumAccountVM != null && enumAccountVM.Count() > 0)
+                {
+                    return Ok(enumAccountVM.AsEnumerable());
+                }
+                else
+                {
+                    return StatusCode(StatusCodes.Status204NoContent);
+                }
             }
             catch (Exception e)
             {
-                Console.WriteLine(e);
-                return StatusCode(StatusCodes.Status500InternalServerError);
+                return StatusCode(StatusCodes.Status500InternalServerError,e);
             }
         }
         [HttpPost("Create")]
-        public IActionResult Create(Account acc)
+        public IActionResult Create(AccountM acc)
         {
             try
             {
-                return Ok(accrep.CreateAccount(acc));
+                Account accobj = new()
+                {
+                    Username = acc.Username,
+                    Password = acc.Password,
+                    RoleId = acc.RoleId,
+                    Status = acc.Status
+                };
+                return Ok(accrep.CreateAccount(accobj));
             }
             catch (Exception e)
             {
-                Console.WriteLine(e);
-                return StatusCode(StatusCodes.Status500InternalServerError);
+                return StatusCode(StatusCodes.Status500InternalServerError,e);
             }
         }
         [HttpGet("Usr={username}")]
@@ -47,7 +73,14 @@ namespace CafeManagementSystemBackEnd.Controllers
                 var data = accrep.GetAccountByName(username);
                 if (data != null)
                 {
-                    return Ok(data);
+                    Account accobj = new()
+                    {
+                        Username = data.Username,
+                        Password = data.Password,
+                        RoleId = data.RoleId,
+                        Status = data.Status
+                    };
+                    return Ok(accobj);
                 }
                 else
                 {
@@ -56,8 +89,7 @@ namespace CafeManagementSystemBackEnd.Controllers
             }
             catch (Exception e)
             {
-                Console.WriteLine(e);
-                return StatusCode(StatusCodes.Status500InternalServerError);
+                return StatusCode(StatusCodes.Status500InternalServerError,e);
             }
         }
         [HttpGet("Usr={username}&Pwd={password}")]
@@ -68,7 +100,14 @@ namespace CafeManagementSystemBackEnd.Controllers
                 var data = accrep.GetAccountByNameAndPass(username,password);
                 if (data != null)
                 {
-                    return Ok(data);
+                    Account accobj = new()
+                    {
+                        Username = data.Username,
+                        Password = data.Password,
+                        RoleId = data.RoleId,
+                        Status = data.Status
+                    };
+                    return Ok(accobj);
                 }
                 else
                 {
@@ -77,8 +116,7 @@ namespace CafeManagementSystemBackEnd.Controllers
             }
             catch (Exception e)
             {
-                Console.WriteLine(e);
-                return StatusCode(StatusCodes.Status500InternalServerError);
+                return StatusCode(StatusCodes.Status500InternalServerError,e);
             }
         }
         [HttpGet("Stf={staffid}")]
@@ -89,7 +127,14 @@ namespace CafeManagementSystemBackEnd.Controllers
                 var data = accrep.GetAccountByStaff(staffid);
                 if (data != null)
                 {
-                    return Ok(data);
+                    Account accobj = new()
+                    {
+                        Username = data.Username,
+                        Password = data.Password,
+                        RoleId = data.RoleId,
+                        Status = data.Status
+                    };
+                    return Ok(accobj);
                 }
                 else
                 {
@@ -98,12 +143,11 @@ namespace CafeManagementSystemBackEnd.Controllers
             }
             catch (Exception e)
             {
-                Console.WriteLine(e);
-                return StatusCode(StatusCodes.Status500InternalServerError);
+                return StatusCode(StatusCodes.Status500InternalServerError,e);
             }
         }
         [HttpPut("Update/Usr={username}")]
-        public IActionResult Edit(Account acc, string username)
+        public IActionResult Edit(AccountVM acc, string username)
         {
             var usr = accrep.GetAccountByName(username);
             if (usr == null)
@@ -112,11 +156,14 @@ namespace CafeManagementSystemBackEnd.Controllers
             }
             try
             {
-                return Ok(accrep.UpdateAccount(acc));
+                usr.Password = acc.Password;
+                usr.RoleId = acc.RoleId;
+                usr.Status = acc.Status;
+                return Ok(accrep.UpdateAccount(usr));
             }
-            catch
+            catch(Exception e)
             {
-                return StatusCode(StatusCodes.Status500InternalServerError);
+                return StatusCode(StatusCodes.Status500InternalServerError,e);
             }
         }
         [HttpDelete("Delete/Usr={username}")]
@@ -131,9 +178,9 @@ namespace CafeManagementSystemBackEnd.Controllers
             {
                 return Ok(accrep.DeleteAccount(usr));
             }
-            catch
+            catch(Exception e)
             {
-                return StatusCode(StatusCodes.Status500InternalServerError);
+                return StatusCode(StatusCodes.Status500InternalServerError,e);
             }
         }
     }

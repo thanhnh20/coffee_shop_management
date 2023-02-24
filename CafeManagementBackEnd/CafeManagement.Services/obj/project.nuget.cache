@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "dYtlXGBhhdijeYh8qIcrGkA5uFFSyitbCbap44cCbwQ8OYYqISLZ7sHecLDoQ1rjVP8ne9IrpITFVHNyOFk2nQ==",
+  "dgSpecHash": "guSWlIOqs3ewcB7MctV3ETWpHRyTd8JOezd1cFNCWOb9ol4dK83shYYrrpf3tb/w5lwoQaf0RfjMwU9ZZyfvQw==",
   "success": true,
-  "projectFilePath": "D:\\SWD\\CafeManagementSystem\\CafeManagementSystem\\CafeManagement.Services\\CafeManagement.Services.csproj",
+  "projectFilePath": "D:\\SWD\\CafeManagementSystem\\CafeManagementBackEnd\\CafeManagement.Services\\CafeManagement.Services.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ADMIN\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\ADMIN\\.nuget\\packages\\microsoft.aspnet.webapi.client\\5.2.9\\microsoft.aspnet.webapi.client.5.2.9.nupkg.sha512",

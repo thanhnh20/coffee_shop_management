@@ -26,3 +26,17 @@ D:\SWD\CafeManagementSystem\CafeManagementSystem\CafeManagement.Infrastructure\o
 D:\SWD\CafeManagementSystem\CafeManagementSystem\CafeManagement.Infrastructure\obj\Debug\net6.0\CafeManagement.Infrastructure.pdb
 D:\SWD\CafeManagementSystem\CafeManagementSystem\CafeManagement.Infrastructure\obj\Debug\net6.0\CafeManagement.Infrastructure.genruntimeconfig.cache
 D:\SWD\CafeManagementSystem\CafeManagementSystem\CafeManagement.Infrastructure\obj\Debug\net6.0\ref\CafeManagement.Infrastructure.dll
+D:\SWD\CafeManagementSystem\CafeManagementBackEnd\CafeManagement.Infrastructure\bin\Debug\net6.0\CafeManagement.Infrastructure.deps.json
+D:\SWD\CafeManagementSystem\CafeManagementBackEnd\CafeManagement.Infrastructure\bin\Debug\net6.0\CafeManagement.Infrastructure.runtimeconfig.json
+D:\SWD\CafeManagementSystem\CafeManagementBackEnd\CafeManagement.Infrastructure\bin\Debug\net6.0\CafeManagement.Infrastructure.dll
+D:\SWD\CafeManagementSystem\CafeManagementBackEnd\CafeManagement.Infrastructure\bin\Debug\net6.0\CafeManagement.Infrastructure.pdb
+D:\SWD\CafeManagementSystem\CafeManagementBackEnd\CafeManagement.Infrastructure\obj\Debug\net6.0\CafeManagement.Infrastructure.csproj.AssemblyReference.cache
+D:\SWD\CafeManagementSystem\CafeManagementBackEnd\CafeManagement.Infrastructure\obj\Debug\net6.0\CafeManagement.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+D:\SWD\CafeManagementSystem\CafeManagementBackEnd\CafeManagement.Infrastructure\obj\Debug\net6.0\CafeManagement.Infrastructure.AssemblyInfoInputs.cache
+D:\SWD\CafeManagementSystem\CafeManagementBackEnd\CafeManagement.Infrastructure\obj\Debug\net6.0\CafeManagement.Infrastructure.AssemblyInfo.cs
+D:\SWD\CafeManagementSystem\CafeManagementBackEnd\CafeManagement.Infrastructure\obj\Debug\net6.0\CafeManagement.Infrastructure.csproj.CoreCompileInputs.cache
+D:\SWD\CafeManagementSystem\CafeManagementBackEnd\CafeManagement.Infrastructure\obj\Debug\net6.0\CafeManagement.Infrastructure.dll
+D:\SWD\CafeManagementSystem\CafeManagementBackEnd\CafeManagement.Infrastructure\obj\Debug\net6.0\refint\CafeManagement.Infrastructure.dll
+D:\SWD\CafeManagementSystem\CafeManagementBackEnd\CafeManagement.Infrastructure\obj\Debug\net6.0\CafeManagement.Infrastructure.pdb
+D:\SWD\CafeManagementSystem\CafeManagementBackEnd\CafeManagement.Infrastructure\obj\Debug\net6.0\CafeManagement.Infrastructure.genruntimeconfig.cache
+D:\SWD\CafeManagementSystem\CafeManagementBackEnd\CafeManagement.Infrastructure\obj\Debug\net6.0\ref\CafeManagement.Infrastructure.dll

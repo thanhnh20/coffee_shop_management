@@ -1,8 +1,8 @@
 {
   "Version": 1,
-  "Hash": "+cnhQwXEdOZnlyKYGaLAjyn1oiNasfd7jLOgn/rWh3U=",
-  "Source": "CafeManagementSystemBackEnd",
-  "BasePath": "_content/CafeManagementSystemBackEnd",
+  "Hash": "O08n4HgasxPGzjiyPe9LJfSWziBw27ciQH+3rEUTlR4=",
+  "Source": "CafeManagement.Services",
+  "BasePath": "_content/CafeManagement.Services",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],

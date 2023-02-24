@@ -1,6 +1,6 @@
 ﻿using CafeManagement.Infrastructure.Models;
 using CafeManagement.Infrastructure.Repositories;
-using CafeManagementSystemBackEnd.VModels;
+using CafeManagement.Services.VModels;
 using Microsoft.AspNetCore.Mvc;
 
 namespace CafeManagementSystemBackEnd.Controllers

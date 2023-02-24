@@ -17,7 +17,7 @@ namespace CafeManagement.Infrastructure.Models
         public string? PhoneNumber { get; set; }
         public DateTime? DateOfBirth { get; set; }
         public string? TaxCode { get; set; }
-        public int Status { get; set; }
+        public double? Salary { get; set; }
         public string? Username { get; set; }
 
         public virtual Account? UsernameNavigation { get; set; }
