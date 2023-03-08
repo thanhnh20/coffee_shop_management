@@ -1,49 +1,41 @@
 ﻿using CafeManagement.Infrastructure.Models;
 using CafeManagement.Infrastructure.Repositories;
-using CafeManagement.Services.VModels;
+using CafeManagement.Services.API.Services;
+using CafeManagement.Services.API.VModels;
 using Microsoft.AspNetCore.Mvc;
 
-namespace CafeManagementSystemBackEnd.Controllers
+namespace CafeManagement.Services.API.Controllers
 {
     [Route("Camasy/[controller]")]
     [ApiController]
     public class AccountController : ControllerBase
     {
-        private readonly IAccountRepository accrep;
-        public AccountController(IAccountRepository accountRepository)
+        private readonly IAccountServices accrep;
+
+        private readonly IRoleServices rolrep;
+        public AccountController(IAccountServices accountServices,IRoleServices roleServices)
         {
-            accrep = accountRepository;
+            accrep = accountServices;
+            rolrep = roleServices;
         }
         [HttpGet]
         public IActionResult GetAll()
         {
             try
             {
-                List<AccountVM> enumAccountVM = new();
-                IEnumerable<Account> lisacc = accrep.GetAccounts();
-                foreach (Account acc in lisacc)
-                {
-                    AccountVM accvm = new()
-                    {
-                        Username = acc.Username,
-                        Password = acc.Password,
-                        RoleId = acc.RoleId,
-                        Status = acc.Status
-                    };
-                    enumAccountVM.Add(accvm);
-                }
+                IEnumerable<AccountVM> enumAccountVM = accrep.GetAccounts();
                 if (enumAccountVM != null && enumAccountVM.Count() > 0)
                 {
-                    return Ok(enumAccountVM.AsEnumerable());
+                    return Ok(enumAccountVM);
                 }
                 else
                 {
-                    return StatusCode(StatusCodes.Status204NoContent);
+                    return NotFound();
                 }
             }
             catch (Exception e)
             {
-                return StatusCode(StatusCodes.Status500InternalServerError,e);
+                return StatusCode(StatusCodes.Status500InternalServerError, e);
             }
         }
         [HttpPost("Create")]
@@ -51,18 +43,43 @@ namespace CafeManagementSystemBackEnd.Controllers
         {
             try
             {
-                Account accobj = new()
+                var rol = rolrep.GetRoleById(acc.RoleId);
+                if (rol == null) return StatusCode(StatusCodes.Status404NotFound, "Role Not Found!".ToString());
+                AccountVM accountVM = accrep.CreateAccount(acc);
+                if (accountVM != null)
                 {
-                    Username = acc.Username,
-                    Password = acc.Password,
-                    RoleId = acc.RoleId,
-                    Status = acc.Status
-                };
-                return Ok(accrep.CreateAccount(accobj));
+                    return Ok(accountVM);
+                }
+                else
+                {
+                    return StatusCode(StatusCodes.Status400BadRequest);
+                }
             }
             catch (Exception e)
             {
-                return StatusCode(StatusCodes.Status500InternalServerError,e);
+                return StatusCode(StatusCodes.Status500InternalServerError, e.InnerException.Message);
+            }
+        }
+        [HttpPost("Register")]
+        public IActionResult Register(AccountM acc)
+        {
+            try
+            {
+                var rol = rolrep.GetRoleById(acc.RoleId);
+                if (rol == null) return StatusCode(StatusCodes.Status404NotFound, "Role Not Found!".ToString());
+                AccountVM accountVM = accrep.CreateAccount(acc);
+                if (accountVM != null)
+                {
+                    return Ok(accountVM);
+                }
+                else
+                {
+                    return StatusCode(StatusCodes.Status400BadRequest);
+                }
+            }
+            catch (Exception e)
+            {
+                return StatusCode(StatusCodes.Status500InternalServerError, e.InnerException.Message);
             }
         }
         [HttpGet("Usr={username}")]
@@ -70,44 +87,27 @@ namespace CafeManagementSystemBackEnd.Controllers
         {
             try
             {
-                var data = accrep.GetAccountByName(username);
-                if (data != null)
+                AccountVM enumaccountVM = accrep.GetAccountByName(username);
+                if(enumaccountVM != null)
                 {
-                    Account accobj = new()
-                    {
-                        Username = data.Username,
-                        Password = data.Password,
-                        RoleId = data.RoleId,
-                        Status = data.Status
-                    };
-                    return Ok(accobj);
+                    return Ok(enumaccountVM);
                 }
-                else
-                {
-                    return NotFound();
-                }
+                return NotFound();
             }
             catch (Exception e)
             {
-                return StatusCode(StatusCodes.Status500InternalServerError,e);
+                return StatusCode(StatusCodes.Status500InternalServerError, e.InnerException.Message);
             }
         }
         [HttpGet("Usr={username}&Pwd={password}")]
-        public IActionResult GetByUsernameAndPassword(string username,string password)
+        public IActionResult Login(string username, string password)
         {
             try
             {
-                var data = accrep.GetAccountByNameAndPass(username,password);
+                var data = accrep.GetAccountByNameAndPass(username, password);
                 if (data != null)
                 {
-                    Account accobj = new()
-                    {
-                        Username = data.Username,
-                        Password = data.Password,
-                        RoleId = data.RoleId,
-                        Status = data.Status
-                    };
-                    return Ok(accobj);
+                    return Ok(data);
                 }
                 else
                 {
@@ -116,7 +116,7 @@ namespace CafeManagementSystemBackEnd.Controllers
             }
             catch (Exception e)
             {
-                return StatusCode(StatusCodes.Status500InternalServerError,e);
+                return StatusCode(StatusCodes.Status500InternalServerError, e.InnerException.Message);
             }
         }
         [HttpGet("Stf={staffid}")]
@@ -127,14 +127,7 @@ namespace CafeManagementSystemBackEnd.Controllers
                 var data = accrep.GetAccountByStaff(staffid);
                 if (data != null)
                 {
-                    Account accobj = new()
-                    {
-                        Username = data.Username,
-                        Password = data.Password,
-                        RoleId = data.RoleId,
-                        Status = data.Status
-                    };
-                    return Ok(accobj);
+                    return Ok(data);
                 }
                 else
                 {
@@ -143,44 +136,41 @@ namespace CafeManagementSystemBackEnd.Controllers
             }
             catch (Exception e)
             {
-                return StatusCode(StatusCodes.Status500InternalServerError,e);
+                return StatusCode(StatusCodes.Status500InternalServerError, e.InnerException.Message);
             }
         }
         [HttpPut("Update/Usr={username}")]
         public IActionResult Edit(AccountVM acc, string username)
         {
-            var usr = accrep.GetAccountByName(username);
-            if (usr == null)
-            {
-                return BadRequest();
-            }
             try
             {
-                usr.Password = acc.Password;
-                usr.RoleId = acc.RoleId;
-                usr.Status = acc.Status;
-                return Ok(accrep.UpdateAccount(usr));
+                AccountVM accountVM = accrep.UpdateAccount(acc,username);
+                if(accountVM != null)
+                {
+                    return Ok(accountVM);
+                }
+                return BadRequest();
             }
-            catch(Exception e)
+            catch (Exception e)
             {
-                return StatusCode(StatusCodes.Status500InternalServerError,e);
+                return StatusCode(StatusCodes.Status500InternalServerError, e.InnerException.Message);
             }
         }
         [HttpDelete("Delete/Usr={username}")]
         public IActionResult Delete(string username)
         {
-            var usr = accrep.GetAccountByName(username);
-            if (usr == null)
-            {
-                return BadRequest();
-            }
             try
             {
-                return Ok(accrep.DeleteAccount(usr));
+                bool success = accrep.DeleteAccount(username);
+                if(success)
+                {
+                    return Ok();
+                }
+                return BadRequest();
             }
-            catch(Exception e)
+            catch (Exception e)
             {
-                return StatusCode(StatusCodes.Status500InternalServerError,e);
+                return StatusCode(StatusCodes.Status500InternalServerError, e.InnerException.Message);
             }
         }
     }

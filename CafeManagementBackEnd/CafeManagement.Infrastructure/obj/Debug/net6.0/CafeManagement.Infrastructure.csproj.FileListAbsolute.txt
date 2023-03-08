@@ -26,6 +26,8 @@ D:\SWD\CafeManagementSystem\CafeManagementSystem\CafeManagement.Infrastructure\o
 D:\SWD\CafeManagementSystem\CafeManagementSystem\CafeManagement.Infrastructure\obj\Debug\net6.0\CafeManagement.Infrastructure.pdb
 D:\SWD\CafeManagementSystem\CafeManagementSystem\CafeManagement.Infrastructure\obj\Debug\net6.0\CafeManagement.Infrastructure.genruntimeconfig.cache
 D:\SWD\CafeManagementSystem\CafeManagementSystem\CafeManagement.Infrastructure\obj\Debug\net6.0\ref\CafeManagement.Infrastructure.dll
+D:\SWD\CafeManagementSystem\CafeManagementBackEnd\CafeManagement.Infrastructure\bin\Debug\net6.0\appsettings.Development.json
+D:\SWD\CafeManagementSystem\CafeManagementBackEnd\CafeManagement.Infrastructure\bin\Debug\net6.0\appsettings.json
 D:\SWD\CafeManagementSystem\CafeManagementBackEnd\CafeManagement.Infrastructure\bin\Debug\net6.0\CafeManagement.Infrastructure.deps.json
 D:\SWD\CafeManagementSystem\CafeManagementBackEnd\CafeManagement.Infrastructure\bin\Debug\net6.0\CafeManagement.Infrastructure.runtimeconfig.json
 D:\SWD\CafeManagementSystem\CafeManagementBackEnd\CafeManagement.Infrastructure\bin\Debug\net6.0\CafeManagement.Infrastructure.dll

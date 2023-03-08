@@ -10,7 +10,7 @@ namespace CafeManagement.Infrastructure.Repositories.RepositoryImplementations
 {
     public class RoleRepository : IRoleRepository
     {
-        public bool CreateRole(Role role)
+        public Role CreateRole(Role role)
         {
             return RoleDAO.getInstance.CreateRole(role);
         }
@@ -35,7 +35,7 @@ namespace CafeManagement.Infrastructure.Repositories.RepositoryImplementations
             return RoleDAO.getInstance.GetRoleByName(name);
         }
 
-        public bool UpdateRole(Role role)
+        public Role UpdateRole(Role role)
         {
             return RoleDAO.getInstance.UpdateRole(role);
         }

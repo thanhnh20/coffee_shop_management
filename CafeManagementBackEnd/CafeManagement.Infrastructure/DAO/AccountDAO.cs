@@ -33,14 +33,14 @@ namespace CafeManagement.Infrastructure.DAO
         public Account GetAccbyName(string name) => _context.Accounts.FirstOrDefault(acc => acc.Username == name);
         public Account GetAccbyStaff(int staffid) => _context.Accounts.FirstOrDefault(acc => acc.staff.StaffId == staffid);
         public Account GetAccByNameAndPass(string name, string pwd) => _context.Accounts.FirstOrDefault(acc => acc.Username == name && acc.Password == pwd);
-        public bool CreateAccount(Account account)
+        public Account CreateAccount(Account account)
         {
             try
             {
                 _context.Accounts.Add(account);
                 _context.SaveChanges();
-                if (GetAccbyName(account.Username) != null) return true;
-                return false;
+                account = GetAccByNameAndPass(account.Username,account.Password);
+                return account;
             }
             catch
             {
@@ -51,7 +51,7 @@ namespace CafeManagement.Infrastructure.DAO
         {
             try
             {
-                var user = GetAccbyName(account.Username);
+                var user = GetAccByNameAndPass(account.Username,account.Password);
                 if (user != null)
                 {
                     _context.Accounts.Remove(user);
@@ -65,19 +65,20 @@ namespace CafeManagement.Infrastructure.DAO
                 throw;
             }
         }
-        public bool UpdateAccount(Account account)
+        public Account UpdateAccount(Account account)
         {
             try
             {
-                var user = GetAccbyName(account.Username);
+                var user = GetAccByNameAndPass(account.Username, account.Password);
                 if (user != null)
                 {
                     var tracker = _context.Attach(user);
                     tracker.State = EntityState.Modified;
                     _context.SaveChanges();
-                    return true;
+                    user = GetAccByNameAndPass(account.Username, account.Password);
+                    return user;
                 }
-                return false;
+                return null;
             }
             catch { throw; }
         }

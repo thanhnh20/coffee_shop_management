@@ -13,8 +13,8 @@ namespace CafeManagement.Infrastructure.Repositories
         public Account GetAccountByName(string name);
         public Account GetAccountByNameAndPass(string name, string pwd);
         public Account GetAccountByStaff(int staffid);
-        public bool CreateAccount(Account account);
-        public bool UpdateAccount(Account account);
+        public Account CreateAccount(Account account);
+        public Account UpdateAccount(Account account);
         public bool DeleteAccount(Account account);
     }
 }

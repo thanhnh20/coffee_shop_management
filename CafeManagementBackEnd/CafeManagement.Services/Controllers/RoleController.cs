@@ -1,37 +1,84 @@
 ﻿using CafeManagement.Infrastructure.Models;
 using CafeManagement.Infrastructure.Repositories;
-using CafeManagement.Services.VModels;
+using CafeManagement.Services.API.Services;
+using CafeManagement.Services.API.VModels;
 using Microsoft.AspNetCore.Mvc;
 
-namespace CafeManagementSystemBackEnd.Controllers
+namespace CafeManagement.Services.API.Controllers
 {
     [Route("Camasy/[controller]")]
     [ApiController]
     public class RoleController : ControllerBase
     {
-        private readonly IRoleRepository rolrep;
-        public RoleController(IRoleRepository roleRepository)
+        private readonly IRoleServices rolser;
+        public RoleController(IRoleServices roleServices)
         {
-            rolrep = roleRepository;
+            rolser = roleServices;
         }
-
         [HttpGet]
         public IActionResult GetAll()
         {
             try
             {
-                List<RoleVM> enumRoleVM = new();
-                IEnumerable<Role> lisrol = rolrep.GetRoles();
-                foreach(Role rol in lisrol)
+                IEnumerable<RoleVM> enumRoleVM = rolser.GetRoles();
+                if (enumRoleVM != null && enumRoleVM.Count() > 0)
                 {
-                    RoleVM rolvm = new()
-                    {
-                        RoleId = rol.RoleId,
-                        Name = rol.Name
-                    };
-                    enumRoleVM.Add(rolvm);
+                    return Ok(enumRoleVM.AsEnumerable());
                 }
-                if(enumRoleVM != null && enumRoleVM.Count() > 0)
+                else
+                {
+                    return StatusCode(StatusCodes.Status404NotFound);
+                }
+            }
+            catch (Exception e)
+            {
+                return StatusCode(StatusCodes.Status500InternalServerError, e.InnerException.Message);
+            }
+        }
+        [HttpPost("Create")]
+        public IActionResult Create(RoleM rol)
+        {
+            try
+            {
+                RoleVM roleVM = rolser.CreateRole(rol);
+                if (roleVM != null)
+                {
+                    return Ok(roleVM);
+                }
+                else
+                {
+                    return StatusCode(StatusCodes.Status400BadRequest);
+                }
+            }
+            catch (Exception e)
+            {
+                return StatusCode(StatusCodes.Status500InternalServerError, e.InnerException.Message);
+            }
+        }
+        [HttpGet("Roid={id}")]
+        public IActionResult GetById(int id)
+        {
+            try
+            {
+                RoleVM enumRoleVM = rolser.GetRoleById(id);
+                if (enumRoleVM != null)
+                {
+                    return Ok(enumRoleVM);
+                }
+                return NotFound();
+            }
+            catch (Exception e)
+            {
+                return StatusCode(StatusCodes.Status500InternalServerError, e.InnerException.Message);
+            }
+        }
+        [HttpGet("Rona={rolename}")]
+        public IActionResult GetByName(string rolename)
+        {
+            try
+            {
+                IEnumerable<RoleVM> enumRoleVM = rolser.GetRolesByName(rolename);
+                if (enumRoleVM != null && enumRoleVM.Count() > 0)
                 {
                     return Ok(enumRoleVM.AsEnumerable());
                 }
@@ -42,115 +89,41 @@ namespace CafeManagementSystemBackEnd.Controllers
             }
             catch (Exception e)
             {
-                return StatusCode(StatusCodes.Status500InternalServerError,e);
-            }
-        }
-        [HttpPost("Create")]
-        public IActionResult Create(RoleM rol)
-        {
-            try
-            {
-                Role rolobj = new()
-                {
-                    RoleId = rol.RoleId,
-                    Name = rol.Name
-                };
-                return Ok(rolrep.CreateRole(rolobj));
-            }
-            catch (Exception e)
-            {
-                return StatusCode(StatusCodes.Status500InternalServerError,e);
-            }
-        }
-        [HttpGet("Roid={id}")]
-        public IActionResult GetById(int id)
-        {
-            try
-            {
-                var data = rolrep.GetRoleById(id);
-                if (data != null)
-                {
-                    RoleVM rolobjvm = new()
-                    {
-                        RoleId =data.RoleId,
-                        Name = data.Name
-                    };
-                    return Ok(rolobjvm);
-                }
-                else
-                {
-                    return NotFound();
-                }
-            }
-            catch (Exception e)
-            {
-                return StatusCode(StatusCodes.Status500InternalServerError,e);
-            }
-        }
-        [HttpGet("Rona={rolename}")]
-        public IActionResult GetByName(string rolename)
-        {
-            try
-            {
-                List<RoleVM> enumRoleVM = new();
-                IEnumerable<Role> lisrol = rolrep.GetRolesByName(rolename);
-                foreach (var rol in lisrol)
-                {
-                    RoleVM rolvm = new()
-                    {
-                        RoleId = rol.RoleId,
-                        Name = rol.Name
-                    };
-                    enumRoleVM.Add(rolvm);
-                }
-                if (enumRoleVM != null && enumRoleVM.Count() > 0)
-                {
-                    return Ok(enumRoleVM.AsEnumerable());
-                }
-                else
-                {
-                    return NotFound();
-                }
-            }
-            catch (Exception e)
-            {
-                return StatusCode(StatusCodes.Status500InternalServerError,e);
+                return StatusCode(StatusCodes.Status500InternalServerError, e.InnerException.Message);
             }
         }
         [HttpPut("Update/Roid={id}")]
         public IActionResult Edit(RoleVM rolVM, int id)
         {
-            var rol = rolrep.GetRoleById(id);
-            if (rol == null)
-            {
-                return BadRequest();
-            }
             try
             {
-                rol.RoleId = rolVM.RoleId;
-                rol.Name = rolVM.Name;
-                return Ok(rolrep.UpdateRole(rol));
+                RoleVM roleVM = rolser.UpdateRole(rolVM,id);
+                if (roleVM != null)
+                {
+                    return Ok(roleVM);
+                }
+                return BadRequest();
             }
-            catch(Exception e)
+            catch (Exception e)
             {
-                return StatusCode(StatusCodes.Status500InternalServerError,e);
+                return StatusCode(StatusCodes.Status500InternalServerError, e.InnerException.Message);
             }
         }
         [HttpDelete("Delete/Roid={id}")]
         public IActionResult Delete(int id)
         {
-            var rol = rolrep.GetRoleById(id);
-            if (rol == null)
-            {
-                return BadRequest();
-            }
             try
             {
-                return Ok(rolrep.DeleteRole(rol));
+                bool success = rolser.DeleteRole(id);
+                if (success)
+                {
+                    return Ok();
+                }
+                return BadRequest();
             }
-            catch(Exception e)
+            catch (Exception e)
             {
-                return StatusCode(StatusCodes.Status500InternalServerError, e);
+                return StatusCode(StatusCodes.Status500InternalServerError, e.InnerException.Message);
             }
         }
     }

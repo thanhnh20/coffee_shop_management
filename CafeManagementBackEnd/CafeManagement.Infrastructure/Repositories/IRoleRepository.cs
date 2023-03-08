@@ -13,8 +13,8 @@ namespace CafeManagement.Infrastructure.Repositories
 
         public IEnumerable<Role> GetRolesByName(string name);
         public Role GetRoleById(int roleId);
-        public bool CreateRole(Role role);
-        public bool UpdateRole(Role role);
+        public Role CreateRole(Role role);
+        public Role UpdateRole(Role role);
         public bool DeleteRole(Role role);
     }
 

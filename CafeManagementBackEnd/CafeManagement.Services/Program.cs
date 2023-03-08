@@ -1,10 +1,12 @@
 using CafeManagement.Infrastructure.Models;
 using CafeManagement.Infrastructure.Repositories;
 using CafeManagement.Infrastructure.Repositories.RepositoryImplementations;
+using CafeManagement.Services.API.Services;
+using CafeManagement.Services.API.Services.ServiceImplementations;
 using Microsoft.EntityFrameworkCore;
 using System.Text.Json.Serialization;
 
-namespace CafeManagementSystemBackEnd
+namespace CafeManagement.Services.API
 {
     public class Program
     {
@@ -15,13 +17,15 @@ namespace CafeManagementSystemBackEnd
             // Add services to the container.
 
             builder.Services.AddControllers();
+            //builder.Services.AddSession(s => s.IdleTimeout = TimeSpan.FromMinutes(30));
             builder.Services.AddDbContext<CoffeeShopManagementContext>();
-            builder.Services.AddScoped<IAccountRepository,AccountRepository>();
-            builder.Services.AddScoped<IRoleRepository,RoleRepository>();
+            builder.Services.AddScoped<IAccountRepository, AccountRepository>();
+            builder.Services.AddScoped<IAccountServices, AccountServices>();
+            builder.Services.AddScoped<IRoleRepository, RoleRepository>();
+            builder.Services.AddScoped<IRoleServices, RoleServices>();
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
-
             builder.Services.AddControllers().AddJsonOptions(x =>
                 x.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.IgnoreCycles);
             //builder.Services.AddSession();
@@ -35,6 +39,7 @@ namespace CafeManagementSystemBackEnd
                 app.UseSwaggerUI();
             }
 
+            //app.UseSession();
             app.UseHttpsRedirection();
 
             app.UseAuthorization();

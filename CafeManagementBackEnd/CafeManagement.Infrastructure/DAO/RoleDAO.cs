@@ -32,15 +32,14 @@ namespace CafeManagement.Infrastructure.DAO
         public IEnumerable<Role> GetAllRoles() => _context.Roles.AsEnumerable();
         public Role GetRoleById(int id) => _context.Roles.SingleOrDefault(rol => rol.RoleId == id);
         public IEnumerable<Role> GetRoleByName(string name) => _context.Roles.Where(rol=> rol.Name.Contains(name)).AsEnumerable();
-        public bool CreateRole(Role role)
+        public Role CreateRole(Role role)
         {
             try
             {
-                if (GetRoleById(role.RoleId) != null) return false;
                 _context.Roles.Add(role);
                 _context.SaveChanges();
-                if (GetRoleById(role.RoleId) != null) return true;
-                return false;
+                role = GetRoleById(role.RoleId);
+                return role;
             }
             catch
             {
@@ -65,7 +64,7 @@ namespace CafeManagement.Infrastructure.DAO
                 throw;
             }
         }
-        public bool UpdateRole(Role role)
+        public Role UpdateRole(Role role)
         {
             try
             {
@@ -75,9 +74,10 @@ namespace CafeManagement.Infrastructure.DAO
                     var tracker = _context.Attach(rol);
                     tracker.State = EntityState.Modified;
                     _context.SaveChanges();
-                    return true;
+                    role = GetRoleById(role.RoleId);
+                    return role;
                 }
-                return false;
+                return null;
             }
             catch { throw; }
         }

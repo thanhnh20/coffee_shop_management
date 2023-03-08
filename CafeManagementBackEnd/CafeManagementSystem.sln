@@ -5,7 +5,7 @@ VisualStudioVersion = 17.4.33213.308
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CafeManagement.Infrastructure", "CafeManagement.Infrastructure\CafeManagement.Infrastructure.csproj", "{AFC5C5A8-E24D-470C-81C3-368BA8F5D5F7}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CafeManagement.Services", "CafeManagement.Services\CafeManagement.Services.csproj", "{88298D29-A4DE-499D-B413-DC938CD26DE7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CafeManagement.Services.API", "CafeManagement.Services\CafeManagement.Services.API.csproj", "{88298D29-A4DE-499D-B413-DC938CD26DE7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

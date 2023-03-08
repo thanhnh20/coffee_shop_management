@@ -8401,9 +8401,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\SWD\\CafeManagementSystem\\CafeManagementBackEnd\\CafeManagement.Services\\CafeManagement.Services.csproj",
-      "projectName": "CafeManagement.Services",
-      "projectPath": "D:\\SWD\\CafeManagementSystem\\CafeManagementBackEnd\\CafeManagement.Services\\CafeManagement.Services.csproj",
+      "projectUniqueName": "D:\\SWD\\CafeManagementSystem\\CafeManagementBackEnd\\CafeManagement.Services\\CafeManagement.Services.API.csproj",
+      "projectName": "CafeManagement.Services.API",
+      "projectPath": "D:\\SWD\\CafeManagementSystem\\CafeManagementBackEnd\\CafeManagement.Services\\CafeManagement.Services.API.csproj",
       "packagesPath": "C:\\Users\\ADMIN\\.nuget\\packages\\",
       "outputPath": "D:\\SWD\\CafeManagementSystem\\CafeManagementBackEnd\\CafeManagement.Services\\obj\\",
       "projectStyle": "PackageReference",

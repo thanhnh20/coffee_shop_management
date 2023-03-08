@@ -11,7 +11,7 @@ namespace CafeManagement.Infrastructure.Repositories.RepositoryImplementations
     public class AccountRepository : IAccountRepository
     {
 
-        public bool CreateAccount(Account account)
+        public Account CreateAccount(Account account)
         {
             return AccountDAO.getInstance.CreateAccount(account);
         }
@@ -41,7 +41,7 @@ namespace CafeManagement.Infrastructure.Repositories.RepositoryImplementations
             return AccountDAO.getInstance.GetAllAccounts();
         }
 
-        public bool UpdateAccount(Account account)
+        public Account UpdateAccount(Account account)
         {
             return AccountDAO.getInstance.UpdateAccount(account);
         }
