@@ -1,5 +1,5 @@
 ﻿using CafeManagement.Infrastructure.Models;
-using CafeManagement.Infrastructure.Repositories;
+using CafeManagement.Infrastructure.Repositories.RepositoryImplementations;
 using CafeManagement.Services.VModels;
 using System.Security.Principal;
 
@@ -7,8 +7,8 @@ namespace CafeManagement.Services.Services.ServiceImplementations
 {
     public class RoleServices : IRoleServices
     {
-        private readonly IRoleRepository rolrep;
-        public RoleServices(IRoleRepository roleRepository)
+        private readonly RoleRepository rolrep;
+        public RoleServices(RoleRepository roleRepository)
         {
             rolrep = roleRepository;
         }

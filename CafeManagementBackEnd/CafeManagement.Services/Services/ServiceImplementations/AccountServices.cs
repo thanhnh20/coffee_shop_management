@@ -1,13 +1,13 @@
 ﻿using CafeManagement.Infrastructure.Models;
-using CafeManagement.Infrastructure.Repositories;
+using CafeManagement.Infrastructure.Repositories.RepositoryImplementations;
 using CafeManagement.Services.VModels;
 
 namespace CafeManagement.Services.Services.ServiceImplementations
 {
     public class AccountServices : IAccountServices
     {
-        private readonly IAccountRepository accrep;
-        public AccountServices(IAccountRepository accountRepository)
+        private readonly AccountRepository accrep;
+        public AccountServices(AccountRepository accountRepository)
         {
             accrep = accountRepository;
         }
