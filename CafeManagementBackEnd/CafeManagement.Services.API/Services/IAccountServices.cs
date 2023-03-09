@@ -1,6 +1,6 @@
-﻿using CafeManagement.Services.VModels;
+﻿using CafeManagement.Services.API.VModels;
 
-namespace CafeManagement.Services.Services
+namespace CafeManagement.Services.API.Services
 {
     public interface IAccountServices
     {
@@ -10,7 +10,7 @@ namespace CafeManagement.Services.Services
         public AccountVM GetAccountByNameAndPass(string name, string pwd);
         public AccountVM GetAccountByStaff(int staffid);
         public AccountVM CreateAccount(AccountM account);
-        public AccountVM UpdateAccount(AccountVM account, string username);
+        public AccountVM UpdateAccount(AccountVM account,string username);
         public bool DeleteAccount(string username);
     }
 }

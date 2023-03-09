@@ -2,7 +2,7 @@
 using System.ComponentModel.DataAnnotations;
 using System.Xml.Linq;
 
-namespace CafeManagement.Services.API.VModels
+namespace CafeManagement.Services.VModels
 {
     public class RoleM
     {

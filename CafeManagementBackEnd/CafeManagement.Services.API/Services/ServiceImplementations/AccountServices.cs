@@ -1,8 +1,8 @@
 ﻿using CafeManagement.Infrastructure.Models;
 using CafeManagement.Infrastructure.Repositories;
-using CafeManagement.Services.VModels;
+using CafeManagement.Services.API.VModels;
 
-namespace CafeManagement.Services.Services.ServiceImplementations
+namespace CafeManagement.Services.API.Services.ServiceImplementations
 {
     public class AccountServices : IAccountServices
     {

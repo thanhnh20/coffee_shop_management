@@ -1,6 +1,6 @@
-﻿using CafeManagement.Services.VModels;
+﻿using CafeManagement.Services.API.VModels;
 
-namespace CafeManagement.Services.Services
+namespace CafeManagement.Services.API.Services
 {
     public interface IRoleServices
     {

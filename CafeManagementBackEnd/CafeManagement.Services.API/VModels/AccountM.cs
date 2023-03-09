@@ -2,21 +2,21 @@
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 
-namespace CafeManagement.Services.VModels
+namespace CafeManagement.Services.API.VModels
 {
     public class AccountM
     {
         [Required(ErrorMessage = "Username is required!")]
         [Display(Name = "Username")]
         [MinLength(10, ErrorMessage = "Username must be at least 10 characters!")]
-        [MaxLength(30, ErrorMessage = "Username must be lesser than or equal to 30 characters!")]
+        [MaxLength(30,ErrorMessage = "Username must be lesser than or equal to 30 characters!")]
         [DefaultValue("username01")]
         public string Username { get; set; } = null!;
 
         [Required(ErrorMessage = "Password is required!")]
         [Display(Name = "Password")]
         [MinLength(3, ErrorMessage = "Password must be at least 3 characters")]
-        [MaxLength(20, ErrorMessage = "Password must be lesser than or equal to 20 characters!")]
+        [MaxLength(20,ErrorMessage = "Password must be lesser than or equal to 20 characters!")]
         [DefaultValue(123)]
         public string Password { get; set; } = null!;
 
@@ -25,7 +25,7 @@ namespace CafeManagement.Services.VModels
         [MinLength(3, ErrorMessage = "Confirm Password must be at least 3 characters")]
         [MaxLength(20, ErrorMessage = "Confirm Password must be lesser than or equal to 20 characters!")]
         [DefaultValue(123)]
-        [Compare("Password", ErrorMessage = "Confirm Password not Matched with Password!")]
+        [Compare("Password",ErrorMessage = "Confirm Password not Matched with Password!")]
         public string ConfirmPassword { get; set; } = null!;
 
         [Required(ErrorMessage = "Role is required!")]

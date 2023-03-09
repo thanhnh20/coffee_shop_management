@@ -2,9 +2,9 @@
 using System.ComponentModel.DataAnnotations;
 using System.Xml.Linq;
 
-namespace CafeManagement.Services.VModels
+namespace CafeManagement.Services.API.VModels
 {
-    public class RoleVM
+    public class RoleM
     {
         [Required(ErrorMessage = "Role Id is required!")]
         [Display(Name = "Role Id")]

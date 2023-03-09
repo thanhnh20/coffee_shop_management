@@ -1,9 +1,9 @@
 ﻿using CafeManagement.Infrastructure.Models;
 using CafeManagement.Infrastructure.Repositories;
-using CafeManagement.Services.VModels;
+using CafeManagement.Services.API.VModels;
 using System.Security.Principal;
 
-namespace CafeManagement.Services.Services.ServiceImplementations
+namespace CafeManagement.Services.API.Services.ServiceImplementations
 {
     public class RoleServices : IRoleServices
     {
@@ -20,7 +20,7 @@ namespace CafeManagement.Services.Services.ServiceImplementations
                 Role rolobj = new()
                 {
                     RoleId = Role.RoleId,
-                    Name = Role.Name,
+                    Name= Role.Name,
                 };
                 rolobj = rolrep.CreateRole(rolobj);
                 return new RoleVM()

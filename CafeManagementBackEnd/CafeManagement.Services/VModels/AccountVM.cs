@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 
-namespace CafeManagement.Services.API.VModels
+namespace CafeManagement.Services.VModels
 {
     public class AccountVM
     {

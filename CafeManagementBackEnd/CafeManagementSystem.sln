@@ -5,7 +5,9 @@ VisualStudioVersion = 17.4.33213.308
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CafeManagement.Infrastructure", "CafeManagement.Infrastructure\CafeManagement.Infrastructure.csproj", "{AFC5C5A8-E24D-470C-81C3-368BA8F5D5F7}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CafeManagement.Services.API", "CafeManagement.Services\CafeManagement.Services.API.csproj", "{88298D29-A4DE-499D-B413-DC938CD26DE7}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CafeManagement.Services", "CafeManagement.Services\CafeManagement.Services.csproj", "{149F4362-CB81-4ADA-8225-551C770B4864}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CafeManagement.Services.API", "CafeManagement.Services.API\CafeManagement.Services.API.csproj", "{E2A1DDA5-EFCD-4605-9025-F45A0CA6E771}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,10 +19,14 @@ Global
 		{AFC5C5A8-E24D-470C-81C3-368BA8F5D5F7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AFC5C5A8-E24D-470C-81C3-368BA8F5D5F7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AFC5C5A8-E24D-470C-81C3-368BA8F5D5F7}.Release|Any CPU.Build.0 = Release|Any CPU
-		{88298D29-A4DE-499D-B413-DC938CD26DE7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{88298D29-A4DE-499D-B413-DC938CD26DE7}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{88298D29-A4DE-499D-B413-DC938CD26DE7}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{88298D29-A4DE-499D-B413-DC938CD26DE7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{149F4362-CB81-4ADA-8225-551C770B4864}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{149F4362-CB81-4ADA-8225-551C770B4864}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{149F4362-CB81-4ADA-8225-551C770B4864}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{149F4362-CB81-4ADA-8225-551C770B4864}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E2A1DDA5-EFCD-4605-9025-F45A0CA6E771}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E2A1DDA5-EFCD-4605-9025-F45A0CA6E771}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E2A1DDA5-EFCD-4605-9025-F45A0CA6E771}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E2A1DDA5-EFCD-4605-9025-F45A0CA6E771}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
