@@ -68,6 +68,7 @@
             this.BtnAddNewAccount.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.BtnAddNewAccount.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.BtnAddNewAccount.UseVisualStyleBackColor = true;
+            this.BtnAddNewAccount.Click += new System.EventHandler(this.BtnAddNewAccount_Click);
             // 
             // LbFilterCompanyList
             // 

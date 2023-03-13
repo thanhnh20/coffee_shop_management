@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "F:\\PE_PRN221_TRIAL\\CafeManagement\\CoffeeManagement\\CoffeeManagement.csproj": {}
+    "F:\\Download\\SE151252\\SWD392\\Project gr\\Project\\CafeManagement\\CoffeeManagement\\CoffeeManagement.csproj": {}
   },
   "projects": {
-    "F:\\PE_PRN221_TRIAL\\CafeManagement\\CoffeeManagement\\CoffeeManagement.csproj": {
+    "F:\\Download\\SE151252\\SWD392\\Project gr\\Project\\CafeManagement\\CoffeeManagement\\CoffeeManagement.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\PE_PRN221_TRIAL\\CafeManagement\\CoffeeManagement\\CoffeeManagement.csproj",
+        "projectUniqueName": "F:\\Download\\SE151252\\SWD392\\Project gr\\Project\\CafeManagement\\CoffeeManagement\\CoffeeManagement.csproj",
         "projectName": "CoffeeManagement",
-        "projectPath": "F:\\PE_PRN221_TRIAL\\CafeManagement\\CoffeeManagement\\CoffeeManagement.csproj",
+        "projectPath": "F:\\Download\\SE151252\\SWD392\\Project gr\\Project\\CafeManagement\\CoffeeManagement\\CoffeeManagement.csproj",
         "packagesPath": "C:\\Users\\ASUS\\.nuget\\packages\\",
-        "outputPath": "F:\\PE_PRN221_TRIAL\\CafeManagement\\CoffeeManagement\\obj\\",
+        "outputPath": "F:\\Download\\SE151252\\SWD392\\Project gr\\Project\\CafeManagement\\CoffeeManagement\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\ASUS\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -28,8 +28,8 @@
           "net5.0-windows7.0": {
             "targetAlias": "net5.0-windows",
             "projectReferences": {
-              "F:\\PE_PRN221_TRIAL\\CafeManagement\\Library\\Library.csproj": {
-                "projectPath": "F:\\PE_PRN221_TRIAL\\CafeManagement\\Library\\Library.csproj"
+              "F:\\Download\\SE151252\\SWD392\\Project gr\\Project\\CafeManagement\\Library\\Library.csproj": {
+                "projectPath": "F:\\Download\\SE151252\\SWD392\\Project gr\\Project\\CafeManagement\\Library\\Library.csproj"
               }
             }
           }
@@ -75,14 +75,14 @@
         }
       }
     },
-    "F:\\PE_PRN221_TRIAL\\CafeManagement\\Library\\Library.csproj": {
+    "F:\\Download\\SE151252\\SWD392\\Project gr\\Project\\CafeManagement\\Library\\Library.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\PE_PRN221_TRIAL\\CafeManagement\\Library\\Library.csproj",
+        "projectUniqueName": "F:\\Download\\SE151252\\SWD392\\Project gr\\Project\\CafeManagement\\Library\\Library.csproj",
         "projectName": "Library",
-        "projectPath": "F:\\PE_PRN221_TRIAL\\CafeManagement\\Library\\Library.csproj",
+        "projectPath": "F:\\Download\\SE151252\\SWD392\\Project gr\\Project\\CafeManagement\\Library\\Library.csproj",
         "packagesPath": "C:\\Users\\ASUS\\.nuget\\packages\\",
-        "outputPath": "F:\\PE_PRN221_TRIAL\\CafeManagement\\Library\\obj\\",
+        "outputPath": "F:\\Download\\SE151252\\SWD392\\Project gr\\Project\\CafeManagement\\Library\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\ASUS\\AppData\\Roaming\\NuGet\\NuGet.Config",

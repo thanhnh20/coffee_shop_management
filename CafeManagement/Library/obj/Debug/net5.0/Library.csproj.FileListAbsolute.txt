@@ -30,3 +30,19 @@ F:\PE_PRN221_TRIAL\CafeManagement\Library\obj\Debug\net5.0\refint\Library.dll
 F:\PE_PRN221_TRIAL\CafeManagement\Library\obj\Debug\net5.0\Library.pdb
 F:\PE_PRN221_TRIAL\CafeManagement\Library\obj\Debug\net5.0\Library.genruntimeconfig.cache
 F:\PE_PRN221_TRIAL\CafeManagement\Library\obj\Debug\net5.0\ref\Library.dll
+F:\Download\SE151252\SWD392\Project gr\Project\CafeManagement\Library\bin\Debug\net5.0\appsettings.json
+F:\Download\SE151252\SWD392\Project gr\Project\CafeManagement\Library\bin\Debug\net5.0\Library.deps.json
+F:\Download\SE151252\SWD392\Project gr\Project\CafeManagement\Library\bin\Debug\net5.0\Library.runtimeconfig.json
+F:\Download\SE151252\SWD392\Project gr\Project\CafeManagement\Library\bin\Debug\net5.0\Library.runtimeconfig.dev.json
+F:\Download\SE151252\SWD392\Project gr\Project\CafeManagement\Library\bin\Debug\net5.0\Library.dll
+F:\Download\SE151252\SWD392\Project gr\Project\CafeManagement\Library\bin\Debug\net5.0\Library.pdb
+F:\Download\SE151252\SWD392\Project gr\Project\CafeManagement\Library\obj\Debug\net5.0\Library.csproj.AssemblyReference.cache
+F:\Download\SE151252\SWD392\Project gr\Project\CafeManagement\Library\obj\Debug\net5.0\Library.GeneratedMSBuildEditorConfig.editorconfig
+F:\Download\SE151252\SWD392\Project gr\Project\CafeManagement\Library\obj\Debug\net5.0\Library.AssemblyInfoInputs.cache
+F:\Download\SE151252\SWD392\Project gr\Project\CafeManagement\Library\obj\Debug\net5.0\Library.AssemblyInfo.cs
+F:\Download\SE151252\SWD392\Project gr\Project\CafeManagement\Library\obj\Debug\net5.0\Library.csproj.CoreCompileInputs.cache
+F:\Download\SE151252\SWD392\Project gr\Project\CafeManagement\Library\obj\Debug\net5.0\Library.dll
+F:\Download\SE151252\SWD392\Project gr\Project\CafeManagement\Library\obj\Debug\net5.0\refint\Library.dll
+F:\Download\SE151252\SWD392\Project gr\Project\CafeManagement\Library\obj\Debug\net5.0\Library.pdb
+F:\Download\SE151252\SWD392\Project gr\Project\CafeManagement\Library\obj\Debug\net5.0\Library.genruntimeconfig.cache
+F:\Download\SE151252\SWD392\Project gr\Project\CafeManagement\Library\obj\Debug\net5.0\ref\Library.dll

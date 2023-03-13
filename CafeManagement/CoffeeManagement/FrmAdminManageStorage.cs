@@ -17,5 +17,11 @@ namespace CoffeeManagement
         {
             InitializeComponent();
         }
+
+        private void BtnAddNewIngreadient_Click(object sender, EventArgs e)
+        {
+            FrmAdminInsertIngredient frm  = new FrmAdminInsertIngredient();
+            frm.ShowDialog();
+        }
     }
 }

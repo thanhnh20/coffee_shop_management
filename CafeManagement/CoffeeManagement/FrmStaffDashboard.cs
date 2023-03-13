@@ -148,5 +148,15 @@ namespace CoffeeManagement
                 FrmStaffDashboard = this
             });
         }
+
+        private void btnCustomer_Click(object sender, EventArgs e)
+        {
+            // cấu hình nút khi được click
+            ActiveButton(sender, Color.FromName("Black"));
+            OpenChildForm(new FrmCustomerList()
+            {
+                FrmStaffDashboard = this
+            });
+        }
     }
 }

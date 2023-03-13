@@ -1,6 +1,7 @@
 ﻿using Library.Model;
-using Library.Repository;
-using Library.Repository.RepositoryIml;
+using Library.Service;
+using Library.Service.ServiceImplement;
+using Library.Utils;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -23,27 +24,36 @@ namespace CoffeeManagement
 
         private void BtnLogin_Click(object sender, EventArgs e)
         {
-            string error = "";
             //Code login
             string username = txtUsername.Text;
             string password = TxtPassword.Text;
-            if(username.Length == 0 || password.Length == 0)
+            
+            var accountInput = new Account()
             {
-                error = "Username and Password is required\n";
+                Username = username,
+                Password = password,
+            };
+            var resultError = MyHelper.CheckValid(accountInput);
+            if(resultError != null)
+            {
+                foreach (var failcase in resultError)
+                {
+                    MessageBox.Show(failcase.ErrorMessage, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
             else
             {
-                AccountRepository accountRepository = new AccountRepositoryIml();
-                var account = accountRepository.checkLogin(username, password);
-                if(account != null)
+                IAccountService accountService = new AccountServiceIml();
+                var account = accountService.checkLogin(username, password);
+                if (account != null)
                 {
-                    if(account.RoleId == 0)
+                    if (account.RoleId == 0)
                     {
                         FrmAdminDashboard frmAdminDashboard = new FrmAdminDashboard();
                         this.Hide();
                         frmAdminDashboard.ShowDialog();
                     }
-                    else if(account.RoleId == 1)
+                    else if (account.RoleId == 1)
                     {
                         FrmStaffDashboard frmStaffDashboard = new FrmStaffDashboard();
                         this.Hide();
@@ -52,10 +62,9 @@ namespace CoffeeManagement
                 }
                 else
                 {
-                    error = "Invalid username and password";
-                    MessageBox.Show(error, "Login - Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-            }                      
+                    MessageBox.Show("Username or Password is invalid", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }          
+            }             
         }
     }
 }

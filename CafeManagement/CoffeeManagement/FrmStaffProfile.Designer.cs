@@ -52,6 +52,7 @@
             this.lbDateJoinHeader = new System.Windows.Forms.Label();
             this.LbCompanyNameHader = new System.Windows.Forms.Label();
             this.PicsStaffHeader = new FontAwesome.Sharp.IconPictureBox();
+            this.btnEdit = new FontAwesome.Sharp.IconButton();
             this.PnInformationStudent.SuspendLayout();
             this.panel1.SuspendLayout();
             this.TblPnHeaderHome.SuspendLayout();
@@ -334,11 +335,27 @@
             this.PicsStaffHeader.TabIndex = 0;
             this.PicsStaffHeader.TabStop = false;
             // 
+            // btnEdit
+            // 
+            this.btnEdit.BackColor = System.Drawing.Color.Chocolate;
+            this.btnEdit.ForeColor = System.Drawing.Color.White;
+            this.btnEdit.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.btnEdit.IconColor = System.Drawing.Color.Black;
+            this.btnEdit.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnEdit.Location = new System.Drawing.Point(494, 518);
+            this.btnEdit.Name = "btnEdit";
+            this.btnEdit.Size = new System.Drawing.Size(123, 53);
+            this.btnEdit.TabIndex = 4;
+            this.btnEdit.Text = "Edit Profile";
+            this.btnEdit.UseVisualStyleBackColor = false;
+            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
+            // 
             // FrmStaffProfile
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1093, 604);
+            this.Controls.Add(this.btnEdit);
             this.Controls.Add(this.TblPnHeaderHome);
             this.Controls.Add(this.PnInformationStudent);
             this.MaximumSize = new System.Drawing.Size(1200, 700);
@@ -386,5 +403,6 @@
         private FontAwesome.Sharp.IconPictureBox PicsStaffHeader;
         private System.Windows.Forms.Label lbSalaryHeader;
         private System.Windows.Forms.Label lbDateJoinHeader;
+        private FontAwesome.Sharp.IconButton btnEdit;
     }
 }

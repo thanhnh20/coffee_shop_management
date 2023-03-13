@@ -10,18 +10,12 @@ using System.Windows.Forms;
 
 namespace CoffeeManagement
 {
-    public partial class FrmStaffProfile : Form
+    public partial class FrmCustomerList : Form
     {
         public FrmStaffDashboard FrmStaffDashboard { get; set; }
-        public FrmStaffProfile()
+        public FrmCustomerList()
         {
             InitializeComponent();
-        }
-
-        private void btnEdit_Click(object sender, EventArgs e)
-        {
-            FrmStaffEditProfile frmStaffEditProfile = new FrmStaffEditProfile();
-            frmStaffEditProfile.ShowDialog();
         }
     }
 }

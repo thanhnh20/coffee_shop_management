@@ -59,7 +59,7 @@
             // 
             this.LbHeader.AutoSize = true;
             this.LbHeader.Font = new System.Drawing.Font("Calibri", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.LbHeader.ForeColor = System.Drawing.Color.SlateBlue;
+            this.LbHeader.ForeColor = System.Drawing.Color.Orange;
             this.LbHeader.Location = new System.Drawing.Point(151, 20);
             this.LbHeader.Name = "LbHeader";
             this.LbHeader.Size = new System.Drawing.Size(370, 45);
@@ -85,7 +85,6 @@
             // cbStatus
             // 
             this.cbStatus.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.cbStatus.Enabled = false;
             this.cbStatus.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.cbStatus.FormattingEnabled = true;
             this.cbStatus.Location = new System.Drawing.Point(236, 136);
@@ -190,6 +189,7 @@
             this.Controls.Add(this.PnInformation);
             this.Controls.Add(this.PnHeader);
             this.Name = "FrmAdminInsertIngredient";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Create Ingredient";
             this.PnHeader.ResumeLayout(false);
             this.PnHeader.PerformLayout();

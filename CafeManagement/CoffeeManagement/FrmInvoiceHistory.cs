@@ -10,19 +10,13 @@ using System.Windows.Forms;
 
 namespace CoffeeManagement
 {
-    public partial class FrmAdminManageProductList : Form
+    public partial class FrmInvoiceHistory : Form
     {
-
         public FrmAdminDashboard FrmAdminDashboard { get; set; }
-        public FrmAdminManageProductList()
+
+        public FrmInvoiceHistory()
         {
             InitializeComponent();
-        }
-
-        private void BtnAddNewProduct_Click(object sender, EventArgs e)
-        {
-            FrmAdminInsertNewProduct frm = new FrmAdminInsertNewProduct();
-            frm.ShowDialog();
         }
     }
 }

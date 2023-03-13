@@ -31,6 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmStaffDashboard));
             this.PnDashBoard = new System.Windows.Forms.Panel();
             this.btnLogout = new FontAwesome.Sharp.IconButton();
+            this.btnCustomer = new FontAwesome.Sharp.IconButton();
             this.btnOrder = new FontAwesome.Sharp.IconButton();
             this.btnMyProfile = new FontAwesome.Sharp.IconButton();
             this.PnLogo = new System.Windows.Forms.Panel();
@@ -56,6 +57,7 @@
             // 
             this.PnDashBoard.BackColor = System.Drawing.Color.LemonChiffon;
             this.PnDashBoard.Controls.Add(this.btnLogout);
+            this.PnDashBoard.Controls.Add(this.btnCustomer);
             this.PnDashBoard.Controls.Add(this.btnOrder);
             this.PnDashBoard.Controls.Add(this.btnMyProfile);
             this.PnDashBoard.Controls.Add(this.PnLogo);
@@ -77,16 +79,39 @@
             this.btnLogout.IconColor = System.Drawing.Color.Black;
             this.btnLogout.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnLogout.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnLogout.Location = new System.Drawing.Point(0, 280);
+            this.btnLogout.Location = new System.Drawing.Point(0, 345);
             this.btnLogout.Name = "btnLogout";
             this.btnLogout.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
             this.btnLogout.Size = new System.Drawing.Size(250, 65);
-            this.btnLogout.TabIndex = 7;
+            this.btnLogout.TabIndex = 8;
             this.btnLogout.Text = "Log out";
             this.btnLogout.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnLogout.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnLogout.UseVisualStyleBackColor = true;
             this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
+            // 
+            // btnCustomer
+            // 
+            this.btnCustomer.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCustomer.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnCustomer.FlatAppearance.BorderSize = 0;
+            this.btnCustomer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCustomer.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnCustomer.ForeColor = System.Drawing.Color.Black;
+            this.btnCustomer.IconChar = FontAwesome.Sharp.IconChar.UserFriends;
+            this.btnCustomer.IconColor = System.Drawing.Color.Black;
+            this.btnCustomer.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnCustomer.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCustomer.Location = new System.Drawing.Point(0, 280);
+            this.btnCustomer.Name = "btnCustomer";
+            this.btnCustomer.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
+            this.btnCustomer.Size = new System.Drawing.Size(250, 65);
+            this.btnCustomer.TabIndex = 9;
+            this.btnCustomer.Text = "Customer";
+            this.btnCustomer.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCustomer.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnCustomer.UseVisualStyleBackColor = true;
+            this.btnCustomer.Click += new System.EventHandler(this.btnCustomer_Click);
             // 
             // btnOrder
             // 
@@ -283,7 +308,7 @@
         #endregion
 
         private System.Windows.Forms.Panel PnDashBoard;
-        private FontAwesome.Sharp.IconButton btnLogout;
+        private FontAwesome.Sharp.IconButton btnCustomer;
         private FontAwesome.Sharp.IconButton btnMyProfile;
         private System.Windows.Forms.Panel PnHeader;
         private System.Windows.Forms.Label label1;
@@ -297,5 +322,6 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.PictureBox PicLogo;
+        private FontAwesome.Sharp.IconButton btnLogout;
     }
 }

@@ -34,7 +34,7 @@
             this.btnStorage = new FontAwesome.Sharp.IconButton();
             this.btnAccount = new FontAwesome.Sharp.IconButton();
             this.btnProduct = new FontAwesome.Sharp.IconButton();
-            this.btnMyProfile = new FontAwesome.Sharp.IconButton();
+            this.btnInvoiceHistory = new FontAwesome.Sharp.IconButton();
             this.PnLogo = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.PicLogo = new System.Windows.Forms.PictureBox();
@@ -58,7 +58,7 @@
             this.PnDashBoard.Controls.Add(this.btnStorage);
             this.PnDashBoard.Controls.Add(this.btnAccount);
             this.PnDashBoard.Controls.Add(this.btnProduct);
-            this.PnDashBoard.Controls.Add(this.btnMyProfile);
+            this.PnDashBoard.Controls.Add(this.btnInvoiceHistory);
             this.PnDashBoard.Controls.Add(this.PnLogo);
             this.PnDashBoard.Dock = System.Windows.Forms.DockStyle.Left;
             this.PnDashBoard.Location = new System.Drawing.Point(0, 0);
@@ -160,27 +160,28 @@
             this.btnProduct.UseVisualStyleBackColor = false;
             this.btnProduct.Click += new System.EventHandler(this.btnProduct_Click);
             // 
-            // btnMyProfile
+            // btnInvoiceHistory
             // 
-            this.btnMyProfile.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnMyProfile.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnMyProfile.FlatAppearance.BorderSize = 0;
-            this.btnMyProfile.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMyProfile.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnMyProfile.ForeColor = System.Drawing.Color.Black;
-            this.btnMyProfile.IconChar = FontAwesome.Sharp.IconChar.IdCard;
-            this.btnMyProfile.IconColor = System.Drawing.Color.Black;
-            this.btnMyProfile.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnMyProfile.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnMyProfile.Location = new System.Drawing.Point(0, 150);
-            this.btnMyProfile.Name = "btnMyProfile";
-            this.btnMyProfile.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
-            this.btnMyProfile.Size = new System.Drawing.Size(250, 65);
-            this.btnMyProfile.TabIndex = 2;
-            this.btnMyProfile.Text = "My Profile";
-            this.btnMyProfile.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnMyProfile.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnMyProfile.UseVisualStyleBackColor = true;
+            this.btnInvoiceHistory.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnInvoiceHistory.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnInvoiceHistory.FlatAppearance.BorderSize = 0;
+            this.btnInvoiceHistory.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnInvoiceHistory.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnInvoiceHistory.ForeColor = System.Drawing.Color.Black;
+            this.btnInvoiceHistory.IconChar = FontAwesome.Sharp.IconChar.History;
+            this.btnInvoiceHistory.IconColor = System.Drawing.Color.Black;
+            this.btnInvoiceHistory.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnInvoiceHistory.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnInvoiceHistory.Location = new System.Drawing.Point(0, 150);
+            this.btnInvoiceHistory.Name = "btnInvoiceHistory";
+            this.btnInvoiceHistory.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
+            this.btnInvoiceHistory.Size = new System.Drawing.Size(250, 65);
+            this.btnInvoiceHistory.TabIndex = 2;
+            this.btnInvoiceHistory.Text = "Invoice History";
+            this.btnInvoiceHistory.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnInvoiceHistory.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnInvoiceHistory.UseVisualStyleBackColor = true;
+            this.btnInvoiceHistory.Click += new System.EventHandler(this.btnInvoiceHistory_Click);
             // 
             // PnLogo
             // 
@@ -311,7 +312,7 @@
         private System.Windows.Forms.Panel PnHeader;
         private System.Windows.Forms.Label label1;
         private FontAwesome.Sharp.IconPictureBox PicIconControlHeader;
-        private FontAwesome.Sharp.IconButton btnMyProfile;
+        private FontAwesome.Sharp.IconButton btnInvoiceHistory;
         private System.Windows.Forms.Label LbWelcomeHeader;
         private System.Windows.Forms.Label LbControlHeader;
         private System.Windows.Forms.Panel PnChildForm;

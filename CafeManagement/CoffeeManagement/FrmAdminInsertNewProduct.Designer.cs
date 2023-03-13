@@ -67,7 +67,7 @@
             // 
             this.LbHeader.AutoSize = true;
             this.LbHeader.Font = new System.Drawing.Font("Calibri", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.LbHeader.ForeColor = System.Drawing.Color.SlateBlue;
+            this.LbHeader.ForeColor = System.Drawing.Color.Orange;
             this.LbHeader.Location = new System.Drawing.Point(151, 20);
             this.LbHeader.Name = "LbHeader";
             this.LbHeader.Size = new System.Drawing.Size(335, 45);
@@ -125,7 +125,6 @@
             // cbStatus
             // 
             this.cbStatus.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.cbStatus.Enabled = false;
             this.cbStatus.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.cbStatus.FormattingEnabled = true;
             this.cbStatus.Location = new System.Drawing.Point(236, 249);
@@ -146,7 +145,6 @@
             // CbCategory
             // 
             this.CbCategory.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.CbCategory.Enabled = false;
             this.CbCategory.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.CbCategory.FormattingEnabled = true;
             this.CbCategory.Location = new System.Drawing.Point(236, 189);

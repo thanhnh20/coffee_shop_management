@@ -68,6 +68,7 @@
             this.BtnAddNewProduct.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.BtnAddNewProduct.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.BtnAddNewProduct.UseVisualStyleBackColor = true;
+            this.BtnAddNewProduct.Click += new System.EventHandler(this.BtnAddNewProduct_Click);
             // 
             // LbFilterCompanyList
             // 

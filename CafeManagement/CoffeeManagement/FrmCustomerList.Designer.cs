@@ -1,6 +1,6 @@
 ﻿namespace CoffeeManagement
 {
-    partial class FrmAdminManageStorage
+    partial class FrmCustomerList
     {
         /// <summary>
         /// Required designer variable.
@@ -29,11 +29,11 @@
         private void InitializeComponent()
         {
             this.PnFilter = new System.Windows.Forms.Panel();
-            this.BtnAddNewIngreadient = new FontAwesome.Sharp.IconButton();
+            this.BtnAddNewCustomer = new FontAwesome.Sharp.IconButton();
             this.LbFilterCompanyList = new System.Windows.Forms.Label();
-            this.CbFilterIngredientList = new System.Windows.Forms.ComboBox();
+            this.CbFilterCustomerList = new System.Windows.Forms.ComboBox();
             this.BtnSearchList = new FontAwesome.Sharp.IconButton();
-            this.TxtSearchIngredientFollowingFilter = new System.Windows.Forms.TextBox();
+            this.TxtSearchCustomerFollowingFilter = new System.Windows.Forms.TextBox();
             this.DgvIngredientList = new System.Windows.Forms.DataGridView();
             this.PnFilter.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DgvIngredientList)).BeginInit();
@@ -42,33 +42,32 @@
             // PnFilter
             // 
             this.PnFilter.BackColor = System.Drawing.SystemColors.Control;
-            this.PnFilter.Controls.Add(this.BtnAddNewIngreadient);
+            this.PnFilter.Controls.Add(this.BtnAddNewCustomer);
             this.PnFilter.Controls.Add(this.LbFilterCompanyList);
-            this.PnFilter.Controls.Add(this.CbFilterIngredientList);
+            this.PnFilter.Controls.Add(this.CbFilterCustomerList);
             this.PnFilter.Controls.Add(this.BtnSearchList);
-            this.PnFilter.Controls.Add(this.TxtSearchIngredientFollowingFilter);
+            this.PnFilter.Controls.Add(this.TxtSearchCustomerFollowingFilter);
             this.PnFilter.Dock = System.Windows.Forms.DockStyle.Top;
             this.PnFilter.Location = new System.Drawing.Point(0, 0);
             this.PnFilter.Name = "PnFilter";
             this.PnFilter.Size = new System.Drawing.Size(1064, 116);
-            this.PnFilter.TabIndex = 6;
+            this.PnFilter.TabIndex = 7;
             // 
-            // BtnAddNewIngreadient
+            // BtnAddNewCustomer
             // 
-            this.BtnAddNewIngreadient.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.BtnAddNewIngreadient.IconChar = FontAwesome.Sharp.IconChar.Plus;
-            this.BtnAddNewIngreadient.IconColor = System.Drawing.Color.Black;
-            this.BtnAddNewIngreadient.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.BtnAddNewIngreadient.IconSize = 25;
-            this.BtnAddNewIngreadient.Location = new System.Drawing.Point(955, 86);
-            this.BtnAddNewIngreadient.Name = "BtnAddNewIngreadient";
-            this.BtnAddNewIngreadient.Size = new System.Drawing.Size(106, 31);
-            this.BtnAddNewIngreadient.TabIndex = 4;
-            this.BtnAddNewIngreadient.Text = "Insert";
-            this.BtnAddNewIngreadient.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.BtnAddNewIngreadient.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.BtnAddNewIngreadient.UseVisualStyleBackColor = true;
-            this.BtnAddNewIngreadient.Click += new System.EventHandler(this.BtnAddNewIngreadient_Click);
+            this.BtnAddNewCustomer.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.BtnAddNewCustomer.IconChar = FontAwesome.Sharp.IconChar.Plus;
+            this.BtnAddNewCustomer.IconColor = System.Drawing.Color.Black;
+            this.BtnAddNewCustomer.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.BtnAddNewCustomer.IconSize = 25;
+            this.BtnAddNewCustomer.Location = new System.Drawing.Point(955, 86);
+            this.BtnAddNewCustomer.Name = "BtnAddNewCustomer";
+            this.BtnAddNewCustomer.Size = new System.Drawing.Size(106, 31);
+            this.BtnAddNewCustomer.TabIndex = 4;
+            this.BtnAddNewCustomer.Text = "Insert";
+            this.BtnAddNewCustomer.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.BtnAddNewCustomer.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.BtnAddNewCustomer.UseVisualStyleBackColor = true;
             // 
             // LbFilterCompanyList
             // 
@@ -80,18 +79,18 @@
             this.LbFilterCompanyList.TabIndex = 3;
             this.LbFilterCompanyList.Text = "Search By: ";
             // 
-            // CbFilterIngredientList
+            // CbFilterCustomerList
             // 
-            this.CbFilterIngredientList.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.CbFilterIngredientList.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.CbFilterIngredientList.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.CbFilterIngredientList.FormattingEnabled = true;
-            this.CbFilterIngredientList.Items.AddRange(new object[] {
+            this.CbFilterCustomerList.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.CbFilterCustomerList.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.CbFilterCustomerList.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.CbFilterCustomerList.FormattingEnabled = true;
+            this.CbFilterCustomerList.Items.AddRange(new object[] {
             "Company Name"});
-            this.CbFilterIngredientList.Location = new System.Drawing.Point(189, 23);
-            this.CbFilterIngredientList.Name = "CbFilterIngredientList";
-            this.CbFilterIngredientList.Size = new System.Drawing.Size(178, 32);
-            this.CbFilterIngredientList.TabIndex = 2;
+            this.CbFilterCustomerList.Location = new System.Drawing.Point(189, 23);
+            this.CbFilterCustomerList.Name = "CbFilterCustomerList";
+            this.CbFilterCustomerList.Size = new System.Drawing.Size(178, 32);
+            this.CbFilterCustomerList.TabIndex = 2;
             // 
             // BtnSearchList
             // 
@@ -107,13 +106,13 @@
             this.BtnSearchList.TabIndex = 1;
             this.BtnSearchList.UseVisualStyleBackColor = true;
             // 
-            // TxtSearchIngredientFollowingFilter
+            // TxtSearchCustomerFollowingFilter
             // 
-            this.TxtSearchIngredientFollowingFilter.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.TxtSearchIngredientFollowingFilter.Location = new System.Drawing.Point(401, 23);
-            this.TxtSearchIngredientFollowingFilter.Name = "TxtSearchIngredientFollowingFilter";
-            this.TxtSearchIngredientFollowingFilter.Size = new System.Drawing.Size(490, 32);
-            this.TxtSearchIngredientFollowingFilter.TabIndex = 0;
+            this.TxtSearchCustomerFollowingFilter.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.TxtSearchCustomerFollowingFilter.Location = new System.Drawing.Point(401, 23);
+            this.TxtSearchCustomerFollowingFilter.Name = "TxtSearchCustomerFollowingFilter";
+            this.TxtSearchCustomerFollowingFilter.Size = new System.Drawing.Size(490, 32);
+            this.TxtSearchCustomerFollowingFilter.TabIndex = 0;
             // 
             // DgvIngredientList
             // 
@@ -124,17 +123,17 @@
             this.DgvIngredientList.RowHeadersWidth = 51;
             this.DgvIngredientList.RowTemplate.Height = 29;
             this.DgvIngredientList.Size = new System.Drawing.Size(1064, 435);
-            this.DgvIngredientList.TabIndex = 7;
+            this.DgvIngredientList.TabIndex = 8;
             // 
-            // FrmAdminManageStorage
+            // FrmCustomerList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1064, 551);
             this.Controls.Add(this.DgvIngredientList);
             this.Controls.Add(this.PnFilter);
-            this.Name = "FrmAdminManageStorage";
-            this.Text = "Manage Storage";
+            this.Name = "FrmCustomerList";
+            this.Text = "Customer List";
             this.PnFilter.ResumeLayout(false);
             this.PnFilter.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DgvIngredientList)).EndInit();
@@ -145,11 +144,11 @@
         #endregion
 
         private System.Windows.Forms.Panel PnFilter;
-        private FontAwesome.Sharp.IconButton BtnAddNewIngreadient;
+        private FontAwesome.Sharp.IconButton BtnAddNewCustomer;
         private System.Windows.Forms.Label LbFilterCompanyList;
-        private System.Windows.Forms.ComboBox CbFilterIngredientList;
+        private System.Windows.Forms.ComboBox CbFilterCustomerList;
         private FontAwesome.Sharp.IconButton BtnSearchList;
-        private System.Windows.Forms.TextBox TxtSearchIngredientFollowingFilter;
+        private System.Windows.Forms.TextBox TxtSearchCustomerFollowingFilter;
         private System.Windows.Forms.DataGridView DgvIngredientList;
     }
 }

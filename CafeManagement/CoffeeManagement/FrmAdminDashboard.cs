@@ -161,5 +161,14 @@ namespace CoffeeManagement
             newThread.Start();
             this.Close();
         }
+
+        private void btnInvoiceHistory_Click(object sender, EventArgs e)
+        {
+            ActiveButton(sender, Color.FromName("Black"));
+            OpenChildForm(new FrmInvoiceHistory()
+            {
+                FrmAdminDashboard = this
+            });
+        }
     }
 }

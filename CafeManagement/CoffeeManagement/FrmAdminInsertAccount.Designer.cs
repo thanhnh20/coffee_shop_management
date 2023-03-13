@@ -41,6 +41,8 @@
             this.lbPassword = new System.Windows.Forms.Label();
             this.txtUsername = new System.Windows.Forms.TextBox();
             this.lbUsername = new System.Windows.Forms.Label();
+            this.cbStatus = new System.Windows.Forms.ComboBox();
+            this.lbStatus = new System.Windows.Forms.Label();
             this.PnHeader.SuspendLayout();
             this.PnInformation.SuspendLayout();
             this.PnControls.SuspendLayout();
@@ -59,7 +61,7 @@
             // 
             this.LbHeader.AutoSize = true;
             this.LbHeader.Font = new System.Drawing.Font("Calibri", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.LbHeader.ForeColor = System.Drawing.Color.SlateBlue;
+            this.LbHeader.ForeColor = System.Drawing.Color.Orange;
             this.LbHeader.Location = new System.Drawing.Point(151, 20);
             this.LbHeader.Name = "LbHeader";
             this.LbHeader.Size = new System.Drawing.Size(341, 45);
@@ -68,6 +70,8 @@
             // 
             // PnInformation
             // 
+            this.PnInformation.Controls.Add(this.cbStatus);
+            this.PnInformation.Controls.Add(this.lbStatus);
             this.PnInformation.Controls.Add(this.txtConfirmPassword);
             this.PnInformation.Controls.Add(this.lbConfirmPassword);
             this.PnInformation.Controls.Add(this.PnLayout1);
@@ -79,7 +83,7 @@
             this.PnInformation.Dock = System.Windows.Forms.DockStyle.Fill;
             this.PnInformation.Location = new System.Drawing.Point(0, 77);
             this.PnInformation.Name = "PnInformation";
-            this.PnInformation.Size = new System.Drawing.Size(650, 329);
+            this.PnInformation.Size = new System.Drawing.Size(650, 382);
             this.PnInformation.TabIndex = 5;
             // 
             // txtConfirmPassword
@@ -105,7 +109,7 @@
             // 
             this.PnLayout1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(113)))), ((int)(((byte)(36)))));
             this.PnLayout1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.PnLayout1.Location = new System.Drawing.Point(0, 210);
+            this.PnLayout1.Location = new System.Drawing.Point(0, 263);
             this.PnLayout1.Name = "PnLayout1";
             this.PnLayout1.Size = new System.Drawing.Size(650, 1);
             this.PnLayout1.TabIndex = 11;
@@ -115,7 +119,7 @@
             this.PnControls.Controls.Add(this.BtnCreateAccount);
             this.PnControls.Controls.Add(this.BtnCancel);
             this.PnControls.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.PnControls.Location = new System.Drawing.Point(0, 211);
+            this.PnControls.Location = new System.Drawing.Point(0, 264);
             this.PnControls.Name = "PnControls";
             this.PnControls.Size = new System.Drawing.Size(650, 118);
             this.PnControls.TabIndex = 10;
@@ -180,14 +184,35 @@
             this.lbUsername.TabIndex = 6;
             this.lbUsername.Text = "Username:";
             // 
+            // cbStatus
+            // 
+            this.cbStatus.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.cbStatus.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.cbStatus.FormattingEnabled = true;
+            this.cbStatus.Location = new System.Drawing.Point(236, 203);
+            this.cbStatus.Name = "cbStatus";
+            this.cbStatus.Size = new System.Drawing.Size(338, 32);
+            this.cbStatus.TabIndex = 22;
+            // 
+            // lbStatus
+            // 
+            this.lbStatus.AutoSize = true;
+            this.lbStatus.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lbStatus.Location = new System.Drawing.Point(67, 211);
+            this.lbStatus.Name = "lbStatus";
+            this.lbStatus.Size = new System.Drawing.Size(62, 24);
+            this.lbStatus.TabIndex = 21;
+            this.lbStatus.Text = "Status";
+            // 
             // FrmAdminInsertAccount
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(650, 406);
+            this.ClientSize = new System.Drawing.Size(650, 459);
             this.Controls.Add(this.PnInformation);
             this.Controls.Add(this.PnHeader);
             this.Name = "FrmAdminInsertAccount";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Create Account";
             this.PnHeader.ResumeLayout(false);
             this.PnHeader.PerformLayout();
@@ -213,5 +238,7 @@
         private System.Windows.Forms.TextBox txtUsername;
         private System.Windows.Forms.Label lbUsername;
         private System.Windows.Forms.TextBox txtConfirmPassword;
+        private System.Windows.Forms.ComboBox cbStatus;
+        private System.Windows.Forms.Label lbStatus;
     }
 }

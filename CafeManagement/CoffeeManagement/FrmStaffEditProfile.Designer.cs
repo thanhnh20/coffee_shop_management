@@ -101,7 +101,7 @@
             // 
             this.LbHeader.AutoSize = true;
             this.LbHeader.Font = new System.Drawing.Font("Calibri", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.LbHeader.ForeColor = System.Drawing.Color.SlateBlue;
+            this.LbHeader.ForeColor = System.Drawing.Color.Orange;
             this.LbHeader.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.LbHeader.Location = new System.Drawing.Point(158, 19);
             this.LbHeader.Name = "LbHeader";
