@@ -20,14 +20,19 @@ namespace Library.Utils
             return config["ConnectionStrings:CoffeeShopManagement"];
         }
 
-        public static List<ValidationResult> CheckValid(object entity)
+        public static string CheckValid(object entity)
         {
             var valid = new ValidationContext(entity);
             List<ValidationResult> results = new();
             var isValid = Validator.TryValidateObject(entity, valid, results, true);
             if (!isValid)
-            {               
-                return results;
+            {
+                var msgError = "";
+                foreach (var error in results)
+                {
+                    msgError += error.ErrorMessage + "\n";
+                }
+                return msgError;
             }
             return null;
         }

@@ -36,10 +36,7 @@ namespace CoffeeManagement
             var resultError = MyHelper.CheckValid(accountInput);
             if(resultError != null)
             {
-                foreach (var failcase in resultError)
-                {
-                    MessageBox.Show(failcase.ErrorMessage, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
+                MessageBox.Show(resultError, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {
@@ -47,18 +44,25 @@ namespace CoffeeManagement
                 var account = accountService.checkLogin(username, password);
                 if (account != null)
                 {
-                    if (account.RoleId == 0)
+                    if(account.Status != 0)
                     {
-                        FrmAdminDashboard frmAdminDashboard = new FrmAdminDashboard();
-                        this.Hide();
-                        frmAdminDashboard.ShowDialog();
+                        if (account.RoleId == 0)
+                        {
+                            FrmAdminDashboard frmAdminDashboard = new FrmAdminDashboard();
+                            this.Hide();
+                            frmAdminDashboard.ShowDialog();
+                        }
+                        else if (account.RoleId == 1)
+                        {
+                            FrmStaffDashboard frmStaffDashboard = new FrmStaffDashboard();
+                            this.Hide();
+                            frmStaffDashboard.ShowDialog();
+                        }
                     }
-                    else if (account.RoleId == 1)
+                    else
                     {
-                        FrmStaffDashboard frmStaffDashboard = new FrmStaffDashboard();
-                        this.Hide();
-                        frmStaffDashboard.ShowDialog();
-                    }
+                        MessageBox.Show("Account not allow to this system", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }               
                 }
                 else
                 {
