@@ -1,24 +1,28 @@
 {
   "format": 1,
   "restore": {
-    "F:\\Download\\SE151252\\SWD392\\Project gr\\Project\\CafeManagement\\CoffeeManagement\\CoffeeManagement.csproj": {}
+    "D:\\SWD\\db_coffee_shop_management\\CafeManagement\\CoffeeManagement\\CoffeeManagement.csproj": {}
   },
   "projects": {
-    "F:\\Download\\SE151252\\SWD392\\Project gr\\Project\\CafeManagement\\CoffeeManagement\\CoffeeManagement.csproj": {
+    "D:\\SWD\\db_coffee_shop_management\\CafeManagement\\CoffeeManagement\\CoffeeManagement.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\Download\\SE151252\\SWD392\\Project gr\\Project\\CafeManagement\\CoffeeManagement\\CoffeeManagement.csproj",
+        "projectUniqueName": "D:\\SWD\\db_coffee_shop_management\\CafeManagement\\CoffeeManagement\\CoffeeManagement.csproj",
         "projectName": "CoffeeManagement",
-        "projectPath": "F:\\Download\\SE151252\\SWD392\\Project gr\\Project\\CafeManagement\\CoffeeManagement\\CoffeeManagement.csproj",
-        "packagesPath": "C:\\Users\\ASUS\\.nuget\\packages\\",
-        "outputPath": "F:\\Download\\SE151252\\SWD392\\Project gr\\Project\\CafeManagement\\CoffeeManagement\\obj\\",
+        "projectPath": "D:\\SWD\\db_coffee_shop_management\\CafeManagement\\CoffeeManagement\\CoffeeManagement.csproj",
+        "packagesPath": "C:\\Users\\ADMIN\\.nuget\\packages\\",
+        "outputPath": "D:\\SWD\\db_coffee_shop_management\\CafeManagement\\CoffeeManagement\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "A:\\Microsoft Visual Studio\\Tools\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\ASUS\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\ADMIN\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "net5.0-windows7.0"
+          "net5.0-windows"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
@@ -28,8 +32,8 @@
           "net5.0-windows7.0": {
             "targetAlias": "net5.0-windows",
             "projectReferences": {
-              "F:\\Download\\SE151252\\SWD392\\Project gr\\Project\\CafeManagement\\Library\\Library.csproj": {
-                "projectPath": "F:\\Download\\SE151252\\SWD392\\Project gr\\Project\\CafeManagement\\Library\\Library.csproj"
+              "D:\\SWD\\db_coffee_shop_management\\CafeManagement\\Library\\Library.csproj": {
+                "projectPath": "D:\\SWD\\db_coffee_shop_management\\CafeManagement\\Library\\Library.csproj"
               }
             }
           }
@@ -51,6 +55,38 @@
             "FontAwesome.Sharp": {
               "target": "Package",
               "version": "[5.15.4, )"
+            },
+            "Microsoft.Data.SqlClient": {
+              "target": "Package",
+              "version": "[3.0.1, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[5.0.17, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[5.0.17, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[5.0.17, )"
+            },
+            "Microsoft.Extensions.Configuration": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "Microsoft.Extensions.Configuration.Json": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "System.Collections": {
+              "target": "Package",
+              "version": "[4.3.0, )"
             }
           },
           "imports": [
@@ -59,7 +95,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -71,21 +108,25 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.408\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.103\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "F:\\Download\\SE151252\\SWD392\\Project gr\\Project\\CafeManagement\\Library\\Library.csproj": {
+    "D:\\SWD\\db_coffee_shop_management\\CafeManagement\\Library\\Library.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\Download\\SE151252\\SWD392\\Project gr\\Project\\CafeManagement\\Library\\Library.csproj",
+        "projectUniqueName": "D:\\SWD\\db_coffee_shop_management\\CafeManagement\\Library\\Library.csproj",
         "projectName": "Library",
-        "projectPath": "F:\\Download\\SE151252\\SWD392\\Project gr\\Project\\CafeManagement\\Library\\Library.csproj",
-        "packagesPath": "C:\\Users\\ASUS\\.nuget\\packages\\",
-        "outputPath": "F:\\Download\\SE151252\\SWD392\\Project gr\\Project\\CafeManagement\\Library\\obj\\",
+        "projectPath": "D:\\SWD\\db_coffee_shop_management\\CafeManagement\\Library\\Library.csproj",
+        "packagesPath": "C:\\Users\\ADMIN\\.nuget\\packages\\",
+        "outputPath": "D:\\SWD\\db_coffee_shop_management\\CafeManagement\\Library\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "A:\\Microsoft Visual Studio\\Tools\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\ASUS\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\ADMIN\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -111,19 +152,37 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "dependencies": {
+            "Microsoft.Data.SqlClient": {
+              "target": "Package",
+              "version": "[3.0.1, )"
+            },
             "Microsoft.EntityFrameworkCore.Design": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[5.0.14, )"
+              "version": "[5.0.17, )"
             },
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
-              "version": "[5.0.14, )"
+              "version": "[5.0.17, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[5.0.17, )"
+            },
+            "Microsoft.Extensions.Configuration": {
+              "target": "Package",
+              "version": "[5.0.0, )"
             },
             "Microsoft.Extensions.Configuration.Json": {
               "target": "Package",
               "version": "[5.0.0, )"
+            },
+            "System.Collections": {
+              "target": "Package",
+              "version": "[4.3.0, )"
             }
           },
           "imports": [
@@ -132,7 +191,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -141,7 +201,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.408\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.103\\RuntimeIdentifierGraph.json"
         }
       }
     }
