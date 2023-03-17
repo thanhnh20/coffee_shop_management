@@ -281,6 +281,7 @@ F:\Download\SE151252\SWD392\Project gr\Project\CafeManagement\CoffeeManagement\o
 F:\Download\SE151252\SWD392\Project gr\Project\CafeManagement\CoffeeManagement\obj\Debug\net5.0-windows\CoffeeManagement.pdb
 F:\Download\SE151252\SWD392\Project gr\Project\CafeManagement\CoffeeManagement\obj\Debug\net5.0-windows\CoffeeManagement.genruntimeconfig.cache
 F:\Download\SE151252\SWD392\Project gr\Project\CafeManagement\CoffeeManagement\obj\Debug\net5.0-windows\ref\CoffeeManagement.dll
+<<<<<<< HEAD
 D:\SWD\db_coffee_shop_management\CafeManagement\CoffeeManagement\bin\Debug\net5.0-windows\CoffeeManagement.exe
 D:\SWD\db_coffee_shop_management\CafeManagement\CoffeeManagement\bin\Debug\net5.0-windows\appsettings.json
 D:\SWD\db_coffee_shop_management\CafeManagement\CoffeeManagement\bin\Debug\net5.0-windows\CoffeeManagement.deps.json
@@ -378,3 +379,5 @@ D:\SWD\db_coffee_shop_management\CafeManagement\CoffeeManagement\obj\Debug\net5.
 D:\SWD\db_coffee_shop_management\CafeManagement\CoffeeManagement\obj\Debug\net5.0-windows\CoffeeManagement.genruntimeconfig.cache
 D:\SWD\db_coffee_shop_management\CafeManagement\CoffeeManagement\obj\Debug\net5.0-windows\ref\CoffeeManagement.dll
 D:\SWD\db_coffee_shop_management\CafeManagement\CoffeeManagement\obj\Debug\net5.0-windows\CoffeeManagement.FrmAdminUpdateAccount.resources
+=======
+>>>>>>> parent of e88e793 (Fix Bugs of git)
