@@ -46,3 +46,19 @@ F:\Download\SE151252\SWD392\Project gr\Project\CafeManagement\Library\obj\Debug\
 F:\Download\SE151252\SWD392\Project gr\Project\CafeManagement\Library\obj\Debug\net5.0\Library.pdb
 F:\Download\SE151252\SWD392\Project gr\Project\CafeManagement\Library\obj\Debug\net5.0\Library.genruntimeconfig.cache
 F:\Download\SE151252\SWD392\Project gr\Project\CafeManagement\Library\obj\Debug\net5.0\ref\Library.dll
+D:\SWD\db_coffee_shop_management\CafeManagement\Library\bin\Debug\net5.0\appsettings.json
+D:\SWD\db_coffee_shop_management\CafeManagement\Library\bin\Debug\net5.0\Library.deps.json
+D:\SWD\db_coffee_shop_management\CafeManagement\Library\bin\Debug\net5.0\Library.runtimeconfig.json
+D:\SWD\db_coffee_shop_management\CafeManagement\Library\bin\Debug\net5.0\Library.runtimeconfig.dev.json
+D:\SWD\db_coffee_shop_management\CafeManagement\Library\bin\Debug\net5.0\Library.dll
+D:\SWD\db_coffee_shop_management\CafeManagement\Library\bin\Debug\net5.0\Library.pdb
+D:\SWD\db_coffee_shop_management\CafeManagement\Library\obj\Debug\net5.0\Library.csproj.AssemblyReference.cache
+D:\SWD\db_coffee_shop_management\CafeManagement\Library\obj\Debug\net5.0\Library.GeneratedMSBuildEditorConfig.editorconfig
+D:\SWD\db_coffee_shop_management\CafeManagement\Library\obj\Debug\net5.0\Library.AssemblyInfoInputs.cache
+D:\SWD\db_coffee_shop_management\CafeManagement\Library\obj\Debug\net5.0\Library.AssemblyInfo.cs
+D:\SWD\db_coffee_shop_management\CafeManagement\Library\obj\Debug\net5.0\Library.csproj.CoreCompileInputs.cache
+D:\SWD\db_coffee_shop_management\CafeManagement\Library\obj\Debug\net5.0\Library.dll
+D:\SWD\db_coffee_shop_management\CafeManagement\Library\obj\Debug\net5.0\refint\Library.dll
+D:\SWD\db_coffee_shop_management\CafeManagement\Library\obj\Debug\net5.0\Library.pdb
+D:\SWD\db_coffee_shop_management\CafeManagement\Library\obj\Debug\net5.0\Library.genruntimeconfig.cache
+D:\SWD\db_coffee_shop_management\CafeManagement\Library\obj\Debug\net5.0\ref\Library.dll
