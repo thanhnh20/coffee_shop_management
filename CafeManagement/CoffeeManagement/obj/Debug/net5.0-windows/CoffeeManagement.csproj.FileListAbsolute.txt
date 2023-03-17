@@ -377,3 +377,7 @@ D:\SWD\db_coffee_shop_management\CafeManagement\CoffeeManagement\obj\Debug\net5.
 D:\SWD\db_coffee_shop_management\CafeManagement\CoffeeManagement\obj\Debug\net5.0-windows\CoffeeManagement.pdb
 D:\SWD\db_coffee_shop_management\CafeManagement\CoffeeManagement\obj\Debug\net5.0-windows\CoffeeManagement.genruntimeconfig.cache
 D:\SWD\db_coffee_shop_management\CafeManagement\CoffeeManagement\obj\Debug\net5.0-windows\ref\CoffeeManagement.dll
+<<<<<<< HEAD
+=======
+D:\SWD\db_coffee_shop_management\CafeManagement\CoffeeManagement\obj\Debug\net5.0-windows\CoffeeManagement.FrmAdminUpdateAccount.resources
+>>>>>>> 796617b80527656193a787505ec464c5228c8b8b
