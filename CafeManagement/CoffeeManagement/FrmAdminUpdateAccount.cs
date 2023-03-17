@@ -17,15 +17,55 @@ using System.Globalization;
 
 namespace CoffeeManagement
 {
-    public partial class FrmAdminInsertAccount : Form
+    public partial class FrmAdminUpdateAccount : Form
     {
-        public FrmAdminInsertAccount()
+        private int staid;
+        public FrmAdminUpdateAccount(Account account)
         {
             InitializeComponent();
-            LoadStatus();
+            LoadData(account);
+            LoadStatus(account);
+        }
+        //0 - Inactive/ 1 - Active
+        private void LoadStatus(Account account)
+        {
+            Dictionary<int, string> comboSource = new Dictionary<int, string>() {
+                {0,"InActive" },{1,"Active" }
+            };
+            cbStatus.DataSource = new BindingSource(comboSource, null);
+            cbStatus.DisplayMember = "Value";
+            cbStatus.ValueMember = "Key";
+            cbStatus.SelectedValue = account.Status;
+        }
+        private void LoadData(Account account)
+        {
+            txtUsername.Text = account.Username;
+            txtPassword.Text = account.Password;
+            txtConfirmPassword.Text = account.Password;
+            if(account.staff != null)
+            {
+                MtxtDateJoin.TextMaskFormat = MaskFormat.ExcludePromptAndLiterals;
+                MtxtDateOfBirth.TextMaskFormat = MaskFormat.ExcludePromptAndLiterals;
+                TxtFullName.Text = account.staff.Fullname;
+                MtxtDateJoin.Text = account.staff.DateJoin.ToString("dd/MM/yyyy");
+                MtxtDateOfBirth.Text = account.staff.DateOfBirth.Value.ToString("dd/MM/yyyy");
+                TxtAddress.Text = account.staff.Address;
+                TxtPhoneNumber.Text = account.staff.PhoneNumber;
+                txtSalary.Text = account.staff.Salary.ToString();
+                TxtTaxCode.Text = account.staff.TaxCode;
+                MtxtDateJoin.TextMaskFormat = MaskFormat.IncludePromptAndLiterals;
+                MtxtDateOfBirth.TextMaskFormat = MaskFormat.IncludePromptAndLiterals;
+                staid = account.staff.StaffId;
+            }
+
         }
 
-        private void BtnCreateAccount_Click(object sender, EventArgs e)
+        private void BtnCancel_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void BtnUpdateAccount_Click(object sender, EventArgs e)
         {
             if (!txtConfirmPassword.Text.Equals(txtPassword.Text)) MessageBox.Show("Password and Confirm Password not matched!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             else
@@ -42,6 +82,7 @@ namespace CoffeeManagement
                 {
                     sta = new staff()
                     {
+                        StaffId = staid,
                         Fullname = TxtFullName.Text,
                         Address = TxtAddress.Text,
                         DateJoin = DateTime.ParseExact(MtxtDateJoin.Text, "dd/MM/yyyy", CultureInfo.InvariantCulture),
@@ -52,10 +93,10 @@ namespace CoffeeManagement
                         Username = acc.Username
                     };
                 }
-                catch(Exception ex)
+                catch (Exception ex)
                 {
                     //if(ex.Message.Equals(""))
-                    MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 var resultError = MyHelper.CheckValid(acc) + MyHelper.CheckValid(sta);
                 if (resultError != null && resultError.Count() > 0)
@@ -66,37 +107,20 @@ namespace CoffeeManagement
                 {
                     IAccountService accountService = new AccountServiceIml();
                     IStaffServices staffService = new StaffServiceIml();
-                    var staffacc = staffService.Createstaff(sta);
-                    var account = accountService.CreateAccount(acc);
+                    var staffacc = staffService.Updatestaff(sta);
+                    var account = accountService.UpdateAccount(acc);
 
                     if (account != null && staffacc != null)
                     {
-                        MessageBox.Show("Successfully adding new Account", "Success", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("Successfully update existing Account", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         this.Close();
                     }
                     else
                     {
-                        MessageBox.Show("Failed adding new Account", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("Failed update existing Account", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
             }
         }
-        //0 - Inactive/ 1 - Active
-        private void LoadStatus()
-        {
-            Dictionary<int, string> comboSource = new Dictionary<int, string>() {
-                {0,"InActive" },{1,"Active" }
-            };
-            cbStatus.DataSource = new BindingSource(comboSource, null);
-            cbStatus.DisplayMember = "Value";
-            cbStatus.ValueMember = "Key";
-            cbStatus.SelectedValue = 1;
-        }
-
-        private void BtnCancel_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
     }
 }

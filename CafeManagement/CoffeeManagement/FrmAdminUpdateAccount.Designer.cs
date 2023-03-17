@@ -1,6 +1,6 @@
 ﻿namespace CoffeeManagement
 {
-    partial class FrmAdminInsertAccount
+    partial class FrmAdminUpdateAccount
     {
         /// <summary>
         /// Required designer variable.
@@ -35,7 +35,7 @@
             this.lbPassword = new System.Windows.Forms.Label();
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.PnControls = new System.Windows.Forms.Panel();
-            this.BtnCreateAccount = new System.Windows.Forms.Button();
+            this.BtnUpdateAccount = new System.Windows.Forms.Button();
             this.BtnCancel = new System.Windows.Forms.Button();
             this.PnLayout1 = new System.Windows.Forms.Panel();
             this.lbConfirmPassword = new System.Windows.Forms.Label();
@@ -80,11 +80,11 @@
             this.LbHeader.AutoSize = true;
             this.LbHeader.Font = new System.Drawing.Font("Calibri", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.LbHeader.ForeColor = System.Drawing.Color.Orange;
-            this.LbHeader.Location = new System.Drawing.Point(86, 9);
+            this.LbHeader.Location = new System.Drawing.Point(149, 9);
             this.LbHeader.Name = "LbHeader";
-            this.LbHeader.Size = new System.Drawing.Size(345, 37);
+            this.LbHeader.Size = new System.Drawing.Size(215, 37);
             this.LbHeader.TabIndex = 0;
-            this.LbHeader.Text = "Insert A New Staff Account";
+            this.LbHeader.Text = "Update Account";
             // 
             // lbUsername
             // 
@@ -98,10 +98,12 @@
             // 
             // txtUsername
             // 
+            this.txtUsername.Enabled = false;
             this.txtUsername.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txtUsername.Location = new System.Drawing.Point(203, 270);
             this.txtUsername.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtUsername.Name = "txtUsername";
+            this.txtUsername.ReadOnly = true;
             this.txtUsername.Size = new System.Drawing.Size(161, 27);
             this.txtUsername.TabIndex = 1;
             // 
@@ -121,13 +123,12 @@
             this.txtPassword.Location = new System.Drawing.Point(203, 301);
             this.txtPassword.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtPassword.Name = "txtPassword";
-            this.txtPassword.PasswordChar = '*';
             this.txtPassword.Size = new System.Drawing.Size(161, 27);
             this.txtPassword.TabIndex = 2;
             // 
             // PnControls
             // 
-            this.PnControls.Controls.Add(this.BtnCreateAccount);
+            this.PnControls.Controls.Add(this.BtnUpdateAccount);
             this.PnControls.Controls.Add(this.BtnCancel);
             this.PnControls.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.PnControls.Location = new System.Drawing.Point(0, 400);
@@ -136,18 +137,18 @@
             this.PnControls.Size = new System.Drawing.Size(511, 62);
             this.PnControls.TabIndex = 10;
             // 
-            // BtnCreateAccount
+            // BtnUpdateAccount
             // 
-            this.BtnCreateAccount.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.BtnCreateAccount.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.BtnCreateAccount.Location = new System.Drawing.Point(301, 16);
-            this.BtnCreateAccount.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.BtnCreateAccount.Name = "BtnCreateAccount";
-            this.BtnCreateAccount.Size = new System.Drawing.Size(142, 29);
-            this.BtnCreateAccount.TabIndex = 6;
-            this.BtnCreateAccount.Text = "Insert";
-            this.BtnCreateAccount.UseVisualStyleBackColor = true;
-            this.BtnCreateAccount.Click += new System.EventHandler(this.BtnCreateAccount_Click);
+            this.BtnUpdateAccount.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.BtnUpdateAccount.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.BtnUpdateAccount.Location = new System.Drawing.Point(301, 16);
+            this.BtnUpdateAccount.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.BtnUpdateAccount.Name = "BtnUpdateAccount";
+            this.BtnUpdateAccount.Size = new System.Drawing.Size(142, 29);
+            this.BtnUpdateAccount.TabIndex = 6;
+            this.BtnUpdateAccount.Text = "Update";
+            this.BtnUpdateAccount.UseVisualStyleBackColor = true;
+            this.BtnUpdateAccount.Click += new System.EventHandler(this.BtnUpdateAccount_Click);
             // 
             // BtnCancel
             // 
@@ -189,7 +190,6 @@
             this.txtConfirmPassword.Location = new System.Drawing.Point(203, 332);
             this.txtConfirmPassword.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtConfirmPassword.Name = "txtConfirmPassword";
-            this.txtConfirmPassword.PasswordChar = '*';
             this.txtConfirmPassword.Size = new System.Drawing.Size(161, 27);
             this.txtConfirmPassword.TabIndex = 3;
             // 
@@ -306,7 +306,6 @@
             this.TxtTaxCode.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.TxtTaxCode.MaxLength = 1;
             this.TxtTaxCode.Name = "TxtTaxCode";
-            this.TxtTaxCode.PasswordChar = '*';
             this.TxtTaxCode.Size = new System.Drawing.Size(161, 27);
             this.TxtTaxCode.TabIndex = 36;
             // 
@@ -337,7 +336,6 @@
             this.txtSalary.Location = new System.Drawing.Point(203, 128);
             this.txtSalary.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtSalary.Name = "txtSalary";
-            this.txtSalary.PasswordChar = '*';
             this.txtSalary.Size = new System.Drawing.Size(249, 27);
             this.txtSalary.TabIndex = 37;
             // 
@@ -396,7 +394,7 @@
             this.label1.TabIndex = 40;
             this.label1.Text = "Date Join";
             // 
-            // FrmAdminInsertAccount
+            // FrmAdminUpdateAccount
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -404,9 +402,9 @@
             this.Controls.Add(this.PnInformation);
             this.Controls.Add(this.PnHeader);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.Name = "FrmAdminInsertAccount";
+            this.Name = "FrmAdminUpdateAccount";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "Create New Staff Account";
+            this.Text = "Update Existing Account";
             this.PnHeader.ResumeLayout(false);
             this.PnHeader.PerformLayout();
             this.PnControls.ResumeLayout(false);
@@ -425,7 +423,7 @@
         private System.Windows.Forms.Label lbPassword;
         private System.Windows.Forms.TextBox txtPassword;
         private System.Windows.Forms.Panel PnControls;
-        private System.Windows.Forms.Button BtnCreateAccount;
+        private System.Windows.Forms.Button BtnUpdateAccount;
         private System.Windows.Forms.Button BtnCancel;
         private System.Windows.Forms.Panel PnLayout1;
         private System.Windows.Forms.Label lbConfirmPassword;
