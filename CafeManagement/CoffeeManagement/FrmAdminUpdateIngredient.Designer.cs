@@ -1,6 +1,6 @@
 ﻿namespace CoffeeManagement
 {
-    partial class FrmAdminInsertIngredient
+    partial class FrmAdminUpdateIngredient
     {
         /// <summary>
         /// Required designer variable.
@@ -63,9 +63,9 @@
             this.LbHeader.ForeColor = System.Drawing.Color.Orange;
             this.LbHeader.Location = new System.Drawing.Point(132, 15);
             this.LbHeader.Name = "LbHeader";
-            this.LbHeader.Size = new System.Drawing.Size(308, 37);
+            this.LbHeader.Size = new System.Drawing.Size(265, 37);
             this.LbHeader.TabIndex = 0;
-            this.LbHeader.Text = "Insert A New Ingredient";
+            this.LbHeader.Text = "Update A Ingredient";
             // 
             // PnInformation
             // 
@@ -94,7 +94,6 @@
             this.cbStatus.Name = "cbStatus";
             this.cbStatus.Size = new System.Drawing.Size(296, 27);
             this.cbStatus.TabIndex = 20;
-            this.cbStatus.SelectedIndexChanged += new System.EventHandler(this.cbStatus_SelectedIndexChanged);
             // 
             // lbStatus
             // 
@@ -192,7 +191,7 @@
             this.lbIngredientName.TabIndex = 6;
             this.lbIngredientName.Text = "Ingredient Name: ";
             // 
-            // FrmAdminInsertIngredient
+            // FrmAdminUpdateIngredient
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -200,9 +199,9 @@
             this.Controls.Add(this.PnInformation);
             this.Controls.Add(this.PnHeader);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.Name = "FrmAdminInsertIngredient";
+            this.Name = "FrmAdminUpdateIngredient";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "Create Ingredient";
+            this.Text = "Update Ingredient";
             this.Load += new System.EventHandler(this.FrmAdminInsertIngredient_Load);
             this.PnHeader.ResumeLayout(false);
             this.PnHeader.PerformLayout();

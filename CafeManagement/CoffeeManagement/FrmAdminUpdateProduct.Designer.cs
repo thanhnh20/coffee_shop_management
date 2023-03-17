@@ -1,6 +1,6 @@
 ﻿namespace CoffeeManagement
 {
-    partial class FrmAdminUpdateProduct
+    partial class FrmAdminInsertNewProduct
     {
         /// <summary>
         /// Required designer variable.

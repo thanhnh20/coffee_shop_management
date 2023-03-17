@@ -15,7 +15,7 @@ using System.Windows.Controls;
 
 namespace CoffeeManagement
 {
-    public partial class FrmAdminInsertNewProduct : Form
+    public partial class FrmAdminUpdateProduct : Form
     {
         private IProductService productService = new ProductServiceIml();
         private ICategoryProductService categoryProductService = new CategoryProductServiceIml();
@@ -25,7 +25,10 @@ namespace CoffeeManagement
 
 
         private bool isClose { get; set; } = true;
-        public FrmAdminInsertNewProduct()
+
+        public Product ProductStore { get; set; }
+
+        public FrmAdminUpdateProduct()
         {
             InitializeComponent();
         }
@@ -48,16 +51,13 @@ namespace CoffeeManagement
         private void BtnInsertANewProduct_Click(object sender, EventArgs e)
         {
 
-            Product product = new Product()
-            {
-                ProductName = txtProductName.Text,
-                Description = txtDescription.Text,
-                Price = Convert.ToDouble(txtPrice.Text),
-                Image = txtImage.Text,
-                Status = ((KeyValuePair<int, string>)cbStatus.SelectedItem).Key,
-                CategoryId = categoryProductService.GetCategoryProductByName(CbCategory.SelectedItem.ToString()).CategoryId
-            };
-            productService.InsertProduct(product);
+            Product product = productService.GetProductByID(ProductStore.ProductId);
+            product.ProductName = txtProductName.Text;
+            product.Price = Convert.ToDouble(txtPrice.Text);
+            product.Image = txtImage.Text;
+            product.Status = ((KeyValuePair<int, string>)cbStatus.SelectedItem).Key;
+            product.CategoryId = categoryProductService.GetCategoryProductByName(CbCategory.SelectedItem.ToString()).CategoryId;
+            productService.UpdateProduct(product);
             var listIngredientName = ingredientService.GetIngredientByName(cbIngredient.SelectedItem.ToString());
 
 
@@ -65,9 +65,9 @@ namespace CoffeeManagement
             {
                 var ingredientId = ingredientName.IngredientId;
                 var mass = Convert.ToInt32(txtMass.Text);
-                ingredientProductService.insertIngredientProduct(product, ingredientId, mass);
+                ingredientProductService.updateIngredientProduct(product, ingredientId, mass);
             }
-            MessageBox.Show("Inserted successfully", "Insert a Product", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show("Update successfully", "Update a Product", MessageBoxButtons.OK, MessageBoxIcon.Information);
             this.Close();
 
         }
@@ -75,7 +75,16 @@ namespace CoffeeManagement
 
         private void FrmAdminInsertNewProduct_Load(object sender, EventArgs e)
         {
+            BtnInsertANewProduct.Text = "Update";
+            LbHeader.Text = "Update a product";
             cklIngredient.Visible = false;
+            ProductStore = productService.GetProductByID(ProductStore.ProductId);
+            txtProductName.Text = ProductStore.ProductName;
+            txtDescription.Text = ProductStore.Description;
+            txtImage.Text = ProductStore.Image;
+            txtPrice.Text = ProductStore.Price.ToString();
+
+
             Dictionary<int, string> comboSource = new Dictionary<int, string>();
             comboSource.Add(0, "Inactive");
             comboSource.Add(1, "Active");
@@ -85,11 +94,14 @@ namespace CoffeeManagement
             // For example get from database continentals.
             cbIngredient.DataSource = ingredientService.GetNameIngredient();
             CbCategory.DataSource = categoryProductService.GetCategoryProductsName();
-            var Result = ingredientService.GetNameIngredient().ToList();
-            foreach (var item in Result)
-            {
-                cklIngredient.Items.Add(item);
-            }
+
+            var ingredientProductStore = ingredientProductService.GetByID(ProductStore.ProductId);
+
+            txtMass.Text = ingredientProductStore.Mass.ToString();
+
+            CbCategory.SelectedItem = ProductStore.CategoryId;
+            cbStatus.SelectedIndex = (int)ProductStore.Status;
+            //cbIngredient.SelectedIndex = ProductStore.IngredientProducts.i
         }
     }
 }
