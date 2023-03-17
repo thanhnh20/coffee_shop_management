@@ -1,24 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "F:\\Download\\SE151252\\SWD392\\Project gr\\Project\\CafeManagement\\CoffeeManagement\\CoffeeManagement.csproj": {}
+    "D:\\1FPT-UNVIERSITY\\CN7-SPRING2023\\SWD392\\coffee_shop_management\\CafeManagement\\CoffeeManagement\\CoffeeManagement.csproj": {}
   },
   "projects": {
-    "F:\\Download\\SE151252\\SWD392\\Project gr\\Project\\CafeManagement\\CoffeeManagement\\CoffeeManagement.csproj": {
+    "D:\\1FPT-UNVIERSITY\\CN7-SPRING2023\\SWD392\\coffee_shop_management\\CafeManagement\\CoffeeManagement\\CoffeeManagement.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\Download\\SE151252\\SWD392\\Project gr\\Project\\CafeManagement\\CoffeeManagement\\CoffeeManagement.csproj",
+        "projectUniqueName": "D:\\1FPT-UNVIERSITY\\CN7-SPRING2023\\SWD392\\coffee_shop_management\\CafeManagement\\CoffeeManagement\\CoffeeManagement.csproj",
         "projectName": "CoffeeManagement",
-        "projectPath": "F:\\Download\\SE151252\\SWD392\\Project gr\\Project\\CafeManagement\\CoffeeManagement\\CoffeeManagement.csproj",
-        "packagesPath": "C:\\Users\\ASUS\\.nuget\\packages\\",
-        "outputPath": "F:\\Download\\SE151252\\SWD392\\Project gr\\Project\\CafeManagement\\CoffeeManagement\\obj\\",
+        "projectPath": "D:\\1FPT-UNVIERSITY\\CN7-SPRING2023\\SWD392\\coffee_shop_management\\CafeManagement\\CoffeeManagement\\CoffeeManagement.csproj",
+        "packagesPath": "C:\\Users\\tylun\\.nuget\\packages\\",
+        "outputPath": "D:\\1FPT-UNVIERSITY\\CN7-SPRING2023\\SWD392\\coffee_shop_management\\CafeManagement\\CoffeeManagement\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\ASUS\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\tylun\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "net5.0-windows7.0"
+          "net5.0-windows"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
@@ -28,8 +28,8 @@
           "net5.0-windows7.0": {
             "targetAlias": "net5.0-windows",
             "projectReferences": {
-              "F:\\Download\\SE151252\\SWD392\\Project gr\\Project\\CafeManagement\\Library\\Library.csproj": {
-                "projectPath": "F:\\Download\\SE151252\\SWD392\\Project gr\\Project\\CafeManagement\\Library\\Library.csproj"
+              "D:\\1FPT-UNVIERSITY\\CN7-SPRING2023\\SWD392\\coffee_shop_management\\CafeManagement\\Library\\Library.csproj": {
+                "projectPath": "D:\\1FPT-UNVIERSITY\\CN7-SPRING2023\\SWD392\\coffee_shop_management\\CafeManagement\\Library\\Library.csproj"
               }
             }
           }
@@ -59,7 +59,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -71,21 +72,21 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.408\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "F:\\Download\\SE151252\\SWD392\\Project gr\\Project\\CafeManagement\\Library\\Library.csproj": {
+    "D:\\1FPT-UNVIERSITY\\CN7-SPRING2023\\SWD392\\coffee_shop_management\\CafeManagement\\Library\\Library.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\Download\\SE151252\\SWD392\\Project gr\\Project\\CafeManagement\\Library\\Library.csproj",
+        "projectUniqueName": "D:\\1FPT-UNVIERSITY\\CN7-SPRING2023\\SWD392\\coffee_shop_management\\CafeManagement\\Library\\Library.csproj",
         "projectName": "Library",
-        "projectPath": "F:\\Download\\SE151252\\SWD392\\Project gr\\Project\\CafeManagement\\Library\\Library.csproj",
-        "packagesPath": "C:\\Users\\ASUS\\.nuget\\packages\\",
-        "outputPath": "F:\\Download\\SE151252\\SWD392\\Project gr\\Project\\CafeManagement\\Library\\obj\\",
+        "projectPath": "D:\\1FPT-UNVIERSITY\\CN7-SPRING2023\\SWD392\\coffee_shop_management\\CafeManagement\\Library\\Library.csproj",
+        "packagesPath": "C:\\Users\\tylun\\.nuget\\packages\\",
+        "outputPath": "D:\\1FPT-UNVIERSITY\\CN7-SPRING2023\\SWD392\\coffee_shop_management\\CafeManagement\\Library\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\ASUS\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\tylun\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -132,7 +133,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -141,7 +143,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.408\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
         }
       }
     }

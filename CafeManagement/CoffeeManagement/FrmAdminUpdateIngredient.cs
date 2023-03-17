@@ -1,4 +1,5 @@
-﻿using Library.Model;
+﻿using Library.DataAccess;
+using Library.Model;
 using Library.Service;
 using Library.Service.ServicesImplement;
 using Library.Utils;
@@ -14,15 +15,19 @@ using System.Windows.Forms;
 
 namespace CoffeeManagement
 {
-    public partial class FrmAdminInsertIngredient : Form
+    public partial class FrmAdminUpdateIngredient : Form
     {
-        public FrmAdminInsertIngredient()
+        public FrmAdminUpdateIngredient()
         {
             InitializeComponent();
         }
 
+        public FrmAdminManageStorage parentForm { get; set; }
+
+
         private IIngredientService ingredientSevice = new IngredientServiceIml();
 
+        public Ingredient IngredientStore { get; set; }
 
         private bool isClose { get; set; } = true;
 
@@ -41,12 +46,15 @@ namespace CoffeeManagement
 
         }
 
-        private void cbStatus_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
 
         private void FrmAdminInsertIngredient_Load(object sender, EventArgs e)
+        {
+            BtnInsertIngredient.Text = "Update";
+            DisplayCB();
+            LoadIngredientInfo();
+        }
+
+        private void DisplayCB()
         {
             Dictionary<int, string> comboSource = new Dictionary<int, string>();
             comboSource.Add(0, "Inactive");
@@ -54,6 +62,17 @@ namespace CoffeeManagement
             cbStatus.DataSource = new BindingSource(comboSource, null);
             cbStatus.DisplayMember = "Value";
             cbStatus.ValueMember = "Key";
+        }
+
+        private void LoadIngredientInfo()
+        {
+            IngredientStore = ingredientSevice.GetIngredientById(IngredientStore.IngredientId);
+            txtIngredientName.Text = IngredientStore.Name;
+            txtUnit.Text = IngredientStore.Unit;
+            DisplayCB();
+            cbStatus.SelectedIndex = IngredientStore.Status;
+
+
         }
 
         private void BtnInsertIngredient_Click(object sender, EventArgs e)
@@ -65,12 +84,10 @@ namespace CoffeeManagement
             {
 
 
-                Ingredient ingredient = new Ingredient()
-                {
-                    Name = txtIngredientName.Text,
-                    Unit = txtUnit.Text,
-                    Status = ((KeyValuePair<int, string>)cbStatus.SelectedItem).Key
-                };
+                Ingredient ingredient = ingredientSevice.GetIngredientById(IngredientStore.IngredientId);
+                ingredient.Name = txtIngredientName.Text;
+                ingredient.Unit = txtUnit.Text;
+                ingredient.Status = ((KeyValuePair<int, string>)cbStatus.SelectedItem).Key;
                 var resultError = MyHelper.CheckValid(ingredient);
                 if (resultError != null)
                 {
@@ -78,12 +95,11 @@ namespace CoffeeManagement
                 }
                 else
                 {
-                    ingredientSevice.InserIngredient(ingredient);
+                    ingredientSevice.UpdateIngredient(ingredient);
                     isClose = true;
-                    MessageBox.Show("Inserted successfully", "Insert a ingredient", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Update successfully", "Insert a ingredient", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     this.Close();
                 }
-
             }
         }
     }
