@@ -188,13 +188,14 @@ namespace CoffeeManagement
             // 
             // label3
             // 
+            /*
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label3.Location = new System.Drawing.Point(78, 44);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(182, 74);
             this.label3.TabIndex = 1;
-            this.label3.Text = "Camasy Cafe \r\n   Manager";
+            this.label3.Text = "Camasy Cafe \r\n   Manager";*/
             // 
             // PicLogo
             // 

@@ -9,6 +9,7 @@ namespace Library.DataAccess
 {
     public class CustomerDAO
     {
+        CoffeeShopManagementContext db = new CoffeeShopManagementContext();
         private static CustomerDAO instance = null;
         private static readonly object instancelock = new object();
         private CustomerDAO() { }
@@ -64,9 +65,6 @@ namespace Library.DataAccess
                 return false;
             }
         }
-    }
-}
-
         public List<Customer> getAllCustomers() => db.Customers.ToList();
         public List<Customer> getAllCustomersByName(string name) => db.Customers.Where(acc => acc.Name.Contains(name)).ToList();
         public Customer getCustomerbyPhoneNumber(string phonenumber) => db.Customers.FirstOrDefault(acc => acc.PhoneNumber.Equals(phonenumber));
@@ -89,3 +87,7 @@ namespace Library.DataAccess
                 throw;
             }
         }
+    }
+}
+
+        

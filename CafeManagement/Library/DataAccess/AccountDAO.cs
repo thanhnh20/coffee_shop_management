@@ -10,6 +10,7 @@ namespace Library.DataAccess
 {
     public class AccountDAO
     {
+        CoffeeShopManagementContext db = new CoffeeShopManagementContext();
 
         private static AccountDAO instance = null;
         private static readonly object instancelock = new object();

@@ -17,7 +17,7 @@ namespace CoffeeManagement
     public partial class FrmStaffInsertCustomer : Form
     {
         IOrderService orderServices; 
-        IStaffService staffService;
+        IStaffServices staffService;
         ICustomerService customerService;
         public Account AccountStaff { get; set; }
 
@@ -50,7 +50,7 @@ namespace CoffeeManagement
             }
             else
             {
-                var staffInfor = staffService.getStaffByUserName(AccountStaff.Username);
+                var staffInfor = staffService.GetStaffsByUserName(AccountStaff.Username);
                 var customerExist = customerService.GetCustomerByPhone(customer.PhoneNumber);
                 if (customerExist != null)
                 {
