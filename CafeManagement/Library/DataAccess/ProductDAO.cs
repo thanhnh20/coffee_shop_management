@@ -1,18 +1,18 @@
-﻿using System;
+﻿using Library.Model;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Library.Model;
+
 namespace Library.DataAccess
 {
-    public class AccountDAO
+    public class ProductDAO
     {
-
-        private static AccountDAO instance = null;
+        private static ProductDAO instance = null;
         private static readonly object instancelock = new object();
-        private AccountDAO() { }
-        public static AccountDAO Instance
+        private ProductDAO() { }
+        public static ProductDAO Instance
         {
             get
             {
@@ -20,19 +20,19 @@ namespace Library.DataAccess
                 {
                     if (instance == null)
                     {
-                        instance = new AccountDAO();
+                        instance = new ProductDAO();
                     }
                     return instance;
                 }
             }
         }
 
-        public Account checkLogin(string username, string password)
+        public List<Product> GetAllProduct()
         {
             using (var db = new CoffeeShopManagementContext())
             {
-                return db.Accounts.Where(m => m.Username.Equals(username) && m.Password.Equals(password)).FirstOrDefault();
+                return db.Products.ToList();
             }
-        }
+        } 
     }
 }

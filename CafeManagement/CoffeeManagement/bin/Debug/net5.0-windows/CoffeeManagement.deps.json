@@ -10,7 +10,8 @@
         "dependencies": {
           "Extended.Wpf.Toolkit": "4.5.0",
           "FontAwesome.Sharp": "5.15.4",
-          "Library": "1.0.0"
+          "Library": "1.0.0",
+          "System.Resources.ResourceManager": "4.3.0"
         },
         "runtime": {
           "CoffeeManagement.dll": {}

@@ -1,18 +1,18 @@
-﻿using System;
+﻿using Library.Model;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Library.Model;
+
 namespace Library.DataAccess
 {
-    public class AccountDAO
+    public class StaffDAO
     {
-
-        private static AccountDAO instance = null;
+        private static StaffDAO instance = null;
         private static readonly object instancelock = new object();
-        private AccountDAO() { }
-        public static AccountDAO Instance
+        private StaffDAO() { }
+        public static StaffDAO Instance
         {
             get
             {
@@ -20,18 +20,18 @@ namespace Library.DataAccess
                 {
                     if (instance == null)
                     {
-                        instance = new AccountDAO();
+                        instance = new StaffDAO();
                     }
                     return instance;
                 }
             }
         }
 
-        public Account checkLogin(string username, string password)
+        public staff getStaffByUserName(string username)
         {
             using (var db = new CoffeeShopManagementContext())
             {
-                return db.Accounts.Where(m => m.Username.Equals(username) && m.Password.Equals(password)).FirstOrDefault();
+                return db.staff.Where(s => s.Username.Equals(username)).FirstOrDefault();
             }
         }
     }

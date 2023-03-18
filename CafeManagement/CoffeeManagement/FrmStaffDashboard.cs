@@ -1,4 +1,5 @@
 ﻿using FontAwesome.Sharp;
+using Library.Model;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -18,6 +19,8 @@ namespace CoffeeManagement
         private IconButton currentBtn;
         private Panel leftBorderBtn;
         private Form currentChildForm;
+
+        public Account AccountStaff { get; set; }
 
         public FrmStaffDashboard()
         {
@@ -135,7 +138,8 @@ namespace CoffeeManagement
             ActiveButton(sender, Color.FromName("Black"));
             OpenChildForm(new FrmStaffOrderProduct()
             {
-                FrmStaffDashboard = this
+                FrmStaffDashboard = this,
+                AccountStaff = AccountStaff
             });
         }
 

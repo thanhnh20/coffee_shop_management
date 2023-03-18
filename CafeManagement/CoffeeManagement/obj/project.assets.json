@@ -6053,7 +6053,8 @@
     "net5.0-windows7.0": [
       "Extended.Wpf.Toolkit >= 4.5.0",
       "FontAwesome.Sharp >= 5.15.4",
-      "Library >= 1.0.0"
+      "Library >= 1.0.0",
+      "System.Resources.ResourceManager >= 4.3.0"
     ]
   },
   "packageFolders": {
@@ -6106,6 +6107,10 @@
           "FontAwesome.Sharp": {
             "target": "Package",
             "version": "[5.15.4, )"
+          },
+          "System.Resources.ResourceManager": {
+            "target": "Package",
+            "version": "[4.3.0, )"
           }
         },
         "imports": [

@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmLogin));
             this.LbUsername = new System.Windows.Forms.Label();
             this.txtUsername = new System.Windows.Forms.TextBox();
             this.LbPassword = new System.Windows.Forms.Label();
@@ -147,7 +146,7 @@
             // PicLogo
             // 
             this.PicLogo.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.PicLogo.Image = ((System.Drawing.Image)(resources.GetObject("PicLogo.Image")));
+            this.PicLogo.Image = global::CoffeeManagement.Properties.Resources.cafe_11;
             this.PicLogo.InitialImage = null;
             this.PicLogo.Location = new System.Drawing.Point(30, 43);
             this.PicLogo.Name = "PicLogo";
@@ -164,7 +163,7 @@
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(195, 80);
             this.label2.TabIndex = 2;
-            this.label2.Text = "Camasa Cafe \r\n   Manager";
+            this.label2.Text = "Camasy Cafe \r\n   Manager";
             // 
             // FrmLogin
             // 

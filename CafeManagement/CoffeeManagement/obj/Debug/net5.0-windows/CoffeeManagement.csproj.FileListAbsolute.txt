@@ -267,6 +267,7 @@ F:\Download\SE151252\SWD392\Project gr\Project\CafeManagement\CoffeeManagement\o
 F:\Download\SE151252\SWD392\Project gr\Project\CafeManagement\CoffeeManagement\obj\Debug\net5.0-windows\CoffeeManagement.FrmLogin.resources
 F:\Download\SE151252\SWD392\Project gr\Project\CafeManagement\CoffeeManagement\obj\Debug\net5.0-windows\CoffeeManagement.FrmStaffDashboard.resources
 F:\Download\SE151252\SWD392\Project gr\Project\CafeManagement\CoffeeManagement\obj\Debug\net5.0-windows\CoffeeManagement.FrmStaffEditProfile.resources
+F:\Download\SE151252\SWD392\Project gr\Project\CafeManagement\CoffeeManagement\obj\Debug\net5.0-windows\CoffeeManagement.FrmStaffInsertCustomer.resources
 F:\Download\SE151252\SWD392\Project gr\Project\CafeManagement\CoffeeManagement\obj\Debug\net5.0-windows\CoffeeManagement.FrmStaffOrderProduct.resources
 F:\Download\SE151252\SWD392\Project gr\Project\CafeManagement\CoffeeManagement\obj\Debug\net5.0-windows\CoffeeManagement.FrmStaffProfile.resources
 F:\Download\SE151252\SWD392\Project gr\Project\CafeManagement\CoffeeManagement\obj\Debug\net5.0-windows\CoffeeManagement.Properties.Resources.resources

@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmStaffDashboard));
             this.PnDashBoard = new System.Windows.Forms.Panel();
             this.btnLogout = new FontAwesome.Sharp.IconButton();
             this.btnCustomer = new FontAwesome.Sharp.IconButton();
@@ -186,14 +185,14 @@
             this.label3.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label3.Location = new System.Drawing.Point(78, 44);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(183, 74);
+            this.label3.Size = new System.Drawing.Size(182, 74);
             this.label3.TabIndex = 1;
-            this.label3.Text = "Camasa Cafe \r\n   Manager";
+            this.label3.Text = "Camasy Cafe \r\n   Manager";
             // 
             // PicLogo
             // 
             this.PicLogo.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.PicLogo.Image = ((System.Drawing.Image)(resources.GetObject("PicLogo.Image")));
+            this.PicLogo.Image = global::CoffeeManagement.Properties.Resources.cafe_11;
             this.PicLogo.InitialImage = null;
             this.PicLogo.Location = new System.Drawing.Point(3, 44);
             this.PicLogo.Name = "PicLogo";
