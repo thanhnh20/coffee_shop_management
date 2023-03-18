@@ -8,7 +8,7 @@ using System.Windows.Forms;
 
 namespace CoffeeManagement
 {
-    public partial class FrmStaffInsertCustomer : Form
+    public partial class FrmStaffUpdateCustomer : Form
     {
         IOrderService orderServices;
         IStaffServices staffService;
@@ -20,13 +20,21 @@ namespace CoffeeManagement
         public double amount { get; set; }
 
         public bool isPayment { get; set; }
-        public FrmStaffInsertCustomer(Account account)
+        public FrmStaffUpdateCustomer(Account account, Customer customer)
         {
             InitializeComponent();
             AccountStaff = account;
             customerService = new CustomerServiceIml();
             orderServices = new OrderServiceIml();
             staffService = new StaffServiceIml();
+            LoadData(customer);
+        }
+        private void LoadData(Customer customer)
+        {
+            txtPhoneNumber.Text = customer.PhoneNumber;
+            txtEmail.Text = customer.Email;
+            txtName.Text = customer.Name;
+            TxtAddress.Text = customer.Address;
         }
 
         public void CreateCustomer()
@@ -50,13 +58,13 @@ namespace CoffeeManagement
                 if (customerExist != null)
                 {
                     customerService.UpdateCustomer(customer);
-                    MessageBox.Show("Customer Already Existed!", "Customer Existed!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Successfully Updating Customer!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     this.Close();
                 }
                 else
                 {
                     customerService.CreateCustomerToOrder(customer);
-                    MessageBox.Show("Successfully adding new Customer!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Create New Customer Instead!", "Customer Existed!", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     this.Close();
                 }
                 if (isPayment)

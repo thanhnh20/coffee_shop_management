@@ -78,8 +78,8 @@ namespace CoffeeManagement
             txtPrice.PasswordChar = '\0';
             cklIngredient.Visible = false;
             Dictionary<int, string> comboSource = new Dictionary<int, string>();
-            comboSource.Add(0, "Inactive");
-            comboSource.Add(1, "Active");
+            comboSource.Add(0, "Out of stocks");
+            comboSource.Add(1, "In stocks");
             cbStatus.DataSource = new BindingSource(comboSource, null);
             cbStatus.DisplayMember = "Value";
             cbStatus.ValueMember = "Key";

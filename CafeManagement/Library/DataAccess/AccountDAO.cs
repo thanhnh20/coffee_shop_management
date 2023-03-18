@@ -44,7 +44,7 @@ namespace Library.DataAccess
         {
             using (var db = new CoffeeShopManagementContext())
             {
-                return db.Accounts.Where(m => m.Username.Equals(username) && m.Password.Equals(password)).FirstOrDefault();
+                return db.Accounts.Include(sta => sta.staff).Where(m => m.Username.Equals(username) && m.Password.Equals(password)).FirstOrDefault();
             }
         }
         public Account CreateAccount(Account account)

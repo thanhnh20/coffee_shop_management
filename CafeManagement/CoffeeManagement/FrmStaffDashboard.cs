@@ -22,18 +22,17 @@ namespace CoffeeManagement
 
         public Account AccountStaff { get; set; }
 
-        public FrmStaffDashboard(Account accountStaff)
+        public FrmStaffDashboard(Account account)
         {
             InitializeComponent();
             leftBorderBtn = new Panel();
             leftBorderBtn.Size = new Size(7, 60);
             PnDashBoard.Controls.Add(leftBorderBtn);
-            OpenChildForm(new FrmStaffProfile(accountStaff)
+            OpenChildForm(new FrmStaffProfile(account)
             {
                 FrmStaffDashboard = this
             });
-            AccountStaff = accountStaff;
-
+            AccountStaff = account;
             /*
              change image
             PictureBox imageheader = PicLogo;
@@ -137,10 +136,9 @@ namespace CoffeeManagement
         private void btnOrder_Click(object sender, EventArgs e)
         {
             ActiveButton(sender, Color.FromName("Black"));
-            OpenChildForm(new FrmStaffOrderProduct()
+            OpenChildForm(new FrmStaffOrderProduct(AccountStaff)
             {
                 FrmStaffDashboard = this,
-                //AccountStaff = AccountStaff
             });
         }
 
@@ -158,7 +156,7 @@ namespace CoffeeManagement
         {
             // cấu hình nút khi được click
             ActiveButton(sender, Color.FromName("Black"));
-            OpenChildForm(new FrmCustomerList()
+            OpenChildForm(new FrmStaffManageCustomer(AccountStaff)
             {
                 FrmStaffDashboard = this
             });

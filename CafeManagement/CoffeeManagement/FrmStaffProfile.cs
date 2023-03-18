@@ -14,6 +14,11 @@ namespace CoffeeManagement
     public partial class FrmStaffProfile : Form
     {
         public FrmStaffDashboard FrmStaffDashboard { get; set; }
+        public Account AccountStaff { get; set; }
+        public FrmStaffProfile()
+        {
+            InitializeComponent();
+        }
         public FrmStaffProfile(Account account)
         {
             InitializeComponent();
@@ -28,9 +33,14 @@ namespace CoffeeManagement
         private void LoadData(Account account)
         {
             staff accsta = account.staff;
-            lbDateJoinHeader.Text = accsta.DateJoin.ToShortDateString();
-            lbSalaryHeader.Text = accsta.Salary.ToString();
-            
+            lbDateJoinHeader.Text = accsta.DateJoin.ToString("dd/MM/yyyy");
+            lbSalaryHeader.Text = String.Format("{0:0,0 đ}", accsta.Salary);
+            txtStaffname.Text = accsta.Fullname.ToString();
+            txtTaxCode.Text = accsta.TaxCode.ToString();
+            txtStaffID.Text = accsta.StaffId.ToString();
+            txtAddress.Text = accsta.Address;
+            txtPhoneNumber.Text = accsta.PhoneNumber;
+            txtDoB.Text = accsta.DateOfBirth.Value.ToString("dd/MM/yyyy");
         }
     }
 }

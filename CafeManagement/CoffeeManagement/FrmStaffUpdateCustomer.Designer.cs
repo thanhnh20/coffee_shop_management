@@ -1,6 +1,6 @@
 ﻿namespace CoffeeManagement
 {
-    partial class FrmStaffInsertCustomer
+    partial class FrmStaffUpdateCustomer
     {
         /// <summary>
         /// Required designer variable.
@@ -84,11 +84,11 @@
             this.LbHeader.Font = new System.Drawing.Font("Calibri", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.LbHeader.ForeColor = System.Drawing.Color.Orange;
             this.LbHeader.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.LbHeader.Location = new System.Drawing.Point(31, 9);
+            this.LbHeader.Location = new System.Drawing.Point(61, 9);
             this.LbHeader.Name = "LbHeader";
-            this.LbHeader.Size = new System.Drawing.Size(379, 37);
+            this.LbHeader.Size = new System.Drawing.Size(325, 37);
             this.LbHeader.TabIndex = 1;
-            this.LbHeader.Text = "Create New Customer Profile";
+            this.LbHeader.Text = "Update Customer Profile";
             // 
             // PnLayoutBottom
             // 
@@ -121,7 +121,7 @@
             this.BtnUpdate.Name = "BtnUpdate";
             this.BtnUpdate.Size = new System.Drawing.Size(142, 29);
             this.BtnUpdate.TabIndex = 1;
-            this.BtnUpdate.Text = "Create";
+            this.BtnUpdate.Text = "Update";
             this.BtnUpdate.UseVisualStyleBackColor = true;
             this.BtnUpdate.Click += new System.EventHandler(this.BtnUpdate_Click);
             // 
@@ -169,11 +169,13 @@
             // 
             // txtPhoneNumber
             // 
+            this.txtPhoneNumber.Enabled = false;
             this.txtPhoneNumber.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txtPhoneNumber.Location = new System.Drawing.Point(161, 74);
             this.txtPhoneNumber.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtPhoneNumber.MaxLength = 10;
             this.txtPhoneNumber.Name = "txtPhoneNumber";
+            this.txtPhoneNumber.ReadOnly = true;
             this.txtPhoneNumber.Size = new System.Drawing.Size(249, 27);
             this.txtPhoneNumber.TabIndex = 10;
             // 
@@ -221,16 +223,16 @@
             this.LbStaffID.TabIndex = 2;
             this.LbStaffID.Text = "Customer Name";
             // 
-            // FrmStaffInsertCustomer
+            // FrmStaffUpdateCustomer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(442, 344);
             this.Controls.Add(this.PnInformation);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.Name = "FrmStaffInsertCustomer";
+            this.Name = "FrmStaffUpdateCustomer";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "Create New Customer";
+            this.Text = "Update Existing Customer";
             this.PnInformation.ResumeLayout(false);
             this.PnInformation.PerformLayout();
             this.PnHeader.ResumeLayout(false);

@@ -28,6 +28,7 @@ namespace CoffeeManagement
         {
             FrmAdminInsertAccount frm = new FrmAdminInsertAccount();
             frm.ShowDialog();
+            LoadData();
         }
         private void LoadData()
         {

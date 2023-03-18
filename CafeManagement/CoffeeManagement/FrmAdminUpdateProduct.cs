@@ -87,8 +87,8 @@ namespace CoffeeManagement
 
 
             Dictionary<int, string> comboSource = new Dictionary<int, string>();
-            comboSource.Add(0, "Inactive");
-            comboSource.Add(1, "Active");
+            comboSource.Add(0, "Unavailable");
+            comboSource.Add(1, "Available");
             cbStatus.DataSource = new BindingSource(comboSource, null);
             cbStatus.DisplayMember = "Value";
             cbStatus.ValueMember = "Key";

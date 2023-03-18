@@ -47,6 +47,9 @@
     <Compile Update="FrmStaffEditProfile.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="FrmStaffInsertCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="FrmStaffOrderProduct.cs">
       <SubType>Form</SubType>
     </Compile>

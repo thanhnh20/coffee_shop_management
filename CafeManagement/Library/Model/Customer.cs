@@ -32,8 +32,8 @@ namespace Library.Model
         public string Email { get; set; }
 
         [Display(Name = "Customer Address")]
-        [MinLength(10, ErrorMessage = "Customer Address must be at least 10 characters!")]
-        [MaxLength(50, ErrorMessage = "Customer Address be lesser than or equal to 50 characters!")]
+        /*[MinLength(10, ErrorMessage = "Customer Address must be at least 10 characters!")]
+        [MaxLength(50, ErrorMessage = "Customer Address be lesser than or equal to 50 characters!")]*/
         public string Address { get; set; }
 
         public virtual ICollection<Order> Orders { get; set; }

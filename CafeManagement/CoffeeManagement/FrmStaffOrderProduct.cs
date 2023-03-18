@@ -32,10 +32,11 @@ namespace CoffeeManagement
         private double AmountOrder { get; set; }
 
         public Account AccountStaff { get; set; }
-        public FrmStaffOrderProduct()
+        public FrmStaffOrderProduct(Account account)
         {
             InitializeComponent();
             LoadProduct();
+            AccountStaff = account;
         }
 
         private void BtnSearchList_Click(object sender, EventArgs e)
@@ -185,7 +186,7 @@ namespace CoffeeManagement
             }
             else
             {
-                FrmStaffInsertCustomer frmStaffInsertCustomer = new FrmStaffInsertCustomer()
+                FrmStaffInsertCustomer frmStaffInsertCustomer = new FrmStaffInsertCustomer(AccountStaff)
                 {
                     AccountStaff = AccountStaff,
                     listOrder = listOrder,

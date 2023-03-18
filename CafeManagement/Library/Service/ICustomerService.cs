@@ -14,5 +14,8 @@ namespace Library.Service
         public Customer GetCustomerByPhone(string numberPhone);
 
         public bool UpdateCustomer(Customer customer);
+        public List<Customer> GetCustomers();
+        public List<Customer> GetCustomersByName(string username);
+        public bool DeleteCustomer(string phoneNumber);
     }
 }

@@ -52,7 +52,6 @@
             this.lbDateJoinHeader = new System.Windows.Forms.Label();
             this.LbCompanyNameHader = new System.Windows.Forms.Label();
             this.PicsStaffHeader = new FontAwesome.Sharp.IconPictureBox();
-            this.btnEdit = new FontAwesome.Sharp.IconButton();
             this.PnInformationStudent.SuspendLayout();
             this.panel1.SuspendLayout();
             this.TblPnHeaderHome.SuspendLayout();
@@ -80,27 +79,29 @@
             this.PnInformationStudent.Controls.Add(this.LbStaffID);
             this.PnInformationStudent.Controls.Add(this.LbStaffNAme);
             this.PnInformationStudent.Controls.Add(this.panel1);
-            this.PnInformationStudent.Location = new System.Drawing.Point(114, 179);
+            this.PnInformationStudent.Location = new System.Drawing.Point(100, 134);
+            this.PnInformationStudent.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.PnInformationStudent.Name = "PnInformationStudent";
-            this.PnInformationStudent.Size = new System.Drawing.Size(865, 261);
+            this.PnInformationStudent.Size = new System.Drawing.Size(757, 196);
             this.PnInformationStudent.TabIndex = 2;
             // 
             // txtDoB
             // 
             this.txtDoB.Enabled = false;
             this.txtDoB.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtDoB.Location = new System.Drawing.Point(593, 85);
+            this.txtDoB.Location = new System.Drawing.Point(519, 64);
+            this.txtDoB.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtDoB.Name = "txtDoB";
-            this.txtDoB.Size = new System.Drawing.Size(237, 32);
+            this.txtDoB.Size = new System.Drawing.Size(208, 27);
             this.txtDoB.TabIndex = 16;
             // 
             // LbDoB
             // 
             this.LbDoB.AutoSize = true;
             this.LbDoB.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.LbDoB.Location = new System.Drawing.Point(449, 93);
+            this.LbDoB.Location = new System.Drawing.Point(393, 70);
             this.LbDoB.Name = "LbDoB";
-            this.LbDoB.Size = new System.Drawing.Size(127, 24);
+            this.LbDoB.Size = new System.Drawing.Size(100, 19);
             this.LbDoB.TabIndex = 15;
             this.LbDoB.Text = "Date of Birth: ";
             // 
@@ -108,54 +109,59 @@
             // 
             this.txtTaxCode.Enabled = false;
             this.txtTaxCode.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtTaxCode.Location = new System.Drawing.Point(595, 175);
+            this.txtTaxCode.Location = new System.Drawing.Point(521, 131);
+            this.txtTaxCode.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtTaxCode.Name = "txtTaxCode";
-            this.txtTaxCode.Size = new System.Drawing.Size(235, 32);
+            this.txtTaxCode.Size = new System.Drawing.Size(206, 27);
             this.txtTaxCode.TabIndex = 14;
             // 
             // txtAddress
             // 
             this.txtAddress.Enabled = false;
             this.txtAddress.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtAddress.Location = new System.Drawing.Point(183, 180);
+            this.txtAddress.Location = new System.Drawing.Point(160, 135);
+            this.txtAddress.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtAddress.Name = "txtAddress";
-            this.txtAddress.Size = new System.Drawing.Size(237, 32);
+            this.txtAddress.Size = new System.Drawing.Size(208, 27);
             this.txtAddress.TabIndex = 13;
             // 
             // txtPhoneNumber
             // 
             this.txtPhoneNumber.Enabled = false;
             this.txtPhoneNumber.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtPhoneNumber.Location = new System.Drawing.Point(593, 131);
+            this.txtPhoneNumber.Location = new System.Drawing.Point(519, 98);
+            this.txtPhoneNumber.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtPhoneNumber.Name = "txtPhoneNumber";
-            this.txtPhoneNumber.Size = new System.Drawing.Size(237, 32);
+            this.txtPhoneNumber.Size = new System.Drawing.Size(208, 27);
             this.txtPhoneNumber.TabIndex = 11;
             // 
             // txtStaffID
             // 
             this.txtStaffID.Enabled = false;
             this.txtStaffID.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtStaffID.Location = new System.Drawing.Point(183, 131);
+            this.txtStaffID.Location = new System.Drawing.Point(160, 98);
+            this.txtStaffID.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtStaffID.Name = "txtStaffID";
-            this.txtStaffID.Size = new System.Drawing.Size(237, 32);
+            this.txtStaffID.Size = new System.Drawing.Size(208, 27);
             this.txtStaffID.TabIndex = 10;
             // 
             // txtStaffname
             // 
             this.txtStaffname.Enabled = false;
             this.txtStaffname.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtStaffname.Location = new System.Drawing.Point(183, 85);
+            this.txtStaffname.Location = new System.Drawing.Point(160, 64);
+            this.txtStaffname.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtStaffname.Name = "txtStaffname";
-            this.txtStaffname.Size = new System.Drawing.Size(237, 32);
+            this.txtStaffname.Size = new System.Drawing.Size(208, 27);
             this.txtStaffname.TabIndex = 9;
             // 
             // LbTaxcode
             // 
             this.LbTaxcode.AutoSize = true;
             this.LbTaxcode.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.LbTaxcode.Location = new System.Drawing.Point(449, 183);
+            this.LbTaxcode.Location = new System.Drawing.Point(393, 137);
             this.LbTaxcode.Name = "LbTaxcode";
-            this.LbTaxcode.Size = new System.Drawing.Size(95, 24);
+            this.LbTaxcode.Size = new System.Drawing.Size(76, 19);
             this.LbTaxcode.TabIndex = 7;
             this.LbTaxcode.Text = "Tax Code: ";
             // 
@@ -163,9 +169,9 @@
             // 
             this.LbPhoneNumber.AutoSize = true;
             this.LbPhoneNumber.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.LbPhoneNumber.Location = new System.Drawing.Point(449, 139);
+            this.LbPhoneNumber.Location = new System.Drawing.Point(393, 104);
             this.LbPhoneNumber.Name = "LbPhoneNumber";
-            this.LbPhoneNumber.Size = new System.Drawing.Size(146, 24);
+            this.LbPhoneNumber.Size = new System.Drawing.Size(112, 19);
             this.LbPhoneNumber.TabIndex = 6;
             this.LbPhoneNumber.Text = "Phone Number: ";
             // 
@@ -173,9 +179,9 @@
             // 
             this.lbAddress.AutoSize = true;
             this.lbAddress.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lbAddress.Location = new System.Drawing.Point(39, 188);
+            this.lbAddress.Location = new System.Drawing.Point(34, 141);
             this.lbAddress.Name = "lbAddress";
-            this.lbAddress.Size = new System.Drawing.Size(82, 24);
+            this.lbAddress.Size = new System.Drawing.Size(65, 19);
             this.lbAddress.TabIndex = 5;
             this.lbAddress.Text = "Address:";
             // 
@@ -183,9 +189,9 @@
             // 
             this.LbStaffID.AutoSize = true;
             this.LbStaffID.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.LbStaffID.Location = new System.Drawing.Point(39, 139);
+            this.LbStaffID.Location = new System.Drawing.Point(34, 104);
             this.LbStaffID.Name = "LbStaffID";
-            this.LbStaffID.Size = new System.Drawing.Size(80, 24);
+            this.LbStaffID.Size = new System.Drawing.Size(64, 19);
             this.LbStaffID.TabIndex = 3;
             this.LbStaffID.Text = "Staff ID: ";
             // 
@@ -193,9 +199,9 @@
             // 
             this.LbStaffNAme.AutoSize = true;
             this.LbStaffNAme.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.LbStaffNAme.Location = new System.Drawing.Point(39, 95);
+            this.LbStaffNAme.Location = new System.Drawing.Point(34, 71);
             this.LbStaffNAme.Name = "LbStaffNAme";
-            this.LbStaffNAme.Size = new System.Drawing.Size(110, 24);
+            this.LbStaffNAme.Size = new System.Drawing.Size(86, 19);
             this.LbStaffNAme.TabIndex = 2;
             this.LbStaffNAme.Text = "Staff name: ";
             // 
@@ -205,8 +211,9 @@
             this.panel1.Controls.Add(this.LbStaffInformation);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(865, 65);
+            this.panel1.Size = new System.Drawing.Size(757, 49);
             this.panel1.TabIndex = 1;
             // 
             // LbStaffInformation
@@ -216,9 +223,9 @@
             this.LbStaffInformation.AutoSize = true;
             this.LbStaffInformation.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.LbStaffInformation.ForeColor = System.Drawing.Color.White;
-            this.LbStaffInformation.Location = new System.Drawing.Point(319, 14);
+            this.LbStaffInformation.Location = new System.Drawing.Point(279, 10);
             this.LbStaffInformation.Name = "LbStaffInformation";
-            this.LbStaffInformation.Size = new System.Drawing.Size(225, 37);
+            this.LbStaffInformation.Size = new System.Drawing.Size(179, 29);
             this.LbStaffInformation.TabIndex = 0;
             this.LbStaffInformation.Text = "Staff Information";
             // 
@@ -230,11 +237,12 @@
             this.TblPnHeaderHome.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.TblPnHeaderHome.Controls.Add(this.PnJobHeader, 1, 0);
             this.TblPnHeaderHome.Controls.Add(this.PnCompanyHeader);
-            this.TblPnHeaderHome.Location = new System.Drawing.Point(240, 51);
+            this.TblPnHeaderHome.Location = new System.Drawing.Point(210, 38);
+            this.TblPnHeaderHome.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.TblPnHeaderHome.Name = "TblPnHeaderHome";
             this.TblPnHeaderHome.RowCount = 1;
             this.TblPnHeaderHome.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.TblPnHeaderHome.Size = new System.Drawing.Size(621, 109);
+            this.TblPnHeaderHome.Size = new System.Drawing.Size(543, 82);
             this.TblPnHeaderHome.TabIndex = 3;
             // 
             // PnJobHeader
@@ -244,9 +252,10 @@
             this.PnJobHeader.Controls.Add(this.LbActiveJobsHeader);
             this.PnJobHeader.Controls.Add(this.PicJobHeader);
             this.PnJobHeader.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.PnJobHeader.Location = new System.Drawing.Point(313, 3);
+            this.PnJobHeader.Location = new System.Drawing.Point(274, 2);
+            this.PnJobHeader.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.PnJobHeader.Name = "PnJobHeader";
-            this.PnJobHeader.Size = new System.Drawing.Size(305, 103);
+            this.PnJobHeader.Size = new System.Drawing.Size(266, 78);
             this.PnJobHeader.TabIndex = 2;
             // 
             // lbSalaryHeader
@@ -254,9 +263,9 @@
             this.lbSalaryHeader.AutoSize = true;
             this.lbSalaryHeader.Font = new System.Drawing.Font("Calibri", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lbSalaryHeader.ForeColor = System.Drawing.Color.White;
-            this.lbSalaryHeader.Location = new System.Drawing.Point(154, 56);
+            this.lbSalaryHeader.Location = new System.Drawing.Point(135, 42);
             this.lbSalaryHeader.Name = "lbSalaryHeader";
-            this.lbSalaryHeader.Size = new System.Drawing.Size(69, 22);
+            this.lbSalaryHeader.Size = new System.Drawing.Size(54, 18);
             this.lbSalaryHeader.TabIndex = 4;
             this.lbSalaryHeader.Text = "100.000";
             // 
@@ -266,9 +275,9 @@
             this.LbActiveJobsHeader.AutoSize = true;
             this.LbActiveJobsHeader.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.LbActiveJobsHeader.ForeColor = System.Drawing.Color.White;
-            this.LbActiveJobsHeader.Location = new System.Drawing.Point(154, 14);
+            this.LbActiveJobsHeader.Location = new System.Drawing.Point(134, 10);
             this.LbActiveJobsHeader.Name = "LbActiveJobsHeader";
-            this.LbActiveJobsHeader.Size = new System.Drawing.Size(60, 24);
+            this.LbActiveJobsHeader.Size = new System.Drawing.Size(48, 19);
             this.LbActiveJobsHeader.TabIndex = 3;
             this.LbActiveJobsHeader.Text = "Salary";
             // 
@@ -278,10 +287,11 @@
             this.PicJobHeader.IconChar = FontAwesome.Sharp.IconChar.MoneyBill;
             this.PicJobHeader.IconColor = System.Drawing.Color.White;
             this.PicJobHeader.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.PicJobHeader.IconSize = 40;
-            this.PicJobHeader.Location = new System.Drawing.Point(49, 36);
+            this.PicJobHeader.IconSize = 30;
+            this.PicJobHeader.Location = new System.Drawing.Point(43, 27);
+            this.PicJobHeader.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.PicJobHeader.Name = "PicJobHeader";
-            this.PicJobHeader.Size = new System.Drawing.Size(40, 40);
+            this.PicJobHeader.Size = new System.Drawing.Size(35, 30);
             this.PicJobHeader.TabIndex = 0;
             this.PicJobHeader.TabStop = false;
             // 
@@ -292,9 +302,10 @@
             this.PnCompanyHeader.Controls.Add(this.LbCompanyNameHader);
             this.PnCompanyHeader.Controls.Add(this.PicsStaffHeader);
             this.PnCompanyHeader.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.PnCompanyHeader.Location = new System.Drawing.Point(3, 3);
+            this.PnCompanyHeader.Location = new System.Drawing.Point(3, 2);
+            this.PnCompanyHeader.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.PnCompanyHeader.Name = "PnCompanyHeader";
-            this.PnCompanyHeader.Size = new System.Drawing.Size(304, 103);
+            this.PnCompanyHeader.Size = new System.Drawing.Size(265, 78);
             this.PnCompanyHeader.TabIndex = 1;
             // 
             // lbDateJoinHeader
@@ -302,9 +313,9 @@
             this.lbDateJoinHeader.AutoSize = true;
             this.lbDateJoinHeader.Font = new System.Drawing.Font("Calibri", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lbDateJoinHeader.ForeColor = System.Drawing.Color.White;
-            this.lbDateJoinHeader.Location = new System.Drawing.Point(136, 56);
+            this.lbDateJoinHeader.Location = new System.Drawing.Point(119, 42);
             this.lbDateJoinHeader.Name = "lbDateJoinHeader";
-            this.lbDateJoinHeader.Size = new System.Drawing.Size(87, 22);
+            this.lbDateJoinHeader.Size = new System.Drawing.Size(69, 18);
             this.lbDateJoinHeader.TabIndex = 5;
             this.lbDateJoinHeader.Text = "3/13/2023";
             // 
@@ -314,9 +325,9 @@
             this.LbCompanyNameHader.AutoSize = true;
             this.LbCompanyNameHader.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.LbCompanyNameHader.ForeColor = System.Drawing.Color.White;
-            this.LbCompanyNameHader.Location = new System.Drawing.Point(137, 15);
+            this.LbCompanyNameHader.Location = new System.Drawing.Point(119, 11);
             this.LbCompanyNameHader.Name = "LbCompanyNameHader";
-            this.LbCompanyNameHader.Size = new System.Drawing.Size(87, 24);
+            this.LbCompanyNameHader.Size = new System.Drawing.Size(69, 19);
             this.LbCompanyNameHader.TabIndex = 1;
             this.LbCompanyNameHader.Text = "Date Join";
             // 
@@ -328,38 +339,24 @@
             this.PicsStaffHeader.IconChar = FontAwesome.Sharp.IconChar.CalendarDay;
             this.PicsStaffHeader.IconColor = System.Drawing.Color.White;
             this.PicsStaffHeader.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.PicsStaffHeader.IconSize = 40;
-            this.PicsStaffHeader.Location = new System.Drawing.Point(32, 39);
+            this.PicsStaffHeader.IconSize = 30;
+            this.PicsStaffHeader.Location = new System.Drawing.Point(28, 29);
+            this.PicsStaffHeader.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.PicsStaffHeader.Name = "PicsStaffHeader";
-            this.PicsStaffHeader.Size = new System.Drawing.Size(46, 40);
+            this.PicsStaffHeader.Size = new System.Drawing.Size(39, 30);
             this.PicsStaffHeader.TabIndex = 0;
             this.PicsStaffHeader.TabStop = false;
             // 
-            // btnEdit
-            // 
-            this.btnEdit.BackColor = System.Drawing.Color.Chocolate;
-            this.btnEdit.ForeColor = System.Drawing.Color.White;
-            this.btnEdit.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.btnEdit.IconColor = System.Drawing.Color.Black;
-            this.btnEdit.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnEdit.Location = new System.Drawing.Point(494, 518);
-            this.btnEdit.Name = "btnEdit";
-            this.btnEdit.Size = new System.Drawing.Size(123, 53);
-            this.btnEdit.TabIndex = 4;
-            this.btnEdit.Text = "Edit Profile";
-            this.btnEdit.UseVisualStyleBackColor = false;
-            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
-            // 
             // FrmStaffProfile
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1093, 604);
-            this.Controls.Add(this.btnEdit);
+            this.ClientSize = new System.Drawing.Size(958, 459);
             this.Controls.Add(this.TblPnHeaderHome);
             this.Controls.Add(this.PnInformationStudent);
-            this.MaximumSize = new System.Drawing.Size(1200, 700);
-            this.MinimumSize = new System.Drawing.Size(1111, 651);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.MaximumSize = new System.Drawing.Size(1052, 535);
+            this.MinimumSize = new System.Drawing.Size(974, 498);
             this.Name = "FrmStaffProfile";
             this.Text = "Staff Information";
             this.PnInformationStudent.ResumeLayout(false);
@@ -403,6 +400,5 @@
         private FontAwesome.Sharp.IconPictureBox PicsStaffHeader;
         private System.Windows.Forms.Label lbSalaryHeader;
         private System.Windows.Forms.Label lbDateJoinHeader;
-        private FontAwesome.Sharp.IconButton btnEdit;
     }
 }

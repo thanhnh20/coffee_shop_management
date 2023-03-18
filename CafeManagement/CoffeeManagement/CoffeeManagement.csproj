@@ -31,7 +31,15 @@
 	</ItemGroup>
 
 	<ItemGroup>
-		<Compile Update="FrmAdminUpdateProduct.cs" />
+		<Compile Update="FrmStaffUpdateCustomer.cs">
+		  <SubType>Form</SubType>
+		</Compile>
+		<Compile Update="FrmStaffManageCustomer.cs">
+		  <SubType>Form</SubType>
+		</Compile>
+		<Compile Update="FrmAdminUpdateProduct.cs">
+			<SubType>Form</SubType>
+		</Compile>
 		<Compile Update="FrmAdminUpdateIngredient.cs">
 			<SubType>Form</SubType>
 		</Compile>

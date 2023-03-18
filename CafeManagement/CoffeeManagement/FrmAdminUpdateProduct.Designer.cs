@@ -1,6 +1,6 @@
 ﻿namespace CoffeeManagement
 {
-    partial class FrmAdminInsertNewProduct
+    partial class FrmAdminUpdateProduct
     {
         /// <summary>
         /// Required designer variable.
@@ -314,7 +314,7 @@
             this.ClientSize = new System.Drawing.Size(650, 711);
             this.Controls.Add(this.PnInformation);
             this.Controls.Add(this.PnHeader);
-            this.Name = "FrmAdminInsertNewProduct";
+            this.Name = "FrmAdminUpdateProduct";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Create Product";
             this.Load += new System.EventHandler(this.FrmAdminInsertNewProduct_Load);

@@ -40,6 +40,6 @@ namespace Library.Service.ServicesImplement
             return StaffDAO.Instance.UpdateStaff(account);
         }
 
-        public staff getStaffByUserName(string username) => StaffDAO.Instance.getStaffByUserName(username);
+        public staff getStaffByUserName(string username) => StaffDAO.Instance.GetStaffbyName(username);
     }
 }

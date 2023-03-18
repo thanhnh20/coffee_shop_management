@@ -16,7 +16,7 @@ namespace CoffeeManagement
 {
     public partial class FrmLogin : Form
     {
-         
+        private Account AccountStaff { get; set; }
         public FrmLogin()
         {
             InitializeComponent();
@@ -54,10 +54,7 @@ namespace CoffeeManagement
                         }
                         else if (account.RoleId == 1)
                         {
-                            FrmStaffDashboard frmStaffDashboard = new FrmStaffDashboard()
-                            {
-                                AccountStaff = account,
-                            };
+                            FrmStaffDashboard frmStaffDashboard = new FrmStaffDashboard(account);
                             this.Hide();
                             frmStaffDashboard.ShowDialog();
                         }
