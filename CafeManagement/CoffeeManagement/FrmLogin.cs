@@ -54,7 +54,10 @@ namespace CoffeeManagement
                         }
                         else if (account.RoleId == 1)
                         {
-                            FrmStaffDashboard frmStaffDashboard = new FrmStaffDashboard(account);
+                            FrmStaffDashboard frmStaffDashboard = new FrmStaffDashboard(account)
+                            {
+                                AccountStaff = account,
+                            };
                             this.Hide();
                             frmStaffDashboard.ShowDialog();
                         }

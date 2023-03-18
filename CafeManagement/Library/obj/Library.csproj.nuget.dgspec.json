@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\SWD\\db_coffee_shop_management\\CafeManagement\\Library\\Library.csproj": {}
+    "F:\\Download\\SE151252\\SWD392\\Project gr\\Project-ver3\\coffee_shop_management\\CafeManagement\\Library\\Library.csproj": {}
   },
   "projects": {
-    "D:\\SWD\\db_coffee_shop_management\\CafeManagement\\Library\\Library.csproj": {
+    "F:\\Download\\SE151252\\SWD392\\Project gr\\Project-ver3\\coffee_shop_management\\CafeManagement\\Library\\Library.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\SWD\\db_coffee_shop_management\\CafeManagement\\Library\\Library.csproj",
+        "projectUniqueName": "F:\\Download\\SE151252\\SWD392\\Project gr\\Project-ver3\\coffee_shop_management\\CafeManagement\\Library\\Library.csproj",
         "projectName": "Library",
-        "projectPath": "D:\\SWD\\db_coffee_shop_management\\CafeManagement\\Library\\Library.csproj",
-        "packagesPath": "C:\\Users\\ADMIN\\.nuget\\packages\\",
-        "outputPath": "D:\\SWD\\db_coffee_shop_management\\CafeManagement\\Library\\obj\\",
+        "projectPath": "F:\\Download\\SE151252\\SWD392\\Project gr\\Project-ver3\\coffee_shop_management\\CafeManagement\\Library\\Library.csproj",
+        "packagesPath": "C:\\Users\\ASUS\\.nuget\\packages\\",
+        "outputPath": "F:\\Download\\SE151252\\SWD392\\Project gr\\Project-ver3\\coffee_shop_management\\CafeManagement\\Library\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "A:\\Microsoft Visual Studio\\Tools\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\ADMIN\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\ASUS\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -83,8 +79,7 @@
             "net47",
             "net471",
             "net472",
-            "net48",
-            "net481"
+            "net48"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -93,7 +88,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.103\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.408\\RuntimeIdentifierGraph.json"
         }
       }
     }

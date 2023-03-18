@@ -136,9 +136,10 @@ namespace CoffeeManagement
         private void btnOrder_Click(object sender, EventArgs e)
         {
             ActiveButton(sender, Color.FromName("Black"));
-            OpenChildForm(new FrmStaffOrderProduct(AccountStaff)
+            OpenChildForm(new FrmStaffOrderProduct()
             {
                 FrmStaffDashboard = this,
+                AccountStaff = AccountStaff
             });
         }
 

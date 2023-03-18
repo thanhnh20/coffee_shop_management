@@ -1,4 +1,5 @@
 ﻿using Library.Model;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -69,6 +70,42 @@ namespace Library.DataAccess
 
                     }                 
                 }                  
+            }
+        }
+
+        public List<Order> ListALL()
+        {
+            using(var db = new CoffeeShopManagementContext())
+            {
+                return db.Orders.Include(i => i.OrderDetails)
+                                    .Include(i => i.Staff)
+                                    .Include(i => i.PaymentMethod)
+                                    .Include(i => i.StatusOrder)
+                                    .OrderByDescending(i => i.DateOrder)
+                    .ToList();
+            }
+        }
+
+        public List<Order> ListALLByOrderID(int orderid)
+        {
+            using (var db = new CoffeeShopManagementContext())
+            {
+                return db.Orders.Where(o => o.OrderId == orderid).Include(i => i.OrderDetails)
+                                    .Include(i => i.Staff)
+                                    .Include(i => i.PaymentMethod)
+                                    .Include(i => i.StatusOrder)
+                                    .OrderByDescending(i => i.DateOrder)
+                    .ToList();
+            }
+        }
+
+        public List<OrderDetail> GetOrderDetailsByOrderID(int orderID)
+        {
+            using(var db = new CoffeeShopManagementContext())
+            {
+                return db.OrderDetails.Where(o => o.OrderId == orderID)
+                        .Include(i => i.Product)
+                    .ToList();
             }
         }
     }

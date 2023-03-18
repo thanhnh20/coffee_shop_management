@@ -11,5 +11,10 @@ namespace Library.Service.ServicesImplement
     public class OrderServiceIml : IOrderService
     {
         public bool CreateOrder(List<Product> listOrder, Customer customer, staff staff, double amount) => OrderDAO.Instance.CreateOrder(listOrder, customer, staff, amount);
+
+        public List<Order> ListALL() => OrderDAO.Instance.ListALL();
+
+        public List<Order> ListALLByOrderID(int orderid) => OrderDAO.Instance.ListALLByOrderID(orderid);
+
     }
 }
