@@ -75,6 +75,7 @@ namespace CoffeeManagement
 
         private void FrmAdminInsertNewProduct_Load(object sender, EventArgs e)
         {
+            txtPrice.PasswordChar = '\0';
             cklIngredient.Visible = false;
             Dictionary<int, string> comboSource = new Dictionary<int, string>();
             comboSource.Add(0, "Inactive");
