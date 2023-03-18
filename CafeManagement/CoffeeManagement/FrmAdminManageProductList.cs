@@ -40,6 +40,8 @@ namespace CoffeeManagement
         private void FrmAdminManageProductList_Load(object sender, EventArgs e)
         {
             IEnumerable<Product> productList = productService.GetProducts();
+            CbFilterProductList.Text = "Product Name";
+
             LoadProduct(productList);
         }
 

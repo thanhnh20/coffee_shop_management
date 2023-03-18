@@ -77,6 +77,7 @@ namespace CoffeeManagement
         {
             BtnInsertANewProduct.Text = "Update";
             LbHeader.Text = "Update a product";
+            txtPrice.PasswordChar = '\0';
             cklIngredient.Visible = false;
             ProductStore = productService.GetProductByID(ProductStore.ProductId);
             txtProductName.Text = ProductStore.ProductName;
