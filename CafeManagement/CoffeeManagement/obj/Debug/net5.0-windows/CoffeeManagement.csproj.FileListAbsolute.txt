@@ -76,6 +76,8 @@ D:\SWD\db_coffee_shop_management\CafeManagement\CoffeeManagement\obj\Debug\net5.
 D:\SWD\db_coffee_shop_management\CafeManagement\CoffeeManagement\obj\Debug\net5.0-windows\CoffeeManagement.FrmAdminManageProductList.resources
 D:\SWD\db_coffee_shop_management\CafeManagement\CoffeeManagement\obj\Debug\net5.0-windows\CoffeeManagement.FrmAdminManageStorage.resources
 D:\SWD\db_coffee_shop_management\CafeManagement\CoffeeManagement\obj\Debug\net5.0-windows\CoffeeManagement.FrmAdminUpdateAccount.resources
+D:\SWD\db_coffee_shop_management\CafeManagement\CoffeeManagement\obj\Debug\net5.0-windows\CoffeeManagement.FrmAdminUpdateIngredient.resources
+D:\SWD\db_coffee_shop_management\CafeManagement\CoffeeManagement\obj\Debug\net5.0-windows\CoffeeManagement.FrmAdminUpdateProduct.resources
 D:\SWD\db_coffee_shop_management\CafeManagement\CoffeeManagement\obj\Debug\net5.0-windows\CoffeeManagement.FrmCustomerList.resources
 D:\SWD\db_coffee_shop_management\CafeManagement\CoffeeManagement\obj\Debug\net5.0-windows\CoffeeManagement.FrmInvoiceHistory.resources
 D:\SWD\db_coffee_shop_management\CafeManagement\CoffeeManagement\obj\Debug\net5.0-windows\CoffeeManagement.FrmLogin.resources

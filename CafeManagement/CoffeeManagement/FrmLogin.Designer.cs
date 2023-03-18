@@ -191,7 +191,7 @@
             this.Name = "FrmLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Camasy Cafe Manager Login";
-            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FrmLogin_KeyDown);
+            /*this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FrmLogin_KeyDown);*/
             this.PnLogo.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.PicLogo)).EndInit();
             this.ResumeLayout(false);
