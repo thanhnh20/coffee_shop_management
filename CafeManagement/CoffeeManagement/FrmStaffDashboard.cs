@@ -140,7 +140,7 @@ namespace CoffeeManagement
             OpenChildForm(new FrmStaffOrderProduct()
             {
                 FrmStaffDashboard = this,
-                //AccountStaff = AccountStaff
+                AccountStaff = AccountStaff
             });
         }
 

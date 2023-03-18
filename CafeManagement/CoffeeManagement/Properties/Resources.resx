@@ -124,13 +124,43 @@
   <data name="cafe3" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\cafe3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="cafe_11" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cafe_11.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="cafe_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\cafe_1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="cafe2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\cafe2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="cafe_11" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\cafe_11.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="banhchuoi" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\banhchuoi.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="banhmi-que" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\banhmi-que.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="cappuccino" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cappuccino.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="coffee1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\coffee.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="phindi-choco" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\phindi-choco.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="phindi-hanhnhan" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\phindi-hanhnhan.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="phindi-kemsua" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\phindi-kemsua.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="tra-daudo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\tra-daudo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="trasen-vang" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\trasen-vang.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="trathach-dao" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\trathach-dao.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
