@@ -1,48 +1,16 @@
-F:\PE_PRN221_TRIAL\Library\bin\Debug\net5.0\Library.deps.json
-F:\PE_PRN221_TRIAL\Library\bin\Debug\net5.0\Library.runtimeconfig.json
-F:\PE_PRN221_TRIAL\Library\bin\Debug\net5.0\Library.runtimeconfig.dev.json
-F:\PE_PRN221_TRIAL\Library\bin\Debug\net5.0\Library.dll
-F:\PE_PRN221_TRIAL\Library\bin\Debug\net5.0\Library.pdb
-F:\PE_PRN221_TRIAL\Library\obj\Debug\net5.0\Library.csproj.AssemblyReference.cache
-F:\PE_PRN221_TRIAL\Library\obj\Debug\net5.0\Library.GeneratedMSBuildEditorConfig.editorconfig
-F:\PE_PRN221_TRIAL\Library\obj\Debug\net5.0\Library.AssemblyInfoInputs.cache
-F:\PE_PRN221_TRIAL\Library\obj\Debug\net5.0\Library.AssemblyInfo.cs
-F:\PE_PRN221_TRIAL\Library\obj\Debug\net5.0\Library.csproj.CoreCompileInputs.cache
-F:\PE_PRN221_TRIAL\Library\obj\Debug\net5.0\Library.dll
-F:\PE_PRN221_TRIAL\Library\obj\Debug\net5.0\ref\Library.dll
-F:\PE_PRN221_TRIAL\Library\obj\Debug\net5.0\Library.pdb
-F:\PE_PRN221_TRIAL\Library\obj\Debug\net5.0\Library.genruntimeconfig.cache
-F:\PE_PRN221_TRIAL\Library\obj\Debug\net5.0\refint\Library.dll
-F:\PE_PRN221_TRIAL\Library\bin\Debug\net5.0\appsettings.json
-F:\PE_PRN221_TRIAL\CafeManagement\Library\bin\Debug\net5.0\appsettings.json
-F:\PE_PRN221_TRIAL\CafeManagement\Library\bin\Debug\net5.0\Library.deps.json
-F:\PE_PRN221_TRIAL\CafeManagement\Library\bin\Debug\net5.0\Library.runtimeconfig.json
-F:\PE_PRN221_TRIAL\CafeManagement\Library\bin\Debug\net5.0\Library.runtimeconfig.dev.json
-F:\PE_PRN221_TRIAL\CafeManagement\Library\bin\Debug\net5.0\Library.dll
-F:\PE_PRN221_TRIAL\CafeManagement\Library\bin\Debug\net5.0\Library.pdb
-F:\PE_PRN221_TRIAL\CafeManagement\Library\obj\Debug\net5.0\Library.csproj.AssemblyReference.cache
-F:\PE_PRN221_TRIAL\CafeManagement\Library\obj\Debug\net5.0\Library.GeneratedMSBuildEditorConfig.editorconfig
-F:\PE_PRN221_TRIAL\CafeManagement\Library\obj\Debug\net5.0\Library.AssemblyInfoInputs.cache
-F:\PE_PRN221_TRIAL\CafeManagement\Library\obj\Debug\net5.0\Library.AssemblyInfo.cs
-F:\PE_PRN221_TRIAL\CafeManagement\Library\obj\Debug\net5.0\Library.csproj.CoreCompileInputs.cache
-F:\PE_PRN221_TRIAL\CafeManagement\Library\obj\Debug\net5.0\Library.dll
-F:\PE_PRN221_TRIAL\CafeManagement\Library\obj\Debug\net5.0\refint\Library.dll
-F:\PE_PRN221_TRIAL\CafeManagement\Library\obj\Debug\net5.0\Library.pdb
-F:\PE_PRN221_TRIAL\CafeManagement\Library\obj\Debug\net5.0\Library.genruntimeconfig.cache
-F:\PE_PRN221_TRIAL\CafeManagement\Library\obj\Debug\net5.0\ref\Library.dll
-F:\Download\SE151252\SWD392\Project gr\Project\CafeManagement\Library\bin\Debug\net5.0\appsettings.json
-F:\Download\SE151252\SWD392\Project gr\Project\CafeManagement\Library\bin\Debug\net5.0\Library.deps.json
-F:\Download\SE151252\SWD392\Project gr\Project\CafeManagement\Library\bin\Debug\net5.0\Library.runtimeconfig.json
-F:\Download\SE151252\SWD392\Project gr\Project\CafeManagement\Library\bin\Debug\net5.0\Library.runtimeconfig.dev.json
-F:\Download\SE151252\SWD392\Project gr\Project\CafeManagement\Library\bin\Debug\net5.0\Library.dll
-F:\Download\SE151252\SWD392\Project gr\Project\CafeManagement\Library\bin\Debug\net5.0\Library.pdb
-F:\Download\SE151252\SWD392\Project gr\Project\CafeManagement\Library\obj\Debug\net5.0\Library.csproj.AssemblyReference.cache
-F:\Download\SE151252\SWD392\Project gr\Project\CafeManagement\Library\obj\Debug\net5.0\Library.GeneratedMSBuildEditorConfig.editorconfig
-F:\Download\SE151252\SWD392\Project gr\Project\CafeManagement\Library\obj\Debug\net5.0\Library.AssemblyInfoInputs.cache
-F:\Download\SE151252\SWD392\Project gr\Project\CafeManagement\Library\obj\Debug\net5.0\Library.AssemblyInfo.cs
-F:\Download\SE151252\SWD392\Project gr\Project\CafeManagement\Library\obj\Debug\net5.0\Library.csproj.CoreCompileInputs.cache
-F:\Download\SE151252\SWD392\Project gr\Project\CafeManagement\Library\obj\Debug\net5.0\Library.dll
-F:\Download\SE151252\SWD392\Project gr\Project\CafeManagement\Library\obj\Debug\net5.0\refint\Library.dll
-F:\Download\SE151252\SWD392\Project gr\Project\CafeManagement\Library\obj\Debug\net5.0\Library.pdb
-F:\Download\SE151252\SWD392\Project gr\Project\CafeManagement\Library\obj\Debug\net5.0\Library.genruntimeconfig.cache
-F:\Download\SE151252\SWD392\Project gr\Project\CafeManagement\Library\obj\Debug\net5.0\ref\Library.dll
+D:\SWD\db_coffee_shop_management\CafeManagement\Library\bin\Debug\net5.0\appsettings.json
+D:\SWD\db_coffee_shop_management\CafeManagement\Library\bin\Debug\net5.0\Library.deps.json
+D:\SWD\db_coffee_shop_management\CafeManagement\Library\bin\Debug\net5.0\Library.runtimeconfig.json
+D:\SWD\db_coffee_shop_management\CafeManagement\Library\bin\Debug\net5.0\Library.runtimeconfig.dev.json
+D:\SWD\db_coffee_shop_management\CafeManagement\Library\bin\Debug\net5.0\Library.dll
+D:\SWD\db_coffee_shop_management\CafeManagement\Library\bin\Debug\net5.0\Library.pdb
+D:\SWD\db_coffee_shop_management\CafeManagement\Library\obj\Debug\net5.0\Library.csproj.AssemblyReference.cache
+D:\SWD\db_coffee_shop_management\CafeManagement\Library\obj\Debug\net5.0\Library.GeneratedMSBuildEditorConfig.editorconfig
+D:\SWD\db_coffee_shop_management\CafeManagement\Library\obj\Debug\net5.0\Library.AssemblyInfoInputs.cache
+D:\SWD\db_coffee_shop_management\CafeManagement\Library\obj\Debug\net5.0\Library.AssemblyInfo.cs
+D:\SWD\db_coffee_shop_management\CafeManagement\Library\obj\Debug\net5.0\Library.csproj.CoreCompileInputs.cache
+D:\SWD\db_coffee_shop_management\CafeManagement\Library\obj\Debug\net5.0\Library.dll
+D:\SWD\db_coffee_shop_management\CafeManagement\Library\obj\Debug\net5.0\refint\Library.dll
+D:\SWD\db_coffee_shop_management\CafeManagement\Library\obj\Debug\net5.0\Library.pdb
+D:\SWD\db_coffee_shop_management\CafeManagement\Library\obj\Debug\net5.0\Library.genruntimeconfig.cache
+D:\SWD\db_coffee_shop_management\CafeManagement\Library\obj\Debug\net5.0\ref\Library.dll

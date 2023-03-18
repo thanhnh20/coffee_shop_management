@@ -12,32 +12,32 @@ namespace Library.Service.ServicesImplement
     {
         public staff Createstaff(staff account)
         {
-            return StaffDAO.getInstance.CreateStaff(account);
+            return StaffDAO.Instance.CreateStaff(account);
         }
 
         public bool Deletestaff(int staffid)
         {
-            return StaffDAO.getInstance.DeleteStaff(staffid);
+            return StaffDAO.Instance.DeleteStaff(staffid);
         }
 
         public staff GetstaffById(int staffid)
         {
-            return StaffDAO.getInstance.GetStaffbyId(staffid);
+            return StaffDAO.Instance.GetStaffbyId(staffid);
         }
 
         public List<staff> GetStaffs()
         {
-            return StaffDAO.getInstance.GetAllStaffs();
+            return StaffDAO.Instance.GetAllStaffs();
         }
 
         public staff GetStaffsByUserName(string username)
         {
-            return StaffDAO.getInstance.GetStaffbyUserName(username);
+            return StaffDAO.Instance.GetStaffbyName(username);
         }
 
         public staff Updatestaff(staff account)
         {
-            return StaffDAO.getInstance.UpdateStaff(account);
+            return StaffDAO.Instance.UpdateStaff(account);
         }
     }
 }

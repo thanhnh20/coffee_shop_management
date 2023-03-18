@@ -5,10 +5,6 @@ using System.Text;
 using System.Threading.Tasks;
 using Library.Model;
 using Microsoft.EntityFrameworkCore;
-<<<<<<< HEAD
-=======
-using Microsoft.EntityFrameworkCore.ChangeTracking;
->>>>>>> 796617b80527656193a787505ec464c5228c8b8b
 
 namespace Library.DataAccess
 {
@@ -46,24 +42,13 @@ namespace Library.DataAccess
         public Account getAccbyStaff(int staffid) => db.Accounts.Include(sta => sta.staff).FirstOrDefault(acc => acc.staff.StaffId.Equals(staffid));
         public Account checkLogin(string username, string password)
             => db.Accounts.Where(m => m.Username.Equals(username) && m.Password.Equals(password)).FirstOrDefault();
-<<<<<<< HEAD
-        public List<Account> GetAllAccounts() => db.Accounts.Include(sta => sta.staff).ToList();
-        public Account GetAccbyName(string name) => db.Accounts.Include(sta => sta.staff).FirstOrDefault(acc => acc.Username.Equals(name));
-        public Account GetAccbyStaff(int staffid) => db.Accounts.Include(sta => sta.staff).FirstOrDefault(acc => acc.staff.StaffId.Equals(staffid));
         public Account CreateAccount(Account account)
-=======
-        public Account createAccount(Account account)
->>>>>>> 796617b80527656193a787505ec464c5228c8b8b
         {
             try
             {
                 db.Accounts.Add(account);
                 db.SaveChanges();
-<<<<<<< HEAD
-                account = GetAccbyName(account.Username);
-=======
                 account = getAccbyName(account.Username);
->>>>>>> 796617b80527656193a787505ec464c5228c8b8b
                 return account;
             }
             catch
@@ -71,19 +56,11 @@ namespace Library.DataAccess
                 throw;
             }
         }
-<<<<<<< HEAD
-        public bool DeleteAccount(Account account)
+        public bool DeleteAccount(string Username)
         {
             try
             {
-                var user = GetAccbyName(account.Username);
-=======
-        public bool deleteAccount(string username)
-        {
-            try
-            {
-                var user = getAccbyName(username);
->>>>>>> 796617b80527656193a787505ec464c5228c8b8b
+                var user = getAccbyName(Username);
                 if (user != null)
                 {
                     db.Accounts.Remove(user);
@@ -97,22 +74,7 @@ namespace Library.DataAccess
                 throw;
             }
         }
-<<<<<<< HEAD
         public Account UpdateAccount(Account account)
-        {
-            try
-            {
-                var user = GetAccbyName(account.Username);
-                if (user != null)
-                {
-                    user.Password = account.Password;
-                    user.RoleId = account.RoleId;
-                    user.Status = account.Status;
-                    db.Accounts.Update(user);
-                    db.SaveChanges();
-                    user = GetAccbyName(account.Username);
-=======
-        public Account updateAccount(Account account)
         {
             try
             {
@@ -120,12 +82,11 @@ namespace Library.DataAccess
                 if (user != null)
                 {
                     user.Password = account.Password;
-                    user.Status = account.Status;
                     user.RoleId = account.RoleId;
+                    user.Status = account.Status;
                     db.Accounts.Update(user);
                     db.SaveChanges();
                     user = getAccbyName(account.Username);
->>>>>>> 796617b80527656193a787505ec464c5228c8b8b
                     return user;
                 }
                 return null;

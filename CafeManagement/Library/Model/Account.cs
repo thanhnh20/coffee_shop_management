@@ -31,10 +31,6 @@ namespace Library.Model
         [Required(ErrorMessage = "Status is required!")]
         [Display(Name = "Status", Description = "0 - inactive / 1 - active")]
         [Range(minimum: 0, maximum: 1, ErrorMessage = "Status must be 0 for Inactive or 1 for Active!")]
-<<<<<<< HEAD
-=======
-        [DefaultValue(1)]
->>>>>>> 796617b80527656193a787505ec464c5228c8b8b
         public int Status { get; set; }
 
         public virtual Role Role { get; set; }

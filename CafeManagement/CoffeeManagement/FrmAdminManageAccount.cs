@@ -72,7 +72,7 @@ namespace CoffeeManagement
             IAccountService accountService = new AccountServiceIml();
             IStaffServices staffService = new StaffServiceIml();
             List<AccStaViewModel> accstalis = new();
-            var acclis = accountService.GetStaffAccounts();
+            var acclis = accountService.GetAccounts();
             if (name != "")
             {
                 acclis = accountService.GetAccountsByName(name);
