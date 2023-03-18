@@ -1,6 +1,6 @@
 ﻿namespace CoffeeManagement
 {
-    partial class FrmAdminInsertNewProduct
+    partial class FrmAdminUpdateProduct
     {
         /// <summary>
         /// Required designer variable.
@@ -31,7 +31,9 @@
             this.PnHeader = new System.Windows.Forms.Panel();
             this.LbHeader = new System.Windows.Forms.Label();
             this.PnInformation = new System.Windows.Forms.Panel();
-            this.btnSelectIngredient = new FontAwesome.Sharp.IconButton();
+            this.txtMass = new System.Windows.Forms.TextBox();
+            this.lbMass = new System.Windows.Forms.Label();
+            this.cbIngredient = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.cbStatus = new System.Windows.Forms.ComboBox();
             this.lbStatus = new System.Windows.Forms.Label();
@@ -49,6 +51,7 @@
             this.lbCategory = new System.Windows.Forms.Label();
             this.txtImage = new System.Windows.Forms.TextBox();
             this.lbImage = new System.Windows.Forms.Label();
+            this.cklIngredient = new System.Windows.Forms.CheckedListBox();
             this.PnHeader.SuspendLayout();
             this.PnInformation.SuspendLayout();
             this.PnControls.SuspendLayout();
@@ -76,7 +79,10 @@
             // 
             // PnInformation
             // 
-            this.PnInformation.Controls.Add(this.btnSelectIngredient);
+            this.PnInformation.Controls.Add(this.cklIngredient);
+            this.PnInformation.Controls.Add(this.txtMass);
+            this.PnInformation.Controls.Add(this.lbMass);
+            this.PnInformation.Controls.Add(this.cbIngredient);
             this.PnInformation.Controls.Add(this.label1);
             this.PnInformation.Controls.Add(this.cbStatus);
             this.PnInformation.Controls.Add(this.lbStatus);
@@ -98,25 +104,38 @@
             this.PnInformation.Size = new System.Drawing.Size(650, 634);
             this.PnInformation.TabIndex = 3;
             // 
-            // btnSelectIngredient
+            // txtMass
             // 
-            this.btnSelectIngredient.IconChar = FontAwesome.Sharp.IconChar.Lemon;
-            this.btnSelectIngredient.IconColor = System.Drawing.Color.Black;
-            this.btnSelectIngredient.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnSelectIngredient.IconSize = 25;
-            this.btnSelectIngredient.Location = new System.Drawing.Point(236, 318);
-            this.btnSelectIngredient.Name = "btnSelectIngredient";
-            this.btnSelectIngredient.Size = new System.Drawing.Size(166, 35);
-            this.btnSelectIngredient.TabIndex = 22;
-            this.btnSelectIngredient.Text = "Select Ingredient";
-            this.btnSelectIngredient.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnSelectIngredient.UseVisualStyleBackColor = true;
+            this.txtMass.Location = new System.Drawing.Point(486, 326);
+            this.txtMass.Name = "txtMass";
+            this.txtMass.Size = new System.Drawing.Size(87, 27);
+            this.txtMass.TabIndex = 24;
+            // 
+            // lbMass
+            // 
+            this.lbMass.AutoSize = true;
+            this.lbMass.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lbMass.Location = new System.Drawing.Point(422, 326);
+            this.lbMass.Name = "lbMass";
+            this.lbMass.Size = new System.Drawing.Size(58, 24);
+            this.lbMass.TabIndex = 23;
+            this.lbMass.Text = "Mass:";
+            // 
+            // cbIngredient
+            // 
+            this.cbIngredient.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.cbIngredient.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.cbIngredient.FormattingEnabled = true;
+            this.cbIngredient.Location = new System.Drawing.Point(235, 323);
+            this.cbIngredient.Name = "cbIngredient";
+            this.cbIngredient.Size = new System.Drawing.Size(172, 32);
+            this.cbIngredient.TabIndex = 22;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(67, 322);
+            this.label1.Location = new System.Drawing.Point(67, 323);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(106, 24);
             this.label1.TabIndex = 21;
@@ -127,7 +146,7 @@
             this.cbStatus.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.cbStatus.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.cbStatus.FormattingEnabled = true;
-            this.cbStatus.Location = new System.Drawing.Point(236, 249);
+            this.cbStatus.Location = new System.Drawing.Point(235, 249);
             this.cbStatus.Name = "cbStatus";
             this.cbStatus.Size = new System.Drawing.Size(338, 32);
             this.cbStatus.TabIndex = 20;
@@ -147,7 +166,7 @@
             this.CbCategory.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.CbCategory.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.CbCategory.FormattingEnabled = true;
-            this.CbCategory.Location = new System.Drawing.Point(236, 189);
+            this.CbCategory.Location = new System.Drawing.Point(235, 189);
             this.CbCategory.Name = "CbCategory";
             this.CbCategory.Size = new System.Drawing.Size(338, 32);
             this.CbCategory.TabIndex = 18;
@@ -156,7 +175,7 @@
             // 
             this.PnLayout1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(113)))), ((int)(((byte)(36)))));
             this.PnLayout1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.PnLayout1.Location = new System.Drawing.Point(0, 515);
+            this.PnLayout1.Location = new System.Drawing.Point(0, 516);
             this.PnLayout1.Name = "PnLayout1";
             this.PnLayout1.Size = new System.Drawing.Size(650, 1);
             this.PnLayout1.TabIndex = 11;
@@ -166,9 +185,9 @@
             this.PnControls.Controls.Add(this.BtnInsertANewProduct);
             this.PnControls.Controls.Add(this.BtnCancel);
             this.PnControls.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.PnControls.Location = new System.Drawing.Point(0, 516);
+            this.PnControls.Location = new System.Drawing.Point(0, 517);
             this.PnControls.Name = "PnControls";
-            this.PnControls.Size = new System.Drawing.Size(650, 118);
+            this.PnControls.Size = new System.Drawing.Size(650, 117);
             this.PnControls.TabIndex = 10;
             // 
             // BtnInsertANewProduct
@@ -181,6 +200,7 @@
             this.BtnInsertANewProduct.TabIndex = 5;
             this.BtnInsertANewProduct.Text = "Insert";
             this.BtnInsertANewProduct.UseVisualStyleBackColor = true;
+            this.BtnInsertANewProduct.Click += new System.EventHandler(this.BtnInsertANewProduct_Click);
             // 
             // BtnCancel
             // 
@@ -193,11 +213,12 @@
             this.BtnCancel.TabIndex = 4;
             this.BtnCancel.Text = "Cancel";
             this.BtnCancel.UseVisualStyleBackColor = true;
+            this.BtnCancel.Click += new System.EventHandler(this.BtnCancel_Click);
             // 
             // txtPrice
             // 
             this.txtPrice.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtPrice.Location = new System.Drawing.Point(236, 76);
+            this.txtPrice.Location = new System.Drawing.Point(235, 76);
             this.txtPrice.Name = "txtPrice";
             this.txtPrice.PasswordChar = '*';
             this.txtPrice.Size = new System.Drawing.Size(338, 32);
@@ -216,7 +237,7 @@
             // txtProductName
             // 
             this.txtProductName.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtProductName.Location = new System.Drawing.Point(236, 23);
+            this.txtProductName.Location = new System.Drawing.Point(235, 23);
             this.txtProductName.Name = "txtProductName";
             this.txtProductName.Size = new System.Drawing.Size(338, 32);
             this.txtProductName.TabIndex = 1;
@@ -234,7 +255,7 @@
             // txtDescription
             // 
             this.txtDescription.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtDescription.Location = new System.Drawing.Point(236, 385);
+            this.txtDescription.Location = new System.Drawing.Point(235, 385);
             this.txtDescription.Multiline = true;
             this.txtDescription.Name = "txtDescription";
             this.txtDescription.Size = new System.Drawing.Size(338, 104);
@@ -263,7 +284,7 @@
             // txtImage
             // 
             this.txtImage.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtImage.Location = new System.Drawing.Point(236, 125);
+            this.txtImage.Location = new System.Drawing.Point(235, 125);
             this.txtImage.Name = "txtImage";
             this.txtImage.Size = new System.Drawing.Size(338, 32);
             this.txtImage.TabIndex = 3;
@@ -278,6 +299,14 @@
             this.lbImage.TabIndex = 0;
             this.lbImage.Text = "Image resouce:";
             // 
+            // cklIngredient
+            // 
+            this.cklIngredient.FormattingEnabled = true;
+            this.cklIngredient.Location = new System.Drawing.Point(26, 437);
+            this.cklIngredient.Name = "cklIngredient";
+            this.cklIngredient.Size = new System.Drawing.Size(150, 114);
+            this.cklIngredient.TabIndex = 25;
+            // 
             // FrmAdminInsertNewProduct
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
@@ -288,6 +317,7 @@
             this.Name = "FrmAdminInsertNewProduct";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Create Product";
+            this.Load += new System.EventHandler(this.FrmAdminInsertNewProduct_Load);
             this.PnHeader.ResumeLayout(false);
             this.PnHeader.PerformLayout();
             this.PnInformation.ResumeLayout(false);
@@ -318,7 +348,10 @@
         private System.Windows.Forms.ComboBox CbCategory;
         private System.Windows.Forms.ComboBox cbStatus;
         private System.Windows.Forms.Label lbStatus;
-        private FontAwesome.Sharp.IconButton btnSelectIngredient;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ComboBox cbIngredient;
+        private System.Windows.Forms.TextBox txtMass;
+        private System.Windows.Forms.Label lbMass;
+        private System.Windows.Forms.CheckedListBox cklIngredient;
     }
 }

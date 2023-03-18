@@ -26,6 +26,12 @@
     <Compile Update="FrmAdminUpdateAccount.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="FrmAdminUpdateIngredient.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="FrmAdminUpdateProduct.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="FrmCustomerList.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -47,5 +53,10 @@
     <Compile Update="FrmStaffProfile.cs">
       <SubType>Form</SubType>
     </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Update="FrmLogin.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
   </ItemGroup>
 </Project>

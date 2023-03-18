@@ -13,5 +13,7 @@ namespace Library.Model
 
         public virtual Ingredient Ingredient { get; set; }
         public virtual Product Product { get; set; }
+
+
     }
 }

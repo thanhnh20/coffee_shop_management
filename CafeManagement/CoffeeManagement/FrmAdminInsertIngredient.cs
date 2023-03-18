@@ -1,4 +1,8 @@
-﻿using System;
+﻿using Library.Model;
+using Library.Service;
+using Library.Service.ServicesImplement;
+using Library.Utils;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +19,72 @@ namespace CoffeeManagement
         public FrmAdminInsertIngredient()
         {
             InitializeComponent();
+        }
+
+        private IIngredientService ingredientSevice = new IngredientServiceIml();
+
+
+        private bool isClose { get; set; } = true;
+
+        private void BtnCancel_Click(object sender, EventArgs e)
+        {
+            if (isClose)
+            {
+                {
+                    DialogResult isExit = MessageBox.Show("Are your sure that you want to exit?", "Exit", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+                    if (isExit == DialogResult.OK)
+                    {
+                        this.Close();
+                    }
+                }
+            }
+
+        }
+
+        private void cbStatus_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void FrmAdminInsertIngredient_Load(object sender, EventArgs e)
+        {
+            Dictionary<int, string> comboSource = new Dictionary<int, string>();
+            comboSource.Add(0, "Inactive");
+            comboSource.Add(1, "Active");
+            cbStatus.DataSource = new BindingSource(comboSource, null);
+            cbStatus.DisplayMember = "Value";
+            cbStatus.ValueMember = "Key";
+        }
+
+        private void BtnInsertIngredient_Click(object sender, EventArgs e)
+        {
+
+            DialogResult rs = MessageBox.Show("Are you sure that you want to save?", "Insert a new student",
+                    MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (rs == DialogResult.Yes)
+            {
+
+
+                Ingredient ingredient = new Ingredient()
+                {
+                    Name = txtIngredientName.Text,
+                    Unit = txtUnit.Text,
+                    Status = ((KeyValuePair<int, string>)cbStatus.SelectedItem).Key
+                };
+                var resultError = MyHelper.CheckValid(ingredient);
+                if (resultError != null)
+                {
+                    MessageBox.Show(resultError, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
+                {
+                    ingredientSevice.InserIngredient(ingredient);
+                    isClose = true;
+                    MessageBox.Show("Inserted successfully", "Insert a ingredient", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    this.Close();
+                }
+
+            }
         }
     }
 }

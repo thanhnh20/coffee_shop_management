@@ -70,5 +70,11 @@ namespace CoffeeManagement
                 }          
             }             
         }
+
+        private void FrmLogin_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+                BtnLogin_Click(sender,e);
+        }
     }
 }

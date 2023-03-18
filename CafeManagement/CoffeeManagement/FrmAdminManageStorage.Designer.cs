@@ -49,8 +49,9 @@
             this.PnFilter.Controls.Add(this.TxtSearchIngredientFollowingFilter);
             this.PnFilter.Dock = System.Windows.Forms.DockStyle.Top;
             this.PnFilter.Location = new System.Drawing.Point(0, 0);
+            this.PnFilter.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.PnFilter.Name = "PnFilter";
-            this.PnFilter.Size = new System.Drawing.Size(1064, 116);
+            this.PnFilter.Size = new System.Drawing.Size(931, 87);
             this.PnFilter.TabIndex = 6;
             // 
             // BtnAddNewIngreadient
@@ -60,9 +61,10 @@
             this.BtnAddNewIngreadient.IconColor = System.Drawing.Color.Black;
             this.BtnAddNewIngreadient.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.BtnAddNewIngreadient.IconSize = 25;
-            this.BtnAddNewIngreadient.Location = new System.Drawing.Point(955, 86);
+            this.BtnAddNewIngreadient.Location = new System.Drawing.Point(836, 64);
+            this.BtnAddNewIngreadient.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.BtnAddNewIngreadient.Name = "BtnAddNewIngreadient";
-            this.BtnAddNewIngreadient.Size = new System.Drawing.Size(106, 31);
+            this.BtnAddNewIngreadient.Size = new System.Drawing.Size(93, 23);
             this.BtnAddNewIngreadient.TabIndex = 4;
             this.BtnAddNewIngreadient.Text = "Insert";
             this.BtnAddNewIngreadient.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -74,9 +76,9 @@
             // 
             this.LbFilterCompanyList.AutoSize = true;
             this.LbFilterCompanyList.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.LbFilterCompanyList.Location = new System.Drawing.Point(83, 31);
+            this.LbFilterCompanyList.Location = new System.Drawing.Point(73, 23);
             this.LbFilterCompanyList.Name = "LbFilterCompanyList";
-            this.LbFilterCompanyList.Size = new System.Drawing.Size(100, 24);
+            this.LbFilterCompanyList.Size = new System.Drawing.Size(80, 19);
             this.LbFilterCompanyList.TabIndex = 3;
             this.LbFilterCompanyList.Text = "Search By: ";
             // 
@@ -87,10 +89,11 @@
             this.CbFilterIngredientList.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.CbFilterIngredientList.FormattingEnabled = true;
             this.CbFilterIngredientList.Items.AddRange(new object[] {
-            "Company Name"});
-            this.CbFilterIngredientList.Location = new System.Drawing.Point(189, 23);
+            "Ingredient ID"});
+            this.CbFilterIngredientList.Location = new System.Drawing.Point(165, 17);
+            this.CbFilterIngredientList.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.CbFilterIngredientList.Name = "CbFilterIngredientList";
-            this.CbFilterIngredientList.Size = new System.Drawing.Size(178, 32);
+            this.CbFilterIngredientList.Size = new System.Drawing.Size(156, 27);
             this.CbFilterIngredientList.TabIndex = 2;
             // 
             // BtnSearchList
@@ -101,40 +104,48 @@
             this.BtnSearchList.IconColor = System.Drawing.Color.Black;
             this.BtnSearchList.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.BtnSearchList.IconSize = 25;
-            this.BtnSearchList.Location = new System.Drawing.Point(924, 23);
+            this.BtnSearchList.Location = new System.Drawing.Point(808, 17);
+            this.BtnSearchList.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.BtnSearchList.Name = "BtnSearchList";
-            this.BtnSearchList.Size = new System.Drawing.Size(64, 32);
+            this.BtnSearchList.Size = new System.Drawing.Size(56, 24);
             this.BtnSearchList.TabIndex = 1;
             this.BtnSearchList.UseVisualStyleBackColor = true;
+            this.BtnSearchList.Click += new System.EventHandler(this.BtnSearchList_Click);
             // 
             // TxtSearchIngredientFollowingFilter
             // 
             this.TxtSearchIngredientFollowingFilter.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.TxtSearchIngredientFollowingFilter.Location = new System.Drawing.Point(401, 23);
+            this.TxtSearchIngredientFollowingFilter.Location = new System.Drawing.Point(351, 17);
+            this.TxtSearchIngredientFollowingFilter.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.TxtSearchIngredientFollowingFilter.Name = "TxtSearchIngredientFollowingFilter";
-            this.TxtSearchIngredientFollowingFilter.Size = new System.Drawing.Size(490, 32);
+            this.TxtSearchIngredientFollowingFilter.Size = new System.Drawing.Size(429, 27);
             this.TxtSearchIngredientFollowingFilter.TabIndex = 0;
             // 
             // DgvIngredientList
             // 
             this.DgvIngredientList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DgvIngredientList.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.DgvIngredientList.Location = new System.Drawing.Point(0, 116);
+            this.DgvIngredientList.Location = new System.Drawing.Point(0, 87);
+            this.DgvIngredientList.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.DgvIngredientList.Name = "DgvIngredientList";
             this.DgvIngredientList.RowHeadersWidth = 51;
             this.DgvIngredientList.RowTemplate.Height = 29;
-            this.DgvIngredientList.Size = new System.Drawing.Size(1064, 435);
+            this.DgvIngredientList.Size = new System.Drawing.Size(931, 326);
             this.DgvIngredientList.TabIndex = 7;
+            this.DgvIngredientList.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvIngredientList_CellClick);
+            this.DgvIngredientList.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvIngredientList_CellDoubleClick);
             // 
             // FrmAdminManageStorage
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1064, 551);
+            this.ClientSize = new System.Drawing.Size(931, 413);
             this.Controls.Add(this.DgvIngredientList);
             this.Controls.Add(this.PnFilter);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "FrmAdminManageStorage";
             this.Text = "Manage Storage";
+            this.Load += new System.EventHandler(this.FrmAdminManageStorage_Load);
             this.PnFilter.ResumeLayout(false);
             this.PnFilter.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DgvIngredientList)).EndInit();
