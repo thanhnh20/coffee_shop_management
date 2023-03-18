@@ -47,11 +47,11 @@ namespace Library.DataAccess
                 throw;
             }
         }
-        public bool DeleteCustomer(Customer account)
+        public bool DeleteCustomer(string phonenumber)
         {
             try
             {
-                var user = getCustomerbyPhoneNumber(account.PhoneNumber);
+                var user = getCustomerbyPhoneNumber(phonenumber);
                 if (user != null)
                 {
                     db.Customers.Remove(user);

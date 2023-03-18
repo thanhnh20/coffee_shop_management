@@ -41,7 +41,7 @@ namespace Library.DataAccess
         public Account getAccbyName(string name) => db.Accounts.Include(sta => sta.staff).FirstOrDefault(acc => acc.Username.Equals(name));
         public Account getAccbyStaff(int staffid) => db.Accounts.Include(sta => sta.staff).FirstOrDefault(acc => acc.staff.StaffId.Equals(staffid));
         public Account checkLogin(string username, string password)
-            => db.Accounts.Where(m => m.Username.Equals(username) && m.Password.Equals(password)).FirstOrDefault();
+            => db.Accounts.Include(sta => sta.staff).Where(m => m.Username.Equals(username) && m.Password.Equals(password)).FirstOrDefault();
         public Account CreateAccount(Account account)
         {
             try

@@ -1,4 +1,5 @@
 ﻿using FontAwesome.Sharp;
+using Library.Model;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -19,17 +20,17 @@ namespace CoffeeManagement
         private Panel leftBorderBtn;
         private Form currentChildForm;
 
-        public FrmStaffDashboard()
+        public FrmStaffDashboard(Account account)
         {
             InitializeComponent();
             leftBorderBtn = new Panel();
             leftBorderBtn.Size = new Size(7, 60);
             PnDashBoard.Controls.Add(leftBorderBtn);
-            OpenChildForm(new FrmStaffProfile()
+            OpenChildForm(new FrmStaffProfile(account)
             {
                 FrmStaffDashboard = this
             });
-
+            
             /*
              change image
             PictureBox imageheader = PicLogo;
