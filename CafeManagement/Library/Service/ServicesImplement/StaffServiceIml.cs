@@ -1,4 +1,4 @@
-﻿using Library.DataAccess;
+using Library.DataAccess;
 using Library.Model;
 using System;
 using System.Collections.Generic;
@@ -39,5 +39,7 @@ namespace Library.Service.ServicesImplement
         {
             return StaffDAO.Instance.UpdateStaff(account);
         }
+
+        public staff getStaffByUserName(string username) => StaffDAO.Instance.getStaffByUserName(username);
     }
 }

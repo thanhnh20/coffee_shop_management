@@ -1,4 +1,4 @@
-﻿using Library.Model;
+using Library.Model;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -104,6 +104,14 @@ namespace Library.DataAccess
                 return null;
             }
             catch { throw; }
+        }
+
+        public staff getStaffByUserName(string username)
+        {
+            using (var db = new CoffeeShopManagementContext())
+            {
+                return db.staff.Where(s => s.Username.Equals(username)).FirstOrDefault();
+            }
         }
     }
 }

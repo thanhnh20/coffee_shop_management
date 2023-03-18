@@ -1,4 +1,4 @@
-﻿using Library.Model;
+using Library.Model;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,9 +15,10 @@ namespace Library.Service
 
         public Product GetProductByID(int id);
 
-
         public void InsertProduct(Product product);
 
         public void UpdateProduct(Product product);
+
+        public List<Product> GetAllProduct();
     }
 }

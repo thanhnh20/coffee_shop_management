@@ -19,7 +19,7 @@ namespace Library.Model
 
         [Required]
         public string Name { get; set; }
-        [Required, Range(0, int.MaxValue)]
+        [Required]
         public string Unit { get; set; }
         [Required, Range(0, 1)] // 1: active, 0: inactive
         public int Status { get; set; }
