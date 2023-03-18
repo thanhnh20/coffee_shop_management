@@ -1,4 +1,4 @@
-﻿using Library.DataAccess;
+using Library.DataAccess;
 using Library.Model;
 using System;
 using System.Collections.Generic;
@@ -20,6 +20,6 @@ namespace Library.Service.ServicesImplement
 
         public void UpdateProduct(Product product) => ProductDAO.Instance.UpdateProduct(product);
 
-
+        public List<Product> GetAllProduct() => ProductDAO.Instance.GetAllProduct();
     }
 }

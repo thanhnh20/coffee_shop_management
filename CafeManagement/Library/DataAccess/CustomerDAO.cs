@@ -1,4 +1,4 @@
-﻿using Library.Model;
+using Library.Model;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,8 +9,6 @@ namespace Library.DataAccess
 {
     public class CustomerDAO
     {
-        CoffeeShopManagementContext db = new CoffeeShopManagementContext();
-
         private static CustomerDAO instance = null;
         private static readonly object instancelock = new object();
         private CustomerDAO() { }
@@ -28,25 +26,51 @@ namespace Library.DataAccess
                 }
             }
         }
-        public List<Customer> getAllCustomers() => db.Customers.ToList();
 
+        public void CreateCustomerToOrder(Customer customerCreate) {
+            using (var db = new CoffeeShopManagementContext()) {
+                var customer = db.Customers.Where( c => c.PhoneNumber.Equals(customerCreate.PhoneNumber) ).FirstOrDefault();
+                if(customer == null)
+                {
+                    db.Customers.Add(customerCreate);
+                    db.SaveChanges();
+                }
+                else
+                {
+                    customer.Name = customerCreate.Name;
+                    customer.Address = customerCreate.Address;
+                    customer.Email = customerCreate.Email;
+                    db.SaveChanges();
+                }           
+            }
+        }
+
+        public Customer GetCustomerByNumberPhone(string numberPhone) {
+            using (var db = new CoffeeShopManagementContext()) {
+                return db.Customers.Where(c => c.PhoneNumber.Equals(numberPhone)).FirstOrDefault();
+            }
+        }
+
+        public bool UpdateCustomer(Customer customer) {
+            using (var db = new CoffeeShopManagementContext()) {
+                var customerFound = db.Customers.Where(c => c.PhoneNumber.Equals(customer.PhoneNumber)).FirstOrDefault();
+                if (customerFound != null) {
+                    customerFound.Name = customer.Name;
+                    customerFound.Address = customer.Address;
+                    customerFound.Email = customer.Email;
+                    db.SaveChanges();
+                    return true;
+                }
+                return false;
+            }
+        }
+    }
+}
+
+        public List<Customer> getAllCustomers() => db.Customers.ToList();
         public List<Customer> getAllCustomersByName(string name) => db.Customers.Where(acc => acc.Name.Contains(name)).ToList();
         public Customer getCustomerbyPhoneNumber(string phonenumber) => db.Customers.FirstOrDefault(acc => acc.PhoneNumber.Equals(phonenumber));
         public Customer getCustomerbyEmail(string email) => db.Customers.FirstOrDefault(acc => acc.Email.Equals(email));
-        public Customer CreateCustomer(Customer account)
-        {
-            try
-            {
-                db.Customers.Add(account);
-                db.SaveChanges();
-                account = getCustomerbyPhoneNumber(account.PhoneNumber);
-                return account;
-            }
-            catch
-            {
-                throw;
-            }
-        }
         public bool DeleteCustomer(Customer account)
         {
             try
@@ -65,24 +89,3 @@ namespace Library.DataAccess
                 throw;
             }
         }
-        public Customer UpdateCustomer(Customer account)
-        {
-            try
-            {
-                var user = getCustomerbyPhoneNumber(account.PhoneNumber);
-                if (user != null)
-                {
-                    user.Name = account.Name;
-                    user.Email = account.Email;
-                    user.Address = account.Address;
-                    db.Customers.Update(user);
-                    db.SaveChanges();
-                    user = getCustomerbyPhoneNumber(account.PhoneNumber);
-                    return user;
-                }
-                return null;
-            }
-            catch { throw; }
-        }
-    }
-}

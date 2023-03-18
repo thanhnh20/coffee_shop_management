@@ -1,4 +1,4 @@
-﻿namespace CoffeeManagement
+namespace CoffeeManagement
 {
     partial class FrmLogin
     {
@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmLogin));
             this.LbUsername = new System.Windows.Forms.Label();
             this.txtUsername = new System.Windows.Forms.TextBox();
             this.LbPassword = new System.Windows.Forms.Label();
@@ -153,7 +152,7 @@
             // PicLogo
             // 
             this.PicLogo.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.PicLogo.Image = ((System.Drawing.Image)(resources.GetObject("PicLogo.Image")));
+            this.PicLogo.Image = global::CoffeeManagement.Properties.Resources.cafe_11;
             this.PicLogo.InitialImage = null;
             this.PicLogo.Location = new System.Drawing.Point(38, 36);
             this.PicLogo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -170,8 +169,7 @@
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(163, 66);
             this.label2.TabIndex = 2;
-            this.label2.Text = "Camasy Cafe Manager";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.label2.Text = "Camasy Cafe \r\n   Manager";
             // 
             // FrmLogin
             // 

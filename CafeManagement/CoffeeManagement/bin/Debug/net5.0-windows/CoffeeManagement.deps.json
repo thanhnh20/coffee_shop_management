@@ -10,6 +10,7 @@
         "dependencies": {
           "Extended.Wpf.Toolkit": "4.5.0",
           "FontAwesome.Sharp": "5.15.4",
+          "System.Resources.ResourceManager": "4.3.0"
           "Library": "1.0.0",
           "Microsoft.Data.SqlClient": "3.0.1",
           "Microsoft.EntityFrameworkCore.Design": "5.0.17",

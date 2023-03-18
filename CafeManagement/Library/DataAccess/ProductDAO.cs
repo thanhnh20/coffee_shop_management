@@ -1,4 +1,4 @@
-﻿using Library.Model;
+using Library.Model;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -71,5 +71,13 @@ namespace Library.DataAccess
             }
 
         }
+
+        public List<Product> GetAllProduct()
+        {
+            using (var db = new CoffeeShopManagementContext())
+            {
+                return db.Products.ToList();
+            }
+        } 
     }
 }
