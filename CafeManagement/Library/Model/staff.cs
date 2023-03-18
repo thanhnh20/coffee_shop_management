@@ -55,7 +55,7 @@ namespace Library.Model
 
         [Required(ErrorMessage = "Username is required!")]
         [Display(Name = "Username")]
-        [MinLength(10, ErrorMessage = "Username must be at least 10 characters!")]
+        [MinLength(5, ErrorMessage = "Username must be at least 5 characters!")]
         [MaxLength(30, ErrorMessage = "Username must be lesser than or equal to 30 characters!")]
         public string Username { get; set; }
 

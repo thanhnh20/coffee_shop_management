@@ -49,7 +49,8 @@ namespace CoffeeManagement
                         Salary = Convert.ToDouble(txtSalary.Text),
                         TaxCode = TxtTaxCode.Text,
                         DateOfBirth = DateTime.ParseExact(MtxtDateOfBirth.Text, "dd/MM/yyyy", CultureInfo.InvariantCulture),
-                        Username = acc.Username
+                        Username = txtUsername.Text,
+                        UsernameNavigation = acc
                     };
                 }
                 catch(Exception ex)
@@ -67,9 +68,9 @@ namespace CoffeeManagement
                     IAccountService accountService = new AccountServiceIml();
                     IStaffServices staffService = new StaffServiceIml();
                     var staffacc = staffService.Createstaff(sta);
-                    var account = accountService.CreateAccount(acc);
+                    //var account = accountService.CreateAccount(acc);
 
-                    if (account != null && staffacc != null)
+                    if (staffacc != null)
                     {
                         MessageBox.Show("Successfully adding new Account", "Success", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         this.Close();

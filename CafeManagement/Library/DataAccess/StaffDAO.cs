@@ -35,17 +35,47 @@ namespace Library.DataAccess
         public staff GetStaffbyId(int staffid) => db.staff.Include(sta => sta.UsernameNavigation).FirstOrDefault(acc => acc.StaffId.Equals(staffid));
         public staff CreateStaff(staff sta)
         {
-            try
+            using(var db = new CoffeeShopManagementContext())
             {
-                db.staff.Add(sta);
-                db.SaveChanges();
-                sta = GetStaffbyId(sta.StaffId);
-                return sta;
+                using (var transaction = db.Database.BeginTransaction())
+                {
+                    try
+                    {
+                        Account account = new Account()
+                        {
+                            Username = sta.UsernameNavigation.Username,
+                            Password = sta.UsernameNavigation.Password,
+                            RoleId = sta.UsernameNavigation.RoleId,
+                            Status = sta.UsernameNavigation.Status,
+                        };
+                        db.Accounts.Add(account);
+                        db.SaveChanges();
+                        staff createStaff = new staff()
+                        {
+                            Fullname = sta.Fullname,
+                            Address = sta.Address,
+                            DateJoin = sta.DateJoin,
+                            DateOfBirth = sta.DateOfBirth,
+                            PhoneNumber = sta.PhoneNumber,
+                            Salary = sta.Salary,
+                            TaxCode = sta.TaxCode,
+                            Username = sta.Username,
+                        };
+                        db.staff.Add(createStaff);
+                        db.SaveChanges();
+                        transaction.Commit();
+                        sta = GetStaffbyId(createStaff.StaffId);
+
+                        return sta;
+                    }
+                    catch
+                    {
+                        transaction.Rollback();
+                        throw;
+                    }
+                }
             }
-            catch
-            {
-                throw;
-            }
+            
         }
         public bool DeleteStaff(int staid)
         {
