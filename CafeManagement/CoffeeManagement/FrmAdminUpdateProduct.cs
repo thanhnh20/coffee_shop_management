@@ -57,13 +57,14 @@ namespace CoffeeManagement
             product.Image = txtImage.Text;
             product.Status = ((KeyValuePair<int, string>)cbStatus.SelectedItem).Key;
             product.CategoryId = categoryProductService.GetCategoryProductByName(CbCategory.SelectedItem.ToString()).CategoryId;
+            product.Description = txtDescription.Text;
             productService.UpdateProduct(product);
-            var listIngredientName = ingredientService.GetIngredientByName(cbIngredient.SelectedItem.ToString());
+            var listIngredients = ingredientService.GetIngredientByName(cbIngredient.SelectedItem.ToString());
 
 
-            foreach (var ingredientName in listIngredientName)
+            foreach (var ingredient in listIngredients)
             {
-                var ingredientId = ingredientName.IngredientId;
+                var ingredientId = ingredient.IngredientId;
                 var mass = Convert.ToInt32(txtMass.Text);
                 ingredientProductService.updateIngredientProduct(product, ingredientId, mass);
             }

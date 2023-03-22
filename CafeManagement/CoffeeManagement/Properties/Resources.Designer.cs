@@ -153,6 +153,16 @@ namespace CoffeeManagement.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap matcha_daxay {
+            get {
+                object obj = ResourceManager.GetObject("matcha-daxay", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap phindi_choco {
             get {
                 object obj = ResourceManager.GetObject("phindi-choco", resourceCulture);

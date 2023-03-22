@@ -61,9 +61,8 @@ namespace CoffeeManagement
             this.PnDashBoard.Controls.Add(this.PnLogo);
             this.PnDashBoard.Dock = System.Windows.Forms.DockStyle.Left;
             this.PnDashBoard.Location = new System.Drawing.Point(0, 0);
-            this.PnDashBoard.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.PnDashBoard.Name = "PnDashBoard";
-            this.PnDashBoard.Size = new System.Drawing.Size(219, 525);
+            this.PnDashBoard.Size = new System.Drawing.Size(250, 700);
             this.PnDashBoard.TabIndex = 4;
             // 
             // btnLogout
@@ -78,11 +77,10 @@ namespace CoffeeManagement
             this.btnLogout.IconColor = System.Drawing.Color.Black;
             this.btnLogout.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnLogout.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnLogout.Location = new System.Drawing.Point(0, 308);
-            this.btnLogout.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnLogout.Location = new System.Drawing.Point(0, 409);
             this.btnLogout.Name = "btnLogout";
-            this.btnLogout.Padding = new System.Windows.Forms.Padding(9, 0, 18, 0);
-            this.btnLogout.Size = new System.Drawing.Size(219, 49);
+            this.btnLogout.Padding = new System.Windows.Forms.Padding(10, 0, 21, 0);
+            this.btnLogout.Size = new System.Drawing.Size(250, 65);
             this.btnLogout.TabIndex = 7;
             this.btnLogout.Text = "Log out";
             this.btnLogout.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -102,11 +100,10 @@ namespace CoffeeManagement
             this.btnStorage.IconColor = System.Drawing.Color.Black;
             this.btnStorage.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnStorage.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnStorage.Location = new System.Drawing.Point(0, 259);
-            this.btnStorage.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnStorage.Location = new System.Drawing.Point(0, 344);
             this.btnStorage.Name = "btnStorage";
-            this.btnStorage.Padding = new System.Windows.Forms.Padding(9, 0, 18, 0);
-            this.btnStorage.Size = new System.Drawing.Size(219, 49);
+            this.btnStorage.Padding = new System.Windows.Forms.Padding(10, 0, 21, 0);
+            this.btnStorage.Size = new System.Drawing.Size(250, 65);
             this.btnStorage.TabIndex = 6;
             this.btnStorage.Text = "Storage";
             this.btnStorage.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -127,11 +124,10 @@ namespace CoffeeManagement
             this.btnAccount.IconColor = System.Drawing.Color.Black;
             this.btnAccount.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnAccount.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAccount.Location = new System.Drawing.Point(0, 210);
-            this.btnAccount.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnAccount.Location = new System.Drawing.Point(0, 279);
             this.btnAccount.Name = "btnAccount";
-            this.btnAccount.Padding = new System.Windows.Forms.Padding(9, 0, 18, 0);
-            this.btnAccount.Size = new System.Drawing.Size(219, 49);
+            this.btnAccount.Padding = new System.Windows.Forms.Padding(10, 0, 21, 0);
+            this.btnAccount.Size = new System.Drawing.Size(250, 65);
             this.btnAccount.TabIndex = 4;
             this.btnAccount.Text = "Account";
             this.btnAccount.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -152,11 +148,10 @@ namespace CoffeeManagement
             this.btnProduct.IconColor = System.Drawing.Color.Black;
             this.btnProduct.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnProduct.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnProduct.Location = new System.Drawing.Point(0, 161);
-            this.btnProduct.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnProduct.Location = new System.Drawing.Point(0, 214);
             this.btnProduct.Name = "btnProduct";
-            this.btnProduct.Padding = new System.Windows.Forms.Padding(9, 0, 18, 0);
-            this.btnProduct.Size = new System.Drawing.Size(219, 49);
+            this.btnProduct.Padding = new System.Windows.Forms.Padding(10, 0, 21, 0);
+            this.btnProduct.Size = new System.Drawing.Size(250, 65);
             this.btnProduct.TabIndex = 3;
             this.btnProduct.Text = "Product";
             this.btnProduct.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -176,11 +171,10 @@ namespace CoffeeManagement
             this.btnInvoiceHistory.IconColor = System.Drawing.Color.Black;
             this.btnInvoiceHistory.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnInvoiceHistory.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnInvoiceHistory.Location = new System.Drawing.Point(0, 112);
-            this.btnInvoiceHistory.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnInvoiceHistory.Location = new System.Drawing.Point(0, 149);
             this.btnInvoiceHistory.Name = "btnInvoiceHistory";
-            this.btnInvoiceHistory.Padding = new System.Windows.Forms.Padding(9, 0, 18, 0);
-            this.btnInvoiceHistory.Size = new System.Drawing.Size(219, 49);
+            this.btnInvoiceHistory.Padding = new System.Windows.Forms.Padding(10, 0, 21, 0);
+            this.btnInvoiceHistory.Size = new System.Drawing.Size(250, 65);
             this.btnInvoiceHistory.TabIndex = 2;
             this.btnInvoiceHistory.Text = "Invoice History";
             this.btnInvoiceHistory.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -195,17 +189,16 @@ namespace CoffeeManagement
             this.PnLogo.Controls.Add(this.PicLogo);
             this.PnLogo.Dock = System.Windows.Forms.DockStyle.Top;
             this.PnLogo.Location = new System.Drawing.Point(0, 0);
-            this.PnLogo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.PnLogo.Name = "PnLogo";
-            this.PnLogo.Size = new System.Drawing.Size(219, 112);
+            this.PnLogo.Size = new System.Drawing.Size(250, 149);
             this.PnLogo.TabIndex = 0;
             // 
             // label2
             // 
             this.label2.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label2.Location = new System.Drawing.Point(71, 33);
+            this.label2.Location = new System.Drawing.Point(81, 44);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(182, 74);
+            this.label2.Size = new System.Drawing.Size(208, 99);
             this.label2.TabIndex = 1;
             this.label2.Text = "Camasy Cafe \r\n   Manager";
             // 
@@ -214,10 +207,9 @@ namespace CoffeeManagement
             this.PicLogo.Cursor = System.Windows.Forms.Cursors.Hand;
             this.PicLogo.Image = global::CoffeeManagement.Properties.Resources.cafe_11;
             this.PicLogo.InitialImage = null;
-            this.PicLogo.Location = new System.Drawing.Point(3, 33);
-            this.PicLogo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.PicLogo.Location = new System.Drawing.Point(3, 44);
             this.PicLogo.Name = "PicLogo";
-            this.PicLogo.Size = new System.Drawing.Size(72, 54);
+            this.PicLogo.Size = new System.Drawing.Size(82, 72);
             this.PicLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.PicLogo.TabIndex = 0;
             this.PicLogo.TabStop = false;
@@ -230,10 +222,9 @@ namespace CoffeeManagement
             this.PnHeader.Controls.Add(this.LbWelcomeHeader);
             this.PnHeader.Controls.Add(this.LbControlHeader);
             this.PnHeader.Dock = System.Windows.Forms.DockStyle.Top;
-            this.PnHeader.Location = new System.Drawing.Point(219, 0);
-            this.PnHeader.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.PnHeader.Location = new System.Drawing.Point(250, 0);
             this.PnHeader.Name = "PnHeader";
-            this.PnHeader.Size = new System.Drawing.Size(931, 44);
+            this.PnHeader.Size = new System.Drawing.Size(1064, 59);
             this.PnHeader.TabIndex = 5;
             // 
             // PicIconControlHeader
@@ -243,11 +234,10 @@ namespace CoffeeManagement
             this.PicIconControlHeader.IconChar = FontAwesome.Sharp.IconChar.Home;
             this.PicIconControlHeader.IconColor = System.Drawing.SystemColors.ControlText;
             this.PicIconControlHeader.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.PicIconControlHeader.IconSize = 30;
-            this.PicIconControlHeader.Location = new System.Drawing.Point(16, 12);
-            this.PicIconControlHeader.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.PicIconControlHeader.IconSize = 40;
+            this.PicIconControlHeader.Location = new System.Drawing.Point(18, 16);
             this.PicIconControlHeader.Name = "PicIconControlHeader";
-            this.PicIconControlHeader.Size = new System.Drawing.Size(35, 30);
+            this.PicIconControlHeader.Size = new System.Drawing.Size(40, 40);
             this.PicIconControlHeader.TabIndex = 5;
             this.PicIconControlHeader.TabStop = false;
             // 
@@ -256,9 +246,9 @@ namespace CoffeeManagement
             this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(850, 16);
+            this.label1.Location = new System.Drawing.Point(971, 21);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(55, 19);
+            this.label1.Size = new System.Drawing.Size(69, 24);
             this.label1.TabIndex = 4;
             this.label1.Text = "ADMIN";
             // 
@@ -267,9 +257,9 @@ namespace CoffeeManagement
             this.LbWelcomeHeader.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.LbWelcomeHeader.AutoSize = true;
             this.LbWelcomeHeader.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.LbWelcomeHeader.Location = new System.Drawing.Point(1630, 14);
+            this.LbWelcomeHeader.Location = new System.Drawing.Point(1863, 19);
             this.LbWelcomeHeader.Name = "LbWelcomeHeader";
-            this.LbWelcomeHeader.Size = new System.Drawing.Size(142, 19);
+            this.LbWelcomeHeader.Size = new System.Drawing.Size(181, 24);
             this.LbWelcomeHeader.TabIndex = 3;
             this.LbWelcomeHeader.Text = "Welcome, Full Name";
             // 
@@ -277,9 +267,9 @@ namespace CoffeeManagement
             // 
             this.LbControlHeader.AutoSize = true;
             this.LbControlHeader.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.LbControlHeader.Location = new System.Drawing.Point(57, 16);
+            this.LbControlHeader.Location = new System.Drawing.Point(65, 21);
             this.LbControlHeader.Name = "LbControlHeader";
-            this.LbControlHeader.Size = new System.Drawing.Size(47, 19);
+            this.LbControlHeader.Size = new System.Drawing.Size(59, 24);
             this.LbControlHeader.TabIndex = 1;
             this.LbControlHeader.Text = "Home";
             // 
@@ -287,21 +277,19 @@ namespace CoffeeManagement
             // 
             this.PnChildForm.Cursor = System.Windows.Forms.Cursors.Hand;
             this.PnChildForm.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.PnChildForm.Location = new System.Drawing.Point(219, 44);
-            this.PnChildForm.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.PnChildForm.Location = new System.Drawing.Point(250, 59);
             this.PnChildForm.Name = "PnChildForm";
-            this.PnChildForm.Size = new System.Drawing.Size(931, 481);
+            this.PnChildForm.Size = new System.Drawing.Size(1064, 641);
             this.PnChildForm.TabIndex = 6;
             // 
             // FrmAdminDashboard
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1150, 525);
+            this.ClientSize = new System.Drawing.Size(1314, 700);
             this.Controls.Add(this.PnChildForm);
             this.Controls.Add(this.PnHeader);
             this.Controls.Add(this.PnDashBoard);
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "FrmAdminDashboard";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Admin Home";

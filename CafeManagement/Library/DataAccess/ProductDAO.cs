@@ -1,4 +1,5 @@
 using Library.Model;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -78,6 +79,14 @@ namespace Library.DataAccess
             {
                 return db.Products.ToList();
             }
-        } 
+        }
+
+        public Product GetAllDataProductByID(int id)
+        {
+            using (CoffeeShopManagementContext db = new CoffeeShopManagementContext())
+            {
+                return db.Products.Include(c => c.IngredientProducts).Where(l => l.ProductId == id).FirstOrDefault();
+            }
+        }
     }
 }

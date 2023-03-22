@@ -38,14 +38,24 @@ namespace Library.DataAccess
         {
             using (CoffeeShopManagementContext db = new CoffeeShopManagementContext())
             {
-                var temp = new IngredientProduct()
+                var ingredientProduct = db.IngredientProducts.Where(l => l.ProductId == product.ProductId && l.IngredientId == id).FirstOrDefault();
+                if(ingredientProduct != null)
                 {
-                    IngredientId = id,
-                    ProductId = product.ProductId,
-                    Mass = mass
-                };
-                db.Entry<IngredientProduct>(temp).State = Microsoft.EntityFrameworkCore.EntityState.Modified;
-                db.SaveChanges();
+                    ingredientProduct.Mass = mass;
+                    db.SaveChanges();
+                }
+                else
+                {
+                    var temp = new IngredientProduct()
+                    {
+                        IngredientId = id,
+                        ProductId = product.ProductId,
+                        Mass = mass
+                    };
+                    db.Add(temp);
+                    db.SaveChanges();
+                }
+                
             }
         }
 
