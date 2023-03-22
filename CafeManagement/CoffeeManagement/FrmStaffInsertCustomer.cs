@@ -46,21 +46,14 @@ namespace CoffeeManagement
             else
             {
                 var staffInfor = staffService.GetStaffsByUserName(AccountStaff.Username);
-                var customerExist = customerService.GetCustomerByPhone(customer.PhoneNumber);
-                if (customerExist != null)
-                {
-                    customerService.UpdateCustomer(customer);
-                    MessageBox.Show("Customer Already Existed!", "Customer Existed!", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    this.Close();
-                }
-                else
-                {
-                    customerService.CreateCustomerToOrder(customer);
-                    MessageBox.Show("Successfully adding new Customer!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    this.Close();
-                }
                 if (isPayment)
                 {
+                    var customerCheck = customerService.GetCustomerByPhone(customer.PhoneNumber);
+                    if (customerCheck != null)
+                    {
+                        customerService.UpdateCustomer(customer);
+                    }
+
                     if (CreateOrder(customer, staffInfor))
                     {
                         this.Hide();
@@ -68,6 +61,21 @@ namespace CoffeeManagement
 
                     }
                 }
+                else
+                {
+                    var customerExist = customerService.GetCustomerByPhone(customer.PhoneNumber);
+                    if (customerExist != null)
+                    {
+                        MessageBox.Show("Customer Already Existed!", "Customer Existed!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        this.Close();
+                    }
+                    else
+                    {
+                        customerService.CreateCustomerToOrder(customer);
+                        MessageBox.Show("Successfully adding new Customer!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        this.Close();
+                    }
+                }                    
             }
         }
         public bool CreateOrder(Customer customer, staff staffInfor)
