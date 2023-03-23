@@ -153,6 +153,26 @@ namespace CoffeeManagement.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap dau_daxay {
+            get {
+                object obj = ResourceManager.GetObject("dau-daxay", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ep_dau {
+            get {
+                object obj = ResourceManager.GetObject("ep-dau", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap matcha_daxay {
             get {
                 object obj = ResourceManager.GetObject("matcha-daxay", resourceCulture);
@@ -186,6 +206,16 @@ namespace CoffeeManagement.Properties {
         internal static System.Drawing.Bitmap phindi_kemsua {
             get {
                 object obj = ResourceManager.GetObject("phindi-kemsua", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap socolo_daxay {
+            get {
+                object obj = ResourceManager.GetObject("socolo-daxay", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

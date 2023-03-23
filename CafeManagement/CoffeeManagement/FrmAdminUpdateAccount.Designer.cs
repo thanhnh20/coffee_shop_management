@@ -67,9 +67,8 @@
             this.PnHeader.Controls.Add(this.LbHeader);
             this.PnHeader.Dock = System.Windows.Forms.DockStyle.Top;
             this.PnHeader.Location = new System.Drawing.Point(0, 0);
-            this.PnHeader.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.PnHeader.Name = "PnHeader";
-            this.PnHeader.Size = new System.Drawing.Size(511, 58);
+            this.PnHeader.Size = new System.Drawing.Size(584, 77);
             this.PnHeader.TabIndex = 3;
             // 
             // LbHeader
@@ -80,9 +79,9 @@
             this.LbHeader.AutoSize = true;
             this.LbHeader.Font = new System.Drawing.Font("Calibri", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.LbHeader.ForeColor = System.Drawing.Color.Orange;
-            this.LbHeader.Location = new System.Drawing.Point(149, 9);
+            this.LbHeader.Location = new System.Drawing.Point(170, 12);
             this.LbHeader.Name = "LbHeader";
-            this.LbHeader.Size = new System.Drawing.Size(215, 37);
+            this.LbHeader.Size = new System.Drawing.Size(261, 45);
             this.LbHeader.TabIndex = 0;
             this.LbHeader.Text = "Update Account";
             // 
@@ -90,9 +89,9 @@
             // 
             this.lbUsername.AutoSize = true;
             this.lbUsername.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lbUsername.Location = new System.Drawing.Point(56, 273);
+            this.lbUsername.Location = new System.Drawing.Point(64, 364);
             this.lbUsername.Name = "lbUsername";
-            this.lbUsername.Size = new System.Drawing.Size(79, 19);
+            this.lbUsername.Size = new System.Drawing.Size(100, 24);
             this.lbUsername.TabIndex = 6;
             this.lbUsername.Text = "Username:";
             // 
@@ -100,30 +99,29 @@
             // 
             this.txtUsername.Enabled = false;
             this.txtUsername.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtUsername.Location = new System.Drawing.Point(203, 270);
-            this.txtUsername.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtUsername.Location = new System.Drawing.Point(232, 360);
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.ReadOnly = true;
-            this.txtUsername.Size = new System.Drawing.Size(161, 27);
+            this.txtUsername.Size = new System.Drawing.Size(183, 32);
             this.txtUsername.TabIndex = 1;
             // 
             // lbPassword
             // 
             this.lbPassword.AutoSize = true;
             this.lbPassword.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lbPassword.Location = new System.Drawing.Point(56, 309);
+            this.lbPassword.Location = new System.Drawing.Point(64, 412);
             this.lbPassword.Name = "lbPassword";
-            this.lbPassword.Size = new System.Drawing.Size(75, 19);
+            this.lbPassword.Size = new System.Drawing.Size(94, 24);
             this.lbPassword.TabIndex = 8;
             this.lbPassword.Text = "Password:";
             // 
             // txtPassword
             // 
             this.txtPassword.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtPassword.Location = new System.Drawing.Point(203, 301);
-            this.txtPassword.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtPassword.Location = new System.Drawing.Point(232, 401);
             this.txtPassword.Name = "txtPassword";
-            this.txtPassword.Size = new System.Drawing.Size(161, 27);
+            this.txtPassword.PasswordChar = '*';
+            this.txtPassword.Size = new System.Drawing.Size(183, 32);
             this.txtPassword.TabIndex = 2;
             // 
             // PnControls
@@ -131,20 +129,18 @@
             this.PnControls.Controls.Add(this.BtnUpdateAccount);
             this.PnControls.Controls.Add(this.BtnCancel);
             this.PnControls.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.PnControls.Location = new System.Drawing.Point(0, 400);
-            this.PnControls.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.PnControls.Location = new System.Drawing.Point(0, 533);
             this.PnControls.Name = "PnControls";
-            this.PnControls.Size = new System.Drawing.Size(511, 62);
+            this.PnControls.Size = new System.Drawing.Size(584, 83);
             this.PnControls.TabIndex = 10;
             // 
             // BtnUpdateAccount
             // 
             this.BtnUpdateAccount.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.BtnUpdateAccount.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.BtnUpdateAccount.Location = new System.Drawing.Point(301, 16);
-            this.BtnUpdateAccount.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.BtnUpdateAccount.Location = new System.Drawing.Point(344, 21);
             this.BtnUpdateAccount.Name = "BtnUpdateAccount";
-            this.BtnUpdateAccount.Size = new System.Drawing.Size(142, 29);
+            this.BtnUpdateAccount.Size = new System.Drawing.Size(162, 39);
             this.BtnUpdateAccount.TabIndex = 6;
             this.BtnUpdateAccount.Text = "Update";
             this.BtnUpdateAccount.UseVisualStyleBackColor = true;
@@ -155,10 +151,9 @@
             this.BtnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.BtnCancel.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.BtnCancel.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.BtnCancel.Location = new System.Drawing.Point(62, 16);
-            this.BtnCancel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.BtnCancel.Location = new System.Drawing.Point(71, 21);
             this.BtnCancel.Name = "BtnCancel";
-            this.BtnCancel.Size = new System.Drawing.Size(142, 29);
+            this.BtnCancel.Size = new System.Drawing.Size(162, 39);
             this.BtnCancel.TabIndex = 5;
             this.BtnCancel.Text = "Cancel";
             this.BtnCancel.UseVisualStyleBackColor = true;
@@ -168,38 +163,37 @@
             // 
             this.PnLayout1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(113)))), ((int)(((byte)(36)))));
             this.PnLayout1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.PnLayout1.Location = new System.Drawing.Point(0, 399);
-            this.PnLayout1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.PnLayout1.Location = new System.Drawing.Point(0, 532);
             this.PnLayout1.Name = "PnLayout1";
-            this.PnLayout1.Size = new System.Drawing.Size(511, 1);
+            this.PnLayout1.Size = new System.Drawing.Size(584, 1);
             this.PnLayout1.TabIndex = 11;
             // 
             // lbConfirmPassword
             // 
             this.lbConfirmPassword.AutoSize = true;
             this.lbConfirmPassword.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lbConfirmPassword.Location = new System.Drawing.Point(56, 335);
+            this.lbConfirmPassword.Location = new System.Drawing.Point(64, 447);
             this.lbConfirmPassword.Name = "lbConfirmPassword";
-            this.lbConfirmPassword.Size = new System.Drawing.Size(129, 19);
+            this.lbConfirmPassword.Size = new System.Drawing.Size(166, 24);
             this.lbConfirmPassword.TabIndex = 19;
             this.lbConfirmPassword.Text = "Confirm Password:";
             // 
             // txtConfirmPassword
             // 
             this.txtConfirmPassword.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtConfirmPassword.Location = new System.Drawing.Point(203, 332);
-            this.txtConfirmPassword.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtConfirmPassword.Location = new System.Drawing.Point(232, 443);
             this.txtConfirmPassword.Name = "txtConfirmPassword";
-            this.txtConfirmPassword.Size = new System.Drawing.Size(161, 27);
+            this.txtConfirmPassword.PasswordChar = '*';
+            this.txtConfirmPassword.Size = new System.Drawing.Size(183, 32);
             this.txtConfirmPassword.TabIndex = 3;
             // 
             // lbStatus
             // 
             this.lbStatus.AutoSize = true;
             this.lbStatus.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lbStatus.Location = new System.Drawing.Point(56, 366);
+            this.lbStatus.Location = new System.Drawing.Point(64, 488);
             this.lbStatus.Name = "lbStatus";
-            this.lbStatus.Size = new System.Drawing.Size(53, 19);
+            this.lbStatus.Size = new System.Drawing.Size(67, 24);
             this.lbStatus.TabIndex = 21;
             this.lbStatus.Text = "Status:";
             // 
@@ -208,10 +202,9 @@
             this.cbStatus.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbStatus.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.cbStatus.FormattingEnabled = true;
-            this.cbStatus.Location = new System.Drawing.Point(203, 363);
-            this.cbStatus.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cbStatus.Location = new System.Drawing.Point(232, 484);
             this.cbStatus.Name = "cbStatus";
-            this.cbStatus.Size = new System.Drawing.Size(161, 27);
+            this.cbStatus.Size = new System.Drawing.Size(183, 32);
             this.cbStatus.TabIndex = 4;
             // 
             // LbFullName
@@ -219,9 +212,9 @@
             this.LbFullName.AutoSize = true;
             this.LbFullName.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.LbFullName.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.LbFullName.Location = new System.Drawing.Point(56, 7);
+            this.LbFullName.Location = new System.Drawing.Point(64, 9);
             this.LbFullName.Name = "LbFullName";
-            this.LbFullName.Size = new System.Drawing.Size(82, 19);
+            this.LbFullName.Size = new System.Drawing.Size(104, 24);
             this.LbFullName.TabIndex = 26;
             this.LbFullName.Text = "Full Name: ";
             // 
@@ -230,9 +223,9 @@
             this.LbPhonenumber.AutoSize = true;
             this.LbPhonenumber.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.LbPhonenumber.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.LbPhonenumber.Location = new System.Drawing.Point(56, 69);
+            this.LbPhonenumber.Location = new System.Drawing.Point(64, 92);
             this.LbPhonenumber.Name = "LbPhonenumber";
-            this.LbPhonenumber.Size = new System.Drawing.Size(112, 19);
+            this.LbPhonenumber.Size = new System.Drawing.Size(146, 24);
             this.LbPhonenumber.TabIndex = 28;
             this.LbPhonenumber.Text = "Phone Number: ";
             // 
@@ -241,9 +234,9 @@
             this.LbDateOfBirth.AutoSize = true;
             this.LbDateOfBirth.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.LbDateOfBirth.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.LbDateOfBirth.Location = new System.Drawing.Point(56, 162);
+            this.LbDateOfBirth.Location = new System.Drawing.Point(64, 216);
             this.LbDateOfBirth.Name = "LbDateOfBirth";
-            this.LbDateOfBirth.Size = new System.Drawing.Size(100, 19);
+            this.LbDateOfBirth.Size = new System.Drawing.Size(127, 24);
             this.LbDateOfBirth.TabIndex = 29;
             this.LbDateOfBirth.Text = "Date of Birth: ";
             // 
@@ -252,9 +245,9 @@
             this.LbSalary.AutoSize = true;
             this.LbSalary.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.LbSalary.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.LbSalary.Location = new System.Drawing.Point(56, 131);
+            this.LbSalary.Location = new System.Drawing.Point(64, 175);
             this.LbSalary.Name = "LbSalary";
-            this.LbSalary.Size = new System.Drawing.Size(52, 19);
+            this.LbSalary.Size = new System.Drawing.Size(65, 24);
             this.LbSalary.TabIndex = 30;
             this.LbSalary.Text = "Salary:";
             // 
@@ -263,9 +256,9 @@
             this.LbTaxCode.AutoSize = true;
             this.LbTaxCode.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.LbTaxCode.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.LbTaxCode.Location = new System.Drawing.Point(56, 100);
+            this.LbTaxCode.Location = new System.Drawing.Point(64, 133);
             this.LbTaxCode.Name = "LbTaxCode";
-            this.LbTaxCode.Size = new System.Drawing.Size(76, 19);
+            this.LbTaxCode.Size = new System.Drawing.Size(95, 24);
             this.LbTaxCode.TabIndex = 31;
             this.LbTaxCode.Text = "Tax Code: ";
             // 
@@ -274,69 +267,63 @@
             this.LbAddress.AutoSize = true;
             this.LbAddress.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.LbAddress.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.LbAddress.Location = new System.Drawing.Point(56, 218);
+            this.LbAddress.Location = new System.Drawing.Point(64, 291);
             this.LbAddress.Name = "LbAddress";
-            this.LbAddress.Size = new System.Drawing.Size(69, 19);
+            this.LbAddress.Size = new System.Drawing.Size(87, 24);
             this.LbAddress.TabIndex = 32;
             this.LbAddress.Text = "Address: ";
             // 
             // TxtFullName
             // 
             this.TxtFullName.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.TxtFullName.Location = new System.Drawing.Point(203, 4);
-            this.TxtFullName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.TxtFullName.Location = new System.Drawing.Point(232, 5);
             this.TxtFullName.Name = "TxtFullName";
-            this.TxtFullName.Size = new System.Drawing.Size(249, 27);
+            this.TxtFullName.Size = new System.Drawing.Size(284, 32);
             this.TxtFullName.TabIndex = 33;
             // 
             // TxtPhoneNumber
             // 
             this.TxtPhoneNumber.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.TxtPhoneNumber.Location = new System.Drawing.Point(203, 66);
-            this.TxtPhoneNumber.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.TxtPhoneNumber.Location = new System.Drawing.Point(232, 88);
             this.TxtPhoneNumber.MaxLength = 10;
             this.TxtPhoneNumber.Name = "TxtPhoneNumber";
-            this.TxtPhoneNumber.Size = new System.Drawing.Size(161, 27);
+            this.TxtPhoneNumber.Size = new System.Drawing.Size(183, 32);
             this.TxtPhoneNumber.TabIndex = 35;
             // 
             // TxtTaxCode
             // 
             this.TxtTaxCode.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.TxtTaxCode.Location = new System.Drawing.Point(203, 97);
-            this.TxtTaxCode.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.TxtTaxCode.Location = new System.Drawing.Point(232, 129);
             this.TxtTaxCode.MaxLength = 1;
             this.TxtTaxCode.Name = "TxtTaxCode";
-            this.TxtTaxCode.Size = new System.Drawing.Size(161, 27);
+            this.TxtTaxCode.Size = new System.Drawing.Size(183, 32);
             this.TxtTaxCode.TabIndex = 36;
             // 
             // TxtAddress
             // 
             this.TxtAddress.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.TxtAddress.Location = new System.Drawing.Point(203, 190);
-            this.TxtAddress.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.TxtAddress.Location = new System.Drawing.Point(232, 253);
             this.TxtAddress.Multiline = true;
             this.TxtAddress.Name = "TxtAddress";
-            this.TxtAddress.Size = new System.Drawing.Size(249, 76);
+            this.TxtAddress.Size = new System.Drawing.Size(284, 100);
             this.TxtAddress.TabIndex = 39;
             // 
             // MtxtDateOfBirth
             // 
             this.MtxtDateOfBirth.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.MtxtDateOfBirth.Location = new System.Drawing.Point(203, 159);
-            this.MtxtDateOfBirth.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.MtxtDateOfBirth.Location = new System.Drawing.Point(232, 212);
             this.MtxtDateOfBirth.Mask = "00/00/0000";
             this.MtxtDateOfBirth.Name = "MtxtDateOfBirth";
-            this.MtxtDateOfBirth.Size = new System.Drawing.Size(161, 27);
+            this.MtxtDateOfBirth.Size = new System.Drawing.Size(183, 32);
             this.MtxtDateOfBirth.TabIndex = 38;
             this.MtxtDateOfBirth.ValidatingType = typeof(System.DateTime);
             // 
             // txtSalary
             // 
             this.txtSalary.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtSalary.Location = new System.Drawing.Point(203, 128);
-            this.txtSalary.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtSalary.Location = new System.Drawing.Point(232, 171);
             this.txtSalary.Name = "txtSalary";
-            this.txtSalary.Size = new System.Drawing.Size(249, 27);
+            this.txtSalary.Size = new System.Drawing.Size(284, 32);
             this.txtSalary.TabIndex = 37;
             // 
             // PnInformation
@@ -366,20 +353,18 @@
             this.PnInformation.Controls.Add(this.txtUsername);
             this.PnInformation.Controls.Add(this.lbUsername);
             this.PnInformation.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.PnInformation.Location = new System.Drawing.Point(0, 58);
-            this.PnInformation.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.PnInformation.Location = new System.Drawing.Point(0, 77);
             this.PnInformation.Name = "PnInformation";
-            this.PnInformation.Size = new System.Drawing.Size(511, 462);
+            this.PnInformation.Size = new System.Drawing.Size(584, 616);
             this.PnInformation.TabIndex = 5;
             // 
             // MtxtDateJoin
             // 
             this.MtxtDateJoin.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.MtxtDateJoin.Location = new System.Drawing.Point(203, 35);
-            this.MtxtDateJoin.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.MtxtDateJoin.Location = new System.Drawing.Point(232, 47);
             this.MtxtDateJoin.Mask = "00/00/0000";
             this.MtxtDateJoin.Name = "MtxtDateJoin";
-            this.MtxtDateJoin.Size = new System.Drawing.Size(161, 27);
+            this.MtxtDateJoin.Size = new System.Drawing.Size(183, 32);
             this.MtxtDateJoin.TabIndex = 34;
             this.MtxtDateJoin.ValidatingType = typeof(System.DateTime);
             // 
@@ -388,20 +373,19 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label1.Location = new System.Drawing.Point(56, 38);
+            this.label1.Location = new System.Drawing.Point(64, 51);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(69, 19);
+            this.label1.Size = new System.Drawing.Size(87, 24);
             this.label1.TabIndex = 40;
             this.label1.Text = "Date Join";
             // 
             // FrmAdminUpdateAccount
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(511, 520);
+            this.ClientSize = new System.Drawing.Size(584, 693);
             this.Controls.Add(this.PnInformation);
             this.Controls.Add(this.PnHeader);
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "FrmAdminUpdateAccount";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Update Existing Account";

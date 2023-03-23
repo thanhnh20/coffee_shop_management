@@ -72,7 +72,7 @@ namespace CoffeeManagement
 
                     if (staffacc != null)
                     {
-                        MessageBox.Show("Successfully adding new Account", "Success", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("Successfully adding new Account", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         this.Close();
                     }
                     else

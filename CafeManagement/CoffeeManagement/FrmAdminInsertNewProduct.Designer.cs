@@ -31,6 +31,7 @@
             this.PnHeader = new System.Windows.Forms.Panel();
             this.LbHeader = new System.Windows.Forms.Label();
             this.PnInformation = new System.Windows.Forms.Panel();
+            this.cklIngredient = new System.Windows.Forms.CheckedListBox();
             this.txtMass = new System.Windows.Forms.TextBox();
             this.lbMass = new System.Windows.Forms.Label();
             this.cbIngredient = new System.Windows.Forms.ComboBox();
@@ -51,7 +52,6 @@
             this.lbCategory = new System.Windows.Forms.Label();
             this.txtImage = new System.Windows.Forms.TextBox();
             this.lbImage = new System.Windows.Forms.Label();
-            this.cklIngredient = new System.Windows.Forms.CheckedListBox();
             this.PnHeader.SuspendLayout();
             this.PnInformation.SuspendLayout();
             this.PnControls.SuspendLayout();
@@ -104,12 +104,21 @@
             this.PnInformation.Size = new System.Drawing.Size(650, 634);
             this.PnInformation.TabIndex = 3;
             // 
+            // cklIngredient
+            // 
+            this.cklIngredient.FormattingEnabled = true;
+            this.cklIngredient.Location = new System.Drawing.Point(26, 437);
+            this.cklIngredient.Name = "cklIngredient";
+            this.cklIngredient.Size = new System.Drawing.Size(150, 114);
+            this.cklIngredient.TabIndex = 25;
+            // 
             // txtMass
             // 
             this.txtMass.Location = new System.Drawing.Point(486, 326);
             this.txtMass.Name = "txtMass";
             this.txtMass.Size = new System.Drawing.Size(87, 27);
             this.txtMass.TabIndex = 24;
+            this.txtMass.Text = "0";
             // 
             // lbMass
             // 
@@ -220,9 +229,9 @@
             this.txtPrice.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txtPrice.Location = new System.Drawing.Point(235, 76);
             this.txtPrice.Name = "txtPrice";
-            this.txtPrice.PasswordChar = '*';
             this.txtPrice.Size = new System.Drawing.Size(338, 32);
             this.txtPrice.TabIndex = 2;
+            this.txtPrice.Text = "0";
             // 
             // lbPrice
             // 
@@ -298,14 +307,6 @@
             this.lbImage.Size = new System.Drawing.Size(135, 24);
             this.lbImage.TabIndex = 0;
             this.lbImage.Text = "Image resouce:";
-            // 
-            // cklIngredient
-            // 
-            this.cklIngredient.FormattingEnabled = true;
-            this.cklIngredient.Location = new System.Drawing.Point(26, 437);
-            this.cklIngredient.Name = "cklIngredient";
-            this.cklIngredient.Size = new System.Drawing.Size(150, 114);
-            this.cklIngredient.TabIndex = 25;
             // 
             // FrmAdminInsertNewProduct
             // 

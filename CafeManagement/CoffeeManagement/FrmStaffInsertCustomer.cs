@@ -57,7 +57,7 @@ namespace CoffeeManagement
                     if (CreateOrder(customer, staffInfor))
                     {
                         this.Hide();
-                        MessageBox.Show("Order successfully");
+                        MessageBox.Show("Order Succesfully", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                     }
                 }

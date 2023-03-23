@@ -12,6 +12,7 @@ using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.ToolTip;
 using Library.Model;
 using System.Windows.Controls;
+using Library.Utils;
 
 namespace CoffeeManagement
 {
@@ -58,19 +59,26 @@ namespace CoffeeManagement
             product.Status = ((KeyValuePair<int, string>)cbStatus.SelectedItem).Key;
             product.CategoryId = categoryProductService.GetCategoryProductByName(CbCategory.SelectedItem.ToString()).CategoryId;
             product.Description = txtDescription.Text;
-            productService.UpdateProduct(product);
-            var listIngredients = ingredientService.GetIngredientByName(cbIngredient.SelectedItem.ToString());
-
-
-            foreach (var ingredient in listIngredients)
+            var resultError = MyHelper.CheckValid(product);
+            if (resultError != null)
             {
-                var ingredientId = ingredient.IngredientId;
-                var mass = Convert.ToInt32(txtMass.Text);
-                ingredientProductService.updateIngredientProduct(product, ingredientId, mass);
+                MessageBox.Show(resultError, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            MessageBox.Show("Update successfully", "Update a Product", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            this.Close();
+            else
+            {
+                productService.UpdateProduct(product);
+                var listIngredients = ingredientService.GetIngredientByName(cbIngredient.SelectedItem.ToString());
 
+
+                foreach (var ingredient in listIngredients)
+                {
+                    var ingredientId = ingredient.IngredientId;
+                    var mass = Convert.ToInt32(txtMass.Text);
+                    ingredientProductService.updateIngredientProduct(product, ingredientId, mass);
+                }
+                MessageBox.Show("Update successfully", "Update a Product", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                this.Close();
+            }
         }
 
 
